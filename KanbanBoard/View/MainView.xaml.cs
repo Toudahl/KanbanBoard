@@ -12,6 +12,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using KanbanBoard.Enum;
+using KanbanBoard.View;
+using KanbanBoard.ViewModel;
 
 namespace KanbanBoard
 {
@@ -25,6 +28,22 @@ namespace KanbanBoard
             InitializeComponent();
         }
 
-        
+        private void Menu_ToDo_OnClick(object sender, RoutedEventArgs e)
+        {
+            Window AddWindow = new ManipulatePostItView(Categories.ToDo, viewModel_MainView);
+            AddWindow.Show();
+        }
+
+        private void Menu_WorkInProgress_OnClick(object sender, RoutedEventArgs e)
+        {
+            Window AddWindow = new ManipulatePostItView(Categories.WorkInProgress, viewModel_MainView);
+            AddWindow.Show();
+        }
+
+        private void Menu_CompletedWork_OnClick(object sender, RoutedEventArgs e)
+        {
+            Window AddWindow = new ManipulatePostItView(Categories.CompletedWork, viewModel_MainView);
+            AddWindow.Show();
+        }
     }
 }

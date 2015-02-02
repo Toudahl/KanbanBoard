@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace KanbanBoard.Model
+namespace KanbanBoard.Persistence
 {
-    class Notes
+    enum EnumPersistenceOptions
     {
+        JSON,
     }
 }

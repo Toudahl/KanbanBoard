@@ -60,6 +60,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="View\ManipulatePostItView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\MainView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -68,9 +72,20 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Model\PostIt.cs" />
-    <Compile Include="Model\Notes.cs" />
+    <Compile Include="Enum\Categories.cs" />
+    <Compile Include="Model\Person.cs" />
+    <Compile Include="Model\PostItModel.cs" />
+    <Compile Include="Persistence\EnumPersistenceOptions.cs" />
+    <Compile Include="Persistence\JsonPersistence.cs" />
+    <Compile Include="Persistence\PersistenceHandler.cs" />
+    <Compile Include="Properties\Annotations.cs" />
+    <Compile Include="RelayCommand\RelayCommand.cs" />
+    <Compile Include="ViewModel\CategoryViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
+    <Compile Include="ViewModel\ManipulatePostItViewModel.cs" />
+    <Compile Include="View\ManipulatePostItView.xaml.cs">
+      <DependentUpon>ManipulatePostItView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\MainView.xaml.cs">
       <DependentUpon>MainView.xaml</DependentUpon>
       <SubType>Code</SubType>

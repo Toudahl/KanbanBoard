@@ -5,43 +5,182 @@
         xmlns:dd="clr-namespace:GongSolutions.Wpf.DragDrop;assembly=GongSolutions.Wpf.DragDrop"
         x:Class="KanbanBoard.MainWindow"
         Title="Kanban Board">
+    <Window.DataContext>
+        <ViewModel:MainViewModel x:Name="viewModel_MainView"/>
+    </Window.DataContext>
 
     <Grid x:Name="grid_mainBoard">
-        <Grid.DataContext>
-            <ViewModel:MainViewModel/>
-        </Grid.DataContext>
-        <StackPanel Orientation="Horizontal">
-            <ListView x:Name="listview_toDo"
-                  ItemsSource="{Binding Categories[0], Mode=TwoWay}"
-                  DisplayMemberPath="Name"
-                  IsSynchronizedWithCurrentItem="True"
-                  HorizontalAlignment="Left"
-                  dd:DragDrop.IsDragSource="True"
-                  dd:DragDrop.IsDropTarget="True" 
-                  dd:DragDrop.DragHandler="{Binding}"
-                  dd:DragDrop.DropHandler="{Binding}">
-            </ListView>
-            <ListView x:Name="listview_wip"
-                  ItemsSource="{Binding Categories[1], Mode=TwoWay}"
-                  DisplayMemberPath="Name"
-                  IsSynchronizedWithCurrentItem="True"
-                  HorizontalAlignment="Left"
-                  dd:DragDrop.IsDragSource="True"
-                  dd:DragDrop.IsDropTarget="True" 
-                  dd:DragDrop.DragHandler="{Binding}"
-                  dd:DragDrop.DropHandler="{Binding}">
-            </ListView>
-            <ListView x:Name="listview_completed"
-                  ItemsSource="{Binding Categories[2], Mode=TwoWay}"
-                  DisplayMemberPath="Name"
-                  IsSynchronizedWithCurrentItem="True"
-                  HorizontalAlignment="Left"
-                  dd:DragDrop.IsDragSource="True"
-                  dd:DragDrop.IsDropTarget="True"
-                  dd:DragDrop.DragHandler="{Binding}"
-                  dd:DragDrop.DropHandler="{Binding}">
-            </ListView>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
 
-        </StackPanel>
+        <Menu 
+            Grid.Column="0"
+            Grid.Row="0"
+            Grid.ColumnSpan="3">
+            <MenuItem Header="Menu">
+                <MenuItem Header="Add...">
+                    <MenuItem x:Name="menu_ToDo" Header="To do" Click="Menu_ToDo_OnClick"/>
+                    <MenuItem x:Name="menu_WorkInProgress" Header="Work in progress" Click="Menu_WorkInProgress_OnClick"/>
+                    <MenuItem x:Name="menu_CompletedWork" Header="Completed work" Click="Menu_CompletedWork_OnClick"/>
+                </MenuItem>
+                <MenuItem Header="Load..." Command="{Binding LoadFromDialogCommand}"/>
+                <MenuItem Header="Save"/>
+                <MenuItem Header="Save As" Command="{Binding SaveAsDialogCommand}"/>
+                <MenuItem Header="Options">
+                    <CheckBox Content="Auto Load last" />
+                </MenuItem>
+            </MenuItem>
+        </Menu>
+        <ListBox
+            Grid.Column="0"
+            Grid.Row="1"
+            ItemsSource="{Binding ToDoCategory}" 
+            dd:DragDrop.IsDragSource="True"
+            dd:DragDrop.IsDropTarget="True"
+            dd:DragDrop.DropHandler="{Binding}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Label Content="To Do" HorizontalAlignment="Center"></Label>
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+        <ListView
+            VerticalAlignment="Top"
+            Grid.Column="0"
+            Grid.Row="2"
+            ItemsSource="{Binding ListOfToDo}"
+            dd:DragDrop.IsDragSource="True"
+            dd:DragDrop.IsDropTarget="True"
+            dd:DragDrop.DropHandler="{Binding}" 
+            ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Rectangle Fill="{Binding SolidColorBrush}"/>
+                        <StackPanel Orientation="Horizontal">
+                            <StackPanel>
+                                <Label Content="Task Name: "/>
+                                <Label Content="Deadline: "/>
+                                <Label Content="Person responsible: "/>
+                                <Label Content="Details: "/>
+                            </StackPanel>
+                            <StackPanel>
+                                <Label Content="{Binding TaskName}"/>
+                                <Label Content="{Binding Deadline}"/>
+                                <Label Content="{Binding ResponsiblePerson}"/>
+                                <Label Content="{Binding TaskDetails}"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <ListBox
+            Grid.Column="1"
+            Grid.Row="1"
+            ItemsSource="{Binding WorkInProgressCategory}" 
+            dd:DragDrop.IsDragSource="True"
+            dd:DragDrop.IsDropTarget="True"
+            dd:DragDrop.DropHandler="{Binding}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Label Content="Work in progress" HorizontalAlignment="Center"></Label>
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+        <ListView 
+            VerticalAlignment="Top" 
+            Grid.Column="1"
+            Grid.Row="2"
+            ItemsSource="{Binding ListOfWorkInProgress}" 
+            dd:DragDrop.IsDragSource="True"
+            dd:DragDrop.IsDropTarget="True"
+            dd:DragDrop.DropHandler="{Binding}"
+            ScrollViewer.HorizontalScrollBarVisibility="Disabled" >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Rectangle Fill="{Binding SolidColorBrush}"/>
+                        <StackPanel Orientation="Horizontal">
+                            <StackPanel>
+                                <Label Content="Task Name: "/>
+                                <Label Content="Deadline: "/>
+                                <Label Content="Person responsible: "/>
+                                <Label Content="Details: "/>
+                            </StackPanel>
+                            <StackPanel>
+                                <Label Content="{Binding TaskName}"/>
+                                <Label Content="{Binding Deadline}"/>
+                                <Label Content="{Binding ResponsiblePerson}"/>
+                                <Label Content="{Binding TaskDetails}"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <ListBox 
+            Grid.Column="2"
+            Grid.Row="1"
+            ItemsSource="{Binding CompletedCategory}"
+            dd:DragDrop.IsDragSource="True"
+            dd:DragDrop.IsDropTarget="True" 
+            dd:DragDrop.DropHandler="{Binding}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Label Content="Completed tasks" HorizontalAlignment="Center"></Label>
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+        <ListView 
+            VerticalAlignment="Top"
+            Grid.Column="2"
+            Grid.Row="2"
+            ItemsSource="{Binding ListOfCompletedWork}"
+            dd:DragDrop.IsDragSource="True"
+            dd:DragDrop.IsDropTarget="True"
+            dd:DragDrop.DropHandler="{Binding}"
+            ScrollViewer.HorizontalScrollBarVisibility="Disabled" >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Rectangle Fill="{Binding SolidColorBrush}"/>
+                        <StackPanel Orientation="Horizontal">
+                            <StackPanel>
+                                <Label Content="Task Name: "/>
+                                <Label Content="Deadline: "/>
+                                <Label Content="Person responsible: "/>
+                                <Label Content="Details: "/>
+                            </StackPanel>
+                            <StackPanel>
+                                <Label Content="{Binding TaskName}"/>
+                                <Label Content="{Binding Deadline}"/>
+                                <Label Content="{Binding ResponsiblePerson}"/>
+                                <Label Content="{Binding TaskDetails}"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </Grid>
 </Window>

@@ -32,7 +32,7 @@
                     <MenuItem x:Name="menu_CompletedWork" Header="Completed work" Click="Menu_CompletedWork_OnClick"/>
                 </MenuItem>
                 <MenuItem Header="Load..." Command="{Binding LoadFromDialogCommand}"/>
-                <MenuItem Header="Save"/>
+                <MenuItem Header="Save" Command="{Binding SaveCommand}"/>
                 <MenuItem Header="Save As" Command="{Binding SaveAsDialogCommand}"/>
                 <MenuItem Header="Options">
                     <CheckBox Content="Auto Load last" />

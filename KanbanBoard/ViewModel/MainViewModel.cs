@@ -216,6 +216,9 @@ namespace KanbanBoard.ViewModel
             set { _loadFromDialogCommand = value; }
         }
 
+        /// <summary>
+        /// The command used to initaite saving
+        /// </summary>
         public ICommand SaveCommand
         {
             get { return _saveCommand; }
@@ -238,12 +241,11 @@ namespace KanbanBoard.ViewModel
         public ICollectionView CompletedCategory { get; set; }
         
         /// <summary>
-        //  Updates the current drag state.
-        // Remarks:
-        //     To allow a drop at the current drag position, the GongSolutions.Wpf.DragDrop.DropInfo.Effects
-        //     property on dropInfo should be set to a value other than System.Windows.DragDropEffects.None
-        //     and GongSolutions.Wpf.DragDrop.DropInfo.Data should be set to a non-null
-        //     value.
+        ///  Updates the current drag state.
+        ///  Remarks:
+        ///  To allow a drop at the current drag position, the GongSolutions.Wpf.DragDrop.DropInfo.Effects
+        ///  property on dropInfo should be set to a value other than System.Windows.DragDropEffects.None
+        ///  and GongSolutions.Wpf.DragDrop.DropInfo.Data should be set to a non-null value.
         /// </summary>
         /// <param name="dropInfo">Information about the drag.</param>
         public void DragOver(IDropInfo dropInfo)

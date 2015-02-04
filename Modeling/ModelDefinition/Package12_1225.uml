@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="9a81b492-5dbd-448f-ba6b-79e69d44cbda"
+  name="DragDrop"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="39f26cd4-0c3f-4601-8238-a2cd2e72943b"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DGongSolutions.Wpf.DragDrop"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <Interface
+        Id="03d133f1-cee8-4881-830e-243c4b9b24c9"
+        name="IDropInfo"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="ad135a62-fcaf-48e1-9dcf-0190ae2329c9"
+            handle="viewcode://./CodeSchema_Interface?Assembly%3D&quot;file:%2F%2F%2FD:%2FDokumenter%2FVisual Studio 2013%2FProjects%2F2. Semester%2FKanbanBoard%2Fpackages%2Fgong-wpf-dragdrop.0.1.4.3%2Flib%2Fnet40%2FGongSolutions.Wpf.DragDrop.dll&quot; Namespace%3DGongSolutions.Wpf.DragDrop Type%3DIDropInfo"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="b60c3b5b-5271-4029-b5eb-c82415db8ce4"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="349680da-6210-4553-ac41-2a61e0e67c51">
+                <propertyInstance
+                  Id="93cf4499-b6b1-44cb-9940-26aba51afdbb"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="09137866-c4cf-4701-912a-84a1435da175">
+                <propertyInstance
+                  Id="e0696978-4bbc-45b0-b151-9f6ba24ff7bf"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="a61a3da8-36fc-4812-bc5c-6c649fcd3b36">
+                <propertyInstance
+                  Id="c097cdfb-986c-4212-a4f9-7fe06d2d3865"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="76798bb7-760b-4968-8ddc-0f34829a8271">
+                <propertyInstance
+                  Id="6449b54a-b4be-4c34-a294-d698d21429fb"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="aa9624d3-4a55-4e52-85f4-603e547b9fba"
+        name="IDropTarget"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="abba6510-ee9e-49c4-9f43-164d0a5c16c9"
+            handle="viewcode://./CodeSchema_Interface?Assembly%3D&quot;file:%2F%2F%2FD:%2FDokumenter%2FVisual Studio 2013%2FProjects%2F2. Semester%2FKanbanBoard%2Fpackages%2Fgong-wpf-dragdrop.0.1.4.3%2Flib%2Fnet40%2FGongSolutions.Wpf.DragDrop.dll&quot; Namespace%3DGongSolutions.Wpf.DragDrop Type%3DIDropTarget"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="1eb8fa83-a09c-41e4-9496-29f6f4b91e8f"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="5ec12a62-1669-4b6f-9d59-3504ab5f2fda">
+                <propertyInstance
+                  Id="2ee46eb0-0472-4e77-b321-113d6489f1d5"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="e324f875-4147-4d0c-a70d-2331864b6bb0">
+                <propertyInstance
+                  Id="dd77bbb8-2014-4c48-8687-ef6a37bc2149"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="ccc68df4-ebc0-42f9-98f9-34a1124be994">
+                <propertyInstance
+                  Id="d3dcb818-6d71-4b30-8a3c-dfa03b76e8dd"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c8eb9c4d-de1a-42ba-8e06-fbcecedf0ea2">
+                <propertyInstance
+                  Id="cf10bacc-b615-4cd3-8b20-c9f79e0ba1bf"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </Interface>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

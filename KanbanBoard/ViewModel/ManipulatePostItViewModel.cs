@@ -20,7 +20,6 @@ namespace KanbanBoard.ViewModel
         {
             _taskName = null;
             _taskDetails = null;
-            _deadline = DateTime.MinValue.ToString();
 
             _addCommand = new RelayCommand(Save);
 
@@ -29,6 +28,11 @@ namespace KanbanBoard.ViewModel
 
         }
 
+        /// <summary>
+        /// If all fields has input, create a <see cref="PostItModel"/> with the information
+        /// from the fields.
+        /// Add the PostItModel to the correct list.
+        /// </summary>
         private void Save()
         {
             SolidColorBrush redSolidColorBrush = new SolidColorBrush(Colors.Red);

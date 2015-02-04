@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KanbanBoard", "KanbanBoard\KanbanBoard.csproj", "{29975EAD-4C8E-4277-8A31-DB915D821A16}"
 EndProject
+Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "Modeling", "Modeling\Modeling.modelproj", "{E38F5968-65C5-44CE-A2BE-4CC8EA1C666F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{29975EAD-4C8E-4277-8A31-DB915D821A16}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{29975EAD-4C8E-4277-8A31-DB915D821A16}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{29975EAD-4C8E-4277-8A31-DB915D821A16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E38F5968-65C5-44CE-A2BE-4CC8EA1C666F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E38F5968-65C5-44CE-A2BE-4CC8EA1C666F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E38F5968-65C5-44CE-A2BE-4CC8EA1C666F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E38F5968-65C5-44CE-A2BE-4CC8EA1C666F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

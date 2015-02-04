@@ -1,8 +1,13 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.IO;
+using System.Linq;
 using System.Runtime.CompilerServices;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Data;
 using System.Windows.Input;
@@ -10,7 +15,6 @@ using System.Windows.Media;
 using GongSolutions.Wpf.DragDrop;
 using HelperClasses;
 using KanbanBoard.Annotations;
-using KanbanBoard.Enum;
 using KanbanBoard.Model;
 using KanbanBoard.Persistence;
 using Microsoft.Win32;
@@ -30,6 +34,7 @@ namespace KanbanBoard.ViewModel
         private CategoryViewModel _completedWorkCategory;
 
         // Commands for various actions
+        private ICommand _newCommand;
         private ICommand _saveAsDialogCommand;
         private ICommand _loadFromDialogCommand;
         private ICommand _saveCommand;
@@ -44,9 +49,9 @@ namespace KanbanBoard.ViewModel
         public MainViewModel()
         {
             // Instantiate the categories in the board.
-            _toDoCategory = new CategoryViewModel(Categories.ToDo);
-            _workInProgressCategory = new CategoryViewModel(Categories.WorkInProgress);
-            _completedWorkCategory = new CategoryViewModel(Categories.CompletedWork);
+            _toDoCategory = new CategoryViewModel(EnumCategories.ToDo);
+            _workInProgressCategory = new CategoryViewModel(EnumCategories.WorkInProgress);
+            _completedWorkCategory = new CategoryViewModel(EnumCategories.CompletedWork);
             // And the containers for them.
             _toDoCategoryContainer = new List<CategoryViewModel>();
             _workInProgressCategoryContainer = new List<CategoryViewModel>();
@@ -69,8 +74,11 @@ namespace KanbanBoard.ViewModel
             WorkInProgressCategory = CollectionViewSource.GetDefaultView(_workInProgressCategoryContainer);
             CompletedCategory = CollectionViewSource.GetDefaultView(_completedWorkCategoryContainer);
 
+            // Reset board, and create "new" board.
+            _newCommand = new RelayCommand(NewBoard);
+
             // Prepare the Save feature
-            _saveCommand = new RelayCommand(Save);
+            _saveCommand = new RelayCommand(SaveBoard);
             
             // Prepare command for Save As feature
             _saveAsDialogCommand = new RelayCommand(SaveAsDialog);
@@ -90,7 +98,23 @@ namespace KanbanBoard.ViewModel
 
         }
 
-        private void Save()
+        /// <summary>
+        /// Clears the boards, and the file name and path to the save file.
+        /// </summary>
+        private void NewBoard()
+        {
+            ListOfToDo.Clear();
+            ListOfWorkInProgress.Clear();
+            ListOfCompletedWork.Clear();
+            _boardFileNameAndPath = null;
+        }
+
+
+        /// <summary>
+        /// Saves the board to a file, using the allready set file name and path.
+        /// If it has not been set, it will open the <see cref="SaveAsDialog()"/>
+        /// </summary>
+        private void SaveBoard()
         {
             if (_boardFileNameAndPath != null)
             {
@@ -171,6 +195,15 @@ namespace KanbanBoard.ViewModel
         }
 
         /// <summary>
+        /// The command used to initiate the board reset.
+        /// </summary>
+        public ICommand NewCommand
+        {
+            get { return _newCommand; }
+            set { _newCommand = value; }
+        }
+
+        /// <summary>
         /// The command used to initiate the Save As dialog
         /// </summary>
         public ICommand SaveAsDialogCommand
@@ -237,17 +270,17 @@ namespace KanbanBoard.ViewModel
             PostItModel postIt = (PostItModel)dropInfo.Data;
             postItcCollection.PostItsInCategory.Add(postIt);
 
-            if (postItcCollection.CategoryName == Categories.ToDo)
+            if (postItcCollection.CategoryName == EnumCategories.ToDo)
             {
                 postIt.SolidColorBrush = new SolidColorBrush(Colors.Red);
             }
 
-            if (postItcCollection.CategoryName == Categories.WorkInProgress)
+            if (postItcCollection.CategoryName == EnumCategories.WorkInProgress)
             {
                 postIt.SolidColorBrush = new SolidColorBrush(Colors.Yellow);
             }
 
-            if (postItcCollection.CategoryName == Categories.CompletedWork)
+            if (postItcCollection.CategoryName == EnumCategories.CompletedWork)
             {
                 postIt.SolidColorBrush = new SolidColorBrush(Colors.Green);
             }

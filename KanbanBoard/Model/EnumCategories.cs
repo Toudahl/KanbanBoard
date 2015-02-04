@@ -1,6 +1,6 @@
-﻿namespace KanbanBoard.Enum
+﻿namespace KanbanBoard.Model
 {
-    public enum Categories
+    public enum EnumCategories
     {
         ToDo,
         WorkInProgress,

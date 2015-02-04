@@ -72,7 +72,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Enum\Categories.cs" />
+    <Compile Include="Model\EnumCategories.cs" />
     <Compile Include="Model\Person.cs" />
     <Compile Include="Model\PostItModel.cs" />
     <Compile Include="Persistence\EnumPersistenceOptions.cs" />

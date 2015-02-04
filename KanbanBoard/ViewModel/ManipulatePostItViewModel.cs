@@ -2,7 +2,6 @@
 using System.Windows.Input;
 using System.Windows.Media;
 using HelperClasses;
-using KanbanBoard.Enum;
 using KanbanBoard.Model;
 
 namespace KanbanBoard.ViewModel
@@ -13,8 +12,8 @@ namespace KanbanBoard.ViewModel
         private string _taskName;
         private string _taskDetails;
         private string _deadline;
-        private Categories _category;
-        private ICommand _saveCommand;
+        private EnumCategories _category;
+        private ICommand _addCommand;
         private PersonModel _responsiblePerson;
 
         public ManipulatePostItViewModel()
@@ -23,7 +22,7 @@ namespace KanbanBoard.ViewModel
             _taskDetails = null;
             _deadline = DateTime.MinValue.ToString();
 
-            _saveCommand = new RelayCommand(Save);
+            _addCommand = new RelayCommand(Save);
 
             _responsiblePerson = new PersonModel("Morten", "Toudahl");
             _deadline = DateTime.Today.ToString("HH:mm - dd MMMM, yyyy");
@@ -38,15 +37,15 @@ namespace KanbanBoard.ViewModel
 
             if (CheckInput())
             {
-                if (Category == Categories.ToDo)
+                if (Category == EnumCategories.ToDo)
                 {
                     MainViewModel.ListOfToDo.Add(new PostItModel(_taskName, _taskDetails, _deadline, _responsiblePerson, redSolidColorBrush));
                 }
-                if (Category == Categories.WorkInProgress)
+                if (Category == EnumCategories.WorkInProgress)
                 {
                     MainViewModel.ListOfWorkInProgress.Add(new PostItModel(_taskName, _taskDetails, _deadline, _responsiblePerson, yellowSolidColorBrush));
                 }
-                if (Category == Categories.CompletedWork)
+                if (Category == EnumCategories.CompletedWork)
                 {
                     MainViewModel.ListOfCompletedWork.Add(new PostItModel(_taskName, _taskDetails, _deadline, _responsiblePerson, greenSolidColorBrush));
                 }
@@ -96,7 +95,7 @@ namespace KanbanBoard.ViewModel
             set { _deadline = value; }
         }
 
-        public Categories Category
+        public EnumCategories Category
         {
             get { return _category; }
             set { _category = value; }
@@ -104,8 +103,8 @@ namespace KanbanBoard.ViewModel
 
         public ICommand AddCommand
         {
-            get { return _saveCommand; }
-            set { _saveCommand = value; }
+            get { return _addCommand; }
+            set { _addCommand = value; }
         }
     }
 }

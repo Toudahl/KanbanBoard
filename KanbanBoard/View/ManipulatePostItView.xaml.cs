@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Windows;
-using KanbanBoard.Enum;
+using KanbanBoard.Model;
 using KanbanBoard.ViewModel;
 
 namespace KanbanBoard.View
@@ -10,9 +10,9 @@ namespace KanbanBoard.View
     /// </summary>
     public partial class ManipulatePostItView : Window
     {
-        private Categories _selectedCategory;
+        private EnumCategories _selectedCategory;
 
-        public ManipulatePostItView(Categories selectedCategory, MainViewModel viewModel_MainView)
+        public ManipulatePostItView(EnumCategories selectedCategory, MainViewModel viewModel_MainView)
         {
             _selectedCategory = selectedCategory;
             InitializeComponent();
@@ -25,9 +25,9 @@ namespace KanbanBoard.View
             List<string> categories = new List<string>();
 
 
-            categories.Add(Categories.ToDo.ToString());
-            categories.Add(Categories.WorkInProgress.ToString());
-            categories.Add(Categories.CompletedWork.ToString());
+            categories.Add(EnumCategories.ToDo.ToString());
+            categories.Add(EnumCategories.WorkInProgress.ToString());
+            categories.Add(EnumCategories.CompletedWork.ToString());
 
             ComboBox_SelectedCategory.ItemsSource = categories;
             ComboBox_SelectedCategory.SelectedIndex = (int)_selectedCategory;

@@ -1,15 +1,14 @@
 ﻿using System.Collections.ObjectModel;
-using KanbanBoard.Enum;
 using KanbanBoard.Model;
 
 namespace KanbanBoard.ViewModel
 {
     public class CategoryViewModel
     {
-        private Categories _categoryName;
+        private EnumCategories _categoryName;
         private ObservableCollection<PostItModel> _postItsInCategory;
 
-        public CategoryViewModel(Categories categoryName)
+        public CategoryViewModel(EnumCategories categoryName)
         {
             this.CategoryName = categoryName;
             PostItsInCategory = new ObservableCollection<PostItModel>();
@@ -28,7 +27,7 @@ namespace KanbanBoard.ViewModel
             }
         }
 
-        public Categories CategoryName
+        public EnumCategories CategoryName
         {
             get { return _categoryName; }
             set { _categoryName = value; }

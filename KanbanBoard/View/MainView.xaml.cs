@@ -14,7 +14,6 @@ namespace KanbanBoard
             InitializeComponent();
         }
 
-
         // TODO: Move the "AddWindow" methods to MainViewModel, and use commands to access them.
         private void Menu_ToDo_OnClick(object sender, RoutedEventArgs e)
         {

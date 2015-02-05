@@ -14,7 +14,7 @@ namespace KanbanBoard.ViewModel
         private string _deadline;
         private EnumCategories _category;
         private ICommand _addCommand;
-        private PersonModel _responsiblePerson;
+        private EmployeeModel _responsiblePerson;
 
         public ManipulatePostItViewModel()
         {
@@ -23,7 +23,7 @@ namespace KanbanBoard.ViewModel
 
             _addCommand = new RelayCommand(Save);
 
-            _responsiblePerson = new PersonModel("Morten", "Toudahl");
+            _responsiblePerson = new EmployeeModel("Morten", "Toudahl", EnumEmployeeTitles.Developer);
             _deadline = DateTime.Today.ToString("HH:mm - dd MMMM, yyyy");
 
         }

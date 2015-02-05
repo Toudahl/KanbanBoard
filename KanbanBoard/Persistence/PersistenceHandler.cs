@@ -5,6 +5,7 @@ using Newtonsoft.Json;
 
 namespace KanbanBoard.Persistence
 {
+
     /// <summary>
     /// Handles the different types of persistence
     /// </summary>
@@ -23,6 +24,8 @@ namespace KanbanBoard.Persistence
         {
             _persistence.Save(informationToSave, fileName);
         }
+
+        //TODO: Make a check on the file beeing loaded to detect what type of persistence was used, and automatically select the correct class to deserialize.
 
         /// <summary>
         /// Uses the persistence type set by <see cref="SetPersistenceType()"/> to load the post its.
@@ -58,6 +61,8 @@ namespace KanbanBoard.Persistence
         {
             return _selectedPersistenceOptions;
         }
+
+        //TODO: Add other types of persistence.
 
         #region JsonPersistence
         /// <summary>

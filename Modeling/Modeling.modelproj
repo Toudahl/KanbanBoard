@@ -29,6 +29,13 @@
       <SubType>Content</SubType>
       <DependentUpon>Domain Model.classdiagram</DependentUpon>
     </Content>
+    <Content Include="Interaction diagram - Start.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Interaction diagram - Start.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Interaction diagram - Start.sequencediagram</DependentUpon>
+    </Content>
     <Content Include="ModelDefinition\Package10_1225.uml">
       <SubType>Content</SubType>
     </Content>
@@ -79,6 +86,13 @@
     </Content>
     <Content Include="ModelDefinition\Package_1225.uml">
       <SubType>Content</SubType>
+    </Content>
+    <Content Include="Use Case diagram.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Use Case diagram.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Use Case diagram.usecasediagram</DependentUpon>
     </Content>
     <Folder Include="ModelDefinition\" />
     <Content Include="Class Diagram.classdiagram">

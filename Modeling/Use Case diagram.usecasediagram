@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="66a9cfe2-f81f-4c13-8d5a-1ecb26bdd807" name="Use Case diagram" linkedPackageId="81f5e441-0d04-4bf3-ba31-9a55ffb606f5" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <profileInstances>
+    <packageHasProfileInstances Id="3c8cada4-2997-412f-b50e-69dcab8b60ff">
+      <profileInstance Id="5e2f4c25-566b-451d-921b-6ddf40cf304b" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="e436e630-d80c-41c1-b944-138d4e48a932">
+      <profileInstance Id="e9e70df8-3c86-44b9-8702-61e20fa71fd2" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="d409ea3c-d96e-44bf-9e82-a2fff429ef42">
+      <profileInstance Id="0fab56f3-0f58-40d0-b62d-793773867f35" name="CSharpProfile">
+        <elementDefinition Id="015c4f69-1dc9-43dd-ae5b-81e7e13623f7" />
+      </profileInstance>
+      <elementDefinition Id="dea4eec4-81fa-4fd7-b9fe-139c56a46460" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <package Id="81f5e441-0d04-4bf3-ba31-9a55ffb606f5" name="Modeling">
+    <elementDefinition Id="66726029-97b7-475b-848c-6d9676ce6e1a" />
+  </package>
+</useCaseModelRoot>

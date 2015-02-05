@@ -1,5 +1,6 @@
 ﻿using System.Collections.ObjectModel;
 using KanbanBoard.Model;
+using KanbanBoard.Persistence;
 
 namespace KanbanBoard.ViewModel
 {
@@ -12,7 +13,6 @@ namespace KanbanBoard.ViewModel
         {
             this.CategoryName = categoryName;
             PostItsInCategory = new ObservableCollection<PostItModel>();
-            
         }
 
         public ObservableCollection<PostItModel> PostItsInCategory

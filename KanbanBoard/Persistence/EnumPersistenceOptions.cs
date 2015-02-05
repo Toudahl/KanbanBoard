@@ -2,6 +2,6 @@
 {
     enum EnumPersistenceOptions
     {
-        JSON,
+        JsonPersistence,
     }
 }

@@ -1,5 +1,7 @@
 ﻿using System.Collections.Generic;
+using System.IO;
 using KanbanBoard.ViewModel;
+using Newtonsoft.Json;
 
 namespace KanbanBoard.Persistence
 {
@@ -8,53 +10,86 @@ namespace KanbanBoard.Persistence
     /// </summary>
     static class PersistenceHandler
     {
+        static private IPersistence _persistence = new JsonPersistence();
+        private static EnumPersistenceOptions _selectedPersistenceOptions = EnumPersistenceOptions.JsonPersistence;
+
         /// <summary>
-        /// Uses the JsonPersistence class to save the post its.
+        /// Uses the persistence type set by <see cref="SetPersistenceType()"/> to save the post its.
+        /// Default is <see cref="JsonPersistence"/>
         /// </summary>
         /// <param name="informationToSave">The post its that will be saved</param>
         /// <param name="fileName">The path to the file that will be saved to</param>
         static public void Save(List<List<CategoryViewModel>> informationToSave, string fileName)
         {
-            JsonPersistence.Save(informationToSave, fileName);
+            _persistence.Save(informationToSave, fileName);
         }
 
         /// <summary>
-        /// Uses the JsonPersistence class to save the post its.
-        /// </summary>
-        /// <param name="informationToSave">The post its that will be saved</param>
-        /// <param name="fileName">The path to the file that will be saved to</param>
-        /// <param name="persistenceOptions">Specify what type of persistence that will be used.</param>
-        static public void Save(List<List<CategoryViewModel>> informationToSave, string fileName, EnumPersistenceOptions persistenceOptions)
-        {
-            if (persistenceOptions == EnumPersistenceOptions.JSON)
-            {
-                JsonPersistence.Save(informationToSave, fileName);
-            }
-        }
-
-        /// <summary>
-        /// Uses the JsonPersistence class to load the post its.
+        /// Uses the persistence type set by <see cref="SetPersistenceType()"/> to load the post its.
+        /// Default is <see cref="JsonPersistence"/>
         /// </summary>
         /// <param name="fileName">The path to the file that will be saved to</param>
         /// <returns></returns>
         static public List<List<CategoryViewModel>> Load(string fileName)
         {
-            return JsonPersistence.Load(fileName);
+            return _persistence.Load(fileName);
         }
 
         /// <summary>
-        /// Uses the JsonPersistence class to load the post its.
+        /// Set the type of persistence used.
         /// </summary>
-        /// <param name="fileName">The path to the file that will be saved to</param>
-        /// <param name="persistenceOptions">Specify what type of persistence that will be used.</param>
-        /// <returns></returns>
-        static public List<List<CategoryViewModel>> Load(string fileName, EnumPersistenceOptions persistenceOptions)
+        /// <param name="persistenceType">Input the type of persistence you want to use.</param>
+        public static void SetPersistenceType(EnumPersistenceOptions persistenceType)
         {
-            if (persistenceOptions == EnumPersistenceOptions.JSON)
+            switch (persistenceType)
             {
-               return JsonPersistence.Load(fileName);
+                case EnumPersistenceOptions.JsonPersistence:
+                    _selectedPersistenceOptions = EnumPersistenceOptions.JsonPersistence;
+                    _persistence = new JsonPersistence();
+                    break;
             }
-            return null;
         }
+
+        /// <summary>
+        /// Returns currently selected persistence type
+        /// </summary>
+        /// <returns><see cref="EnumPersistenceOptions"/></returns>
+        public static EnumPersistenceOptions GetPersistenceOptions()
+        {
+            return _selectedPersistenceOptions;
+        }
+
+        #region JsonPersistence
+        /// <summary>
+        /// This class will use the newtonsoft json package to serialize and deserialize
+        /// </summary>
+        private class JsonPersistence : IPersistence
+        {
+            /// <summary>
+            /// Saves the post its in the categories.
+            /// </summary>
+            /// <param name="informationToSave">The post its that will be saved</param>
+            /// <param name="fileName">The path to the file that will be saved to</param>
+            public void Save(List<List<CategoryViewModel>> informationToSave, string fileName)
+            {
+                string jsonViewModel = JsonConvert.SerializeObject(informationToSave);
+
+                File.WriteAllText(fileName, jsonViewModel);
+            }
+
+            /// <summary>
+            /// Loads the post its from a file
+            /// </summary>
+            /// <param name="fileName">The file to load from</param>
+            /// <returns>The post its that was loaded</returns>
+
+            public List<List<CategoryViewModel>> Load(string fileName)
+            {
+                string readAllText = File.ReadAllText(fileName);
+                return JsonConvert.DeserializeObject<List<List<CategoryViewModel>>>(readAllText);
+            }
+        }
+        #endregion
+
     }
 }

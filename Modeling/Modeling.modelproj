@@ -29,6 +29,13 @@
       <SubType>Content</SubType>
       <DependentUpon>Domain Model.classdiagram</DependentUpon>
     </Content>
+    <Content Include="Interaction diagram - Load and Save.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Interaction diagram - Load and Save.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Interaction diagram - Load and Save.sequencediagram</DependentUpon>
+    </Content>
     <Content Include="Interaction diagram - Start.sequencediagram">
       <SubType>Content</SubType>
     </Content>

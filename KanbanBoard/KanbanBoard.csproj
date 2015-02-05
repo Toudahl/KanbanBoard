@@ -73,7 +73,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Model\EnumCategories.cs" />
-    <Compile Include="Model\Person.cs" />
+    <Compile Include="Model\PersonModel.cs" />
     <Compile Include="Model\PostItModel.cs" />
     <Compile Include="Persistence\EnumPersistenceOptions.cs" />
     <Compile Include="Persistence\IPersistence.cs" />

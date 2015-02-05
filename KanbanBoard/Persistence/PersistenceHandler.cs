@@ -29,7 +29,7 @@ namespace KanbanBoard.Persistence
         /// Default is <see cref="JsonPersistence"/>
         /// </summary>
         /// <param name="fileName">The path to the file that will be saved to</param>
-        /// <returns></returns>
+        /// <returns>The entire board as a list of a list of CategoryViewModel</returns>
         static public List<List<CategoryViewModel>> Load(string fileName)
         {
             return _persistence.Load(fileName);

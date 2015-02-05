@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['todocategory',['ToDoCategory',['../class_kanban_board_1_1_view_model_1_1_main_view_model.html#a4896420588efd2aad29351a8d8d53657',1,'KanbanBoard::ViewModel::MainViewModel']]]
+  ['raisecanexecutechanged',['RaiseCanExecuteChanged',['../class_helper_classes_1_1_relay_command.html#a14af980403ef90c4ee57f1395988fa8e',1,'HelperClasses::RelayCommand']]],
+  ['relaycommand',['RelayCommand',['../class_helper_classes_1_1_relay_command.html#adaa15c8188e458580150467e65570ae3',1,'HelperClasses.RelayCommand.RelayCommand(Action execute)'],['../class_helper_classes_1_1_relay_command.html#af502adcf702c1b82d7d152367ffd1841',1,'HelperClasses.RelayCommand.RelayCommand(Action execute, Func&lt; bool &gt; canExecute)']]],
+  ['relaycommand',['RelayCommand',['../class_helper_classes_1_1_relay_command.html',1,'HelperClasses']]]
 ];

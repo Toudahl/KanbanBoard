@@ -1,0 +1,104 @@
+\hypertarget{class_kanban_board_1_1_persistence_1_1_persistence_handler}{}\section{Kanban\+Board.\+Persistence.\+Persistence\+Handler Class Reference}
+\label{class_kanban_board_1_1_persistence_1_1_persistence_handler}\index{Kanban\+Board.\+Persistence.\+Persistence\+Handler@{Kanban\+Board.\+Persistence.\+Persistence\+Handler}}
+
+
+Handles the different types of persistence  
+
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_kanban_board_1_1_persistence_1_1_persistence_handler_1_1_json_persistence}{Json\+Persistence}
+\begin{DoxyCompactList}\small\item\em This class will use the newtonsoft json package to serialize and deserialize \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{class_kanban_board_1_1_persistence_1_1_persistence_handler_a868a7554ddbb067280b79d3f91abcb0c}{Save} (List$<$ List$<$ \hyperlink{class_kanban_board_1_1_view_model_1_1_category_view_model}{Category\+View\+Model} $>$$>$ information\+To\+Save, string file\+Name)
+\begin{DoxyCompactList}\small\item\em Uses the persistence type set by \hyperlink{class_kanban_board_1_1_persistence_1_1_persistence_handler_a3fd5c28d09ade9618010f89167b72a86}{Set\+Persistence\+Type()} to save the post its. Default is \hyperlink{class_kanban_board_1_1_persistence_1_1_persistence_handler_1_1_json_persistence}{Json\+Persistence} \end{DoxyCompactList}\item 
+static List$<$ List$<$ \hyperlink{class_kanban_board_1_1_view_model_1_1_category_view_model}{Category\+View\+Model} $>$ $>$ \hyperlink{class_kanban_board_1_1_persistence_1_1_persistence_handler_a71a5355e5b5a3f2f910527dca8b60a03}{Load} (string file\+Name)
+\begin{DoxyCompactList}\small\item\em Uses the persistence type set by \hyperlink{class_kanban_board_1_1_persistence_1_1_persistence_handler_a3fd5c28d09ade9618010f89167b72a86}{Set\+Persistence\+Type()} to load the post its. Default is \hyperlink{class_kanban_board_1_1_persistence_1_1_persistence_handler_1_1_json_persistence}{Json\+Persistence} \end{DoxyCompactList}\item 
+static void \hyperlink{class_kanban_board_1_1_persistence_1_1_persistence_handler_a3fd5c28d09ade9618010f89167b72a86}{Set\+Persistence\+Type} (Enum\+Persistence\+Options persistence\+Type)
+\begin{DoxyCompactList}\small\item\em Set the type of persistence used. \end{DoxyCompactList}\item 
+static Enum\+Persistence\+Options \hyperlink{class_kanban_board_1_1_persistence_1_1_persistence_handler_a5ac8e076f0238a233f6a0cee5190b01a}{Get\+Persistence\+Options} ()
+\begin{DoxyCompactList}\small\item\em Returns currently selected persistence type \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Handles the different types of persistence 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_kanban_board_1_1_persistence_1_1_persistence_handler_a5ac8e076f0238a233f6a0cee5190b01a}{}\index{Kanban\+Board\+::\+Persistence\+::\+Persistence\+Handler@{Kanban\+Board\+::\+Persistence\+::\+Persistence\+Handler}!Get\+Persistence\+Options@{Get\+Persistence\+Options}}
+\index{Get\+Persistence\+Options@{Get\+Persistence\+Options}!Kanban\+Board\+::\+Persistence\+::\+Persistence\+Handler@{Kanban\+Board\+::\+Persistence\+::\+Persistence\+Handler}}
+\subsubsection[{Get\+Persistence\+Options}]{\setlength{\rightskip}{0pt plus 5cm}static Enum\+Persistence\+Options Kanban\+Board.\+Persistence.\+Persistence\+Handler.\+Get\+Persistence\+Options (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_kanban_board_1_1_persistence_1_1_persistence_handler_a5ac8e076f0238a233f6a0cee5190b01a}
+
+
+Returns currently selected persistence type 
+
+\begin{DoxyReturn}{Returns}
+Enum\+Persistence\+Options
+\end{DoxyReturn}
+\hypertarget{class_kanban_board_1_1_persistence_1_1_persistence_handler_a71a5355e5b5a3f2f910527dca8b60a03}{}\index{Kanban\+Board\+::\+Persistence\+::\+Persistence\+Handler@{Kanban\+Board\+::\+Persistence\+::\+Persistence\+Handler}!Load@{Load}}
+\index{Load@{Load}!Kanban\+Board\+::\+Persistence\+::\+Persistence\+Handler@{Kanban\+Board\+::\+Persistence\+::\+Persistence\+Handler}}
+\subsubsection[{Load}]{\setlength{\rightskip}{0pt plus 5cm}static List$<$List$<${\bf Category\+View\+Model}$>$ $>$ Kanban\+Board.\+Persistence.\+Persistence\+Handler.\+Load (
+\begin{DoxyParamCaption}
+\item[{string}]{file\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_kanban_board_1_1_persistence_1_1_persistence_handler_a71a5355e5b5a3f2f910527dca8b60a03}
+
+
+Uses the persistence type set by \hyperlink{class_kanban_board_1_1_persistence_1_1_persistence_handler_a3fd5c28d09ade9618010f89167b72a86}{Set\+Persistence\+Type()} to load the post its. Default is \hyperlink{class_kanban_board_1_1_persistence_1_1_persistence_handler_1_1_json_persistence}{Json\+Persistence} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Name} & The path to the file that will be saved to\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The entire board as a list of a list of Category\+View\+Model
+\end{DoxyReturn}
+\hypertarget{class_kanban_board_1_1_persistence_1_1_persistence_handler_a868a7554ddbb067280b79d3f91abcb0c}{}\index{Kanban\+Board\+::\+Persistence\+::\+Persistence\+Handler@{Kanban\+Board\+::\+Persistence\+::\+Persistence\+Handler}!Save@{Save}}
+\index{Save@{Save}!Kanban\+Board\+::\+Persistence\+::\+Persistence\+Handler@{Kanban\+Board\+::\+Persistence\+::\+Persistence\+Handler}}
+\subsubsection[{Save}]{\setlength{\rightskip}{0pt plus 5cm}static void Kanban\+Board.\+Persistence.\+Persistence\+Handler.\+Save (
+\begin{DoxyParamCaption}
+\item[{List$<$ List$<$ {\bf Category\+View\+Model} $>$$>$}]{information\+To\+Save, }
+\item[{string}]{file\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_kanban_board_1_1_persistence_1_1_persistence_handler_a868a7554ddbb067280b79d3f91abcb0c}
+
+
+Uses the persistence type set by \hyperlink{class_kanban_board_1_1_persistence_1_1_persistence_handler_a3fd5c28d09ade9618010f89167b72a86}{Set\+Persistence\+Type()} to save the post its. Default is \hyperlink{class_kanban_board_1_1_persistence_1_1_persistence_handler_1_1_json_persistence}{Json\+Persistence} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em information\+To\+Save} & The post its that will be saved\\
+\hline
+{\em file\+Name} & The path to the file that will be saved to\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_kanban_board_1_1_persistence_1_1_persistence_handler_a3fd5c28d09ade9618010f89167b72a86}{}\index{Kanban\+Board\+::\+Persistence\+::\+Persistence\+Handler@{Kanban\+Board\+::\+Persistence\+::\+Persistence\+Handler}!Set\+Persistence\+Type@{Set\+Persistence\+Type}}
+\index{Set\+Persistence\+Type@{Set\+Persistence\+Type}!Kanban\+Board\+::\+Persistence\+::\+Persistence\+Handler@{Kanban\+Board\+::\+Persistence\+::\+Persistence\+Handler}}
+\subsubsection[{Set\+Persistence\+Type}]{\setlength{\rightskip}{0pt plus 5cm}static void Kanban\+Board.\+Persistence.\+Persistence\+Handler.\+Set\+Persistence\+Type (
+\begin{DoxyParamCaption}
+\item[{Enum\+Persistence\+Options}]{persistence\+Type}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_kanban_board_1_1_persistence_1_1_persistence_handler_a3fd5c28d09ade9618010f89167b72a86}
+
+
+Set the type of persistence used. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em persistence\+Type} & Input the type of persistence you want to use.\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+d\+:/\+Dokumenter/\+Visual Studio 2013/\+Projects/2. Semester/\+Kanban\+Board/\+Kanban\+Board/\+Persistence/Persistence\+Handler.\+cs\end{DoxyCompactItemize}

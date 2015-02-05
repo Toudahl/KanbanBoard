@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['mainviewmodel',['MainViewModel',['../class_kanban_board_1_1_view_model_1_1_main_view_model.html',1,'KanbanBoard::ViewModel']]],
-  ['manipulatepostitviewmodel',['ManipulatePostItViewModel',['../class_kanban_board_1_1_view_model_1_1_manipulate_post_it_view_model.html',1,'KanbanBoard::ViewModel']]]
+  ['jsonpersistence',['JsonPersistence',['../class_kanban_board_1_1_persistence_1_1_persistence_handler_1_1_json_persistence.html',1,'KanbanBoard::Persistence::PersistenceHandler']]]
 ];

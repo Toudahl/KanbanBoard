@@ -4,33 +4,33 @@
         xmlns:ViewModel="clr-namespace:KanbanBoard.ViewModel"
         xmlns:dd="clr-namespace:GongSolutions.Wpf.DragDrop;assembly=GongSolutions.Wpf.DragDrop"
         x:Class="KanbanBoard.MainWindow"
-        Title="Kanban Board">
+        Title="Kanban Board"
+        Width="955">
     <Window.DataContext>
         <ViewModel:MainViewModel x:Name="viewModel_MainView"/>
     </Window.DataContext>
-    
+
     <Grid x:Name="grid_mainBoard">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition />
-            <ColumnDefinition />
-            <ColumnDefinition />
-        </Grid.ColumnDefinitions>
 
-        <Menu 
-            Grid.Column="0"
-            Grid.Row="0"
-            Grid.ColumnSpan="3">
+        <Menu Grid.Row="0">
             <MenuItem Header="Menu">
                 <MenuItem Header="New" Command="{Binding NewCommand}"/>
                 <MenuItem Header="Add...">
                     <MenuItem x:Name="menu_ToDo" Header="To do" Click="Menu_ToDo_OnClick"/>
                     <MenuItem x:Name="menu_WorkInProgress" Header="Work in progress" Click="Menu_WorkInProgress_OnClick"/>
                     <MenuItem x:Name="menu_CompletedWork" Header="Completed work" Click="Menu_CompletedWork_OnClick"/>
+                </MenuItem>
+                <MenuItem Header="Add test..." ItemsSource="{Binding Categories}">
+                    <MenuItem.ItemTemplate>
+                        <DataTemplate>
+                            <MenuItem Header="{Binding Key}" CommandParameter="{Binding Key}"/>
+                        </DataTemplate>
+                    </MenuItem.ItemTemplate>
                 </MenuItem>
                 <MenuItem Header="Edit selection"/>
                 <MenuItem Header="Load..." Command="{Binding LoadFromDialogCommand}"/>
@@ -42,9 +42,28 @@
             </MenuItem>
         </Menu>
         <ListBox
-            Grid.Column="0"
             Grid.Row="1"
-            Grid.ColumnSpan="3"
+            ItemsSource="{Binding Categories, Mode=TwoWay}" 
+            dd:DragDrop.IsDragSource="True"
+            dd:DragDrop.IsDropTarget="True"
+            dd:DragDrop.DropHandler="{Binding}">
+            <ListBox.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                </ItemsPanelTemplate>
+            </ListBox.ItemsPanel>
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Label Width="300" Content="{Binding Value.CategoryName}"/>
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+        <ListBox
+            Grid.Column="0"
+            Grid.Row="2"
             ItemsSource="{Binding Categories, Mode=TwoWay}" 
             dd:DragDrop.IsDragSource="True"
             dd:DragDrop.IsDropTarget="True"
@@ -56,108 +75,34 @@
             </ListBox.ItemsPanel>
             <ListBox.ItemTemplate>
                 <DataTemplate>
-                    <Grid>
-                        <Label Content="{Binding Value.CategoryName}"/>
+                    <Grid Width="300">
+                        <ListView
+                            ItemsSource="{Binding Value.PostItsInCategory}">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid>
+                                        <Rectangle Fill="{Binding SolidColorBrush, Mode=TwoWay}"/>
+                                        <StackPanel Orientation="Horizontal">
+                                            <StackPanel>
+                                                <Label Content="Task Name: "/>
+                                                <Label Content="Deadline: "/>
+                                                <Label Content="Person responsible: "/>
+                                                <Label Content="Details: "/>
+                                            </StackPanel>
+                                            <StackPanel>
+                                                <Label Content="{Binding TaskName, Mode=TwoWay}"/>
+                                                <Label Content="{Binding Deadline, Mode=TwoWay}"/>
+                                                <Label Content="{Binding ResponsiblePerson, Mode=TwoWay}"/>
+                                                <Label Content="{Binding TaskDetails, Mode=TwoWay}"/>
+                                            </StackPanel>
+                                        </StackPanel>
+                                    </Grid>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
                     </Grid>
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
-
-        <ListView
-            VerticalAlignment="Top"
-            Grid.Column="0"
-            Grid.Row="2"
-            ItemsSource="{Binding Categories[ToDo].PostItsInCategory, Mode=TwoWay}"
-            dd:DragDrop.IsDragSource="True"
-            dd:DragDrop.IsDropTarget="True"
-            dd:DragDrop.DropHandler="{Binding}" 
-            ScrollViewer.HorizontalScrollBarVisibility="Disabled">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <Grid>
-                        <Rectangle Fill="{Binding SolidColorBrush, Mode=TwoWay}"/>
-                        <StackPanel Orientation="Horizontal">
-                            <StackPanel>
-                                <Label Content="Task Name: "/>
-                                <Label Content="Deadline: "/>
-                                <Label Content="Person responsible: "/>
-                                <Label Content="Details: "/>
-                            </StackPanel>
-                            <StackPanel>
-                                <Label Content="{Binding TaskName, Mode=TwoWay}"/>
-                                <Label Content="{Binding Deadline, Mode=TwoWay}"/>
-                                <Label Content="{Binding ResponsiblePerson, Mode=TwoWay}"/>
-                                <Label Content="{Binding TaskDetails, Mode=TwoWay}"/>
-                            </StackPanel>
-                        </StackPanel>
-                    </Grid>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
-
-
-        <ListView 
-            VerticalAlignment="Top" 
-            Grid.Column="1"
-            Grid.Row="2"
-            ItemsSource="{Binding Categories[WorkInProgress].PostItsInCategory, Mode=TwoWay}" 
-            dd:DragDrop.IsDragSource="True"
-            dd:DragDrop.IsDropTarget="True"
-            dd:DragDrop.DropHandler="{Binding}"
-            ScrollViewer.HorizontalScrollBarVisibility="Disabled" >
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <Grid>
-                        <Rectangle Fill="{Binding SolidColorBrush, Mode=TwoWay}"/>
-                        <StackPanel Orientation="Horizontal">
-                            <StackPanel>
-                                <Label Content="Task Name: "/>
-                                <Label Content="Deadline: "/>
-                                <Label Content="Person responsible: "/>
-                                <Label Content="Details: "/>
-                            </StackPanel>
-                            <StackPanel>
-                                <Label Content="{Binding TaskName, Mode=TwoWay}"/>
-                                <Label Content="{Binding Deadline, Mode=TwoWay}"/>
-                                <Label Content="{Binding ResponsiblePerson, Mode=TwoWay}"/>
-                                <Label Content="{Binding TaskDetails, Mode=TwoWay}"/>
-                            </StackPanel>
-                        </StackPanel>
-                    </Grid>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
-
-        <ListView 
-            VerticalAlignment="Top"
-            Grid.Column="2"
-            Grid.Row="2"
-            ItemsSource="{Binding Categories[CompletedWork].PostItsInCategory, Mode=TwoWay}"
-            dd:DragDrop.IsDragSource="True"
-            dd:DragDrop.IsDropTarget="True"
-            dd:DragDrop.DropHandler="{Binding}"
-            ScrollViewer.HorizontalScrollBarVisibility="Disabled" >
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <Grid>
-                        <Rectangle Fill="{Binding SolidColorBrush, Mode=TwoWay}"/>
-                        <StackPanel Orientation="Horizontal">
-                            <StackPanel>
-                                <Label Content="Task Name: "/>
-                                <Label Content="Deadline: "/>
-                                <Label Content="Person responsible: "/>
-                                <Label Content="Details: "/>
-                            </StackPanel>
-                            <StackPanel>
-                                <Label Content="{Binding TaskName, Mode=TwoWay}"/>
-                                <Label Content="{Binding Deadline, Mode=TwoWay}"/>
-                                <Label Content="{Binding ResponsiblePerson, Mode=TwoWay}"/>
-                                <Label Content="{Binding TaskDetails, Mode=TwoWay}"/>
-                            </StackPanel>
-                        </StackPanel>
-                    </Grid>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
     </Grid>
 </Window>

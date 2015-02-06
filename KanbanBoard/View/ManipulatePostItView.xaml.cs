@@ -26,10 +26,10 @@ namespace KanbanBoard.View
         {
             List<string> categories = new List<string>();
 
-
-            categories.Add(EnumCategories.ToDo.ToString());
-            categories.Add(EnumCategories.WorkInProgress.ToString());
-            categories.Add(EnumCategories.CompletedWork.ToString());
+            foreach (KeyValuePair<EnumCategories, CategoryViewModel> keyValuePair in ViewModel_Manipulate.MainViewModel.Categories)
+            {
+                categories.Add(keyValuePair.Key.ToString());
+            }
 
             ComboBox_SelectedCategory.ItemsSource = categories;
             ComboBox_SelectedCategory.SelectedIndex = (int)_selectedCategory;

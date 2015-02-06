@@ -19,12 +19,7 @@ namespace KanbanBoard.ViewModel
     
     public class MainViewModel: IDropTarget, INotifyPropertyChanged
     {
-        // Contains the categories.
-        //private List<CategoryViewModel> _toDoCategoryContainer;
-        //private List<CategoryViewModel> _workInProgressCategoryContainer;
-        //private List<CategoryViewModel> _completedWorkCategoryContainer;
-
-        // Contains the actual postits in the Specific category
+        // The categories
         private Dictionary<EnumCategories, CategoryViewModel> _categories;
 
         // Commands for various actions
@@ -38,46 +33,51 @@ namespace KanbanBoard.ViewModel
         private OpenFileDialog _openFileDialog;
         private string _boardFileNameAndPath;
         private readonly string _compatibleFiles = PersistenceHandler.CompatibleFiles;
-        private List<List<CategoryViewModel>> _boardContainer;
 
         public MainViewModel()
         {
             // Instantiate the categories in the board.
-            _categories = new Dictionary<EnumCategories, CategoryViewModel>();
-            _categories[EnumCategories.ToDo] = new CategoryViewModel(EnumCategories.ToDo);
-            _categories[EnumCategories.WorkInProgress] = new CategoryViewModel(EnumCategories.WorkInProgress);
-            _categories[EnumCategories.CompletedWork] = new CategoryViewModel(EnumCategories.CompletedWork);
+            Categories = new Dictionary<EnumCategories, CategoryViewModel>();
+            Categories[EnumCategories.ToDo] = new CategoryViewModel(EnumCategories.ToDo);
+            Categories[EnumCategories.WorkInProgress] = new CategoryViewModel(EnumCategories.WorkInProgress);
+            Categories[EnumCategories.CompletedWork] = new CategoryViewModel(EnumCategories.CompletedWork);
 
-            // Put the containers in the board container, used for persistence purposes.
-            //_boardContainer = new List<List<CategoryViewModel>>();
-            //_boardContainer.Add(_toDoCategoryContainer);
-            //_boardContainer.Add(_workInProgressCategoryContainer);
-            //_boardContainer.Add(_completedWorkCategoryContainer);
 
-            // Reset board, and create "new" board.
-            _newCommand = new RelayCommand(NewBoard);
-
-            // Prepare the Save feature
-            _saveCommand = new RelayCommand(SaveBoard);
-            
-            // Prepare command for Save As feature
+            #region Instantiate the commands
             _saveAsDialogCommand = new RelayCommand(SaveAsDialog);
+            _saveCommand = new RelayCommand(SaveBoard);
+            _newCommand = new RelayCommand(NewBoard);
+            _loadFromDialogCommand = new RelayCommand(LoadFromDialog);
+            #endregion
+
+            #region Prepare the dialogs
+            // Prepare command for Save As feature
             _saveAsFileDialog = new SaveFileDialog();
             _saveAsFileDialog.AddExtension = true;
             _saveAsFileDialog.CheckPathExists = true;
             _saveAsFileDialog.Filter = _compatibleFiles;
 
             // Prepare command for Load feature
-            _loadFromDialogCommand = new RelayCommand(LoadFromDialog);
             _openFileDialog = new OpenFileDialog();
             _openFileDialog.AddExtension = true;
             _openFileDialog.CheckPathExists = true;
             _openFileDialog.Filter = _compatibleFiles;
-
-            _boardFileNameAndPath = null;
-
+            #endregion
         }
 
+        #region Properties
+        public Dictionary<EnumCategories, CategoryViewModel> Categories
+        {
+            get { return _categories; }
+            set
+            {
+                _categories = value;
+                OnPropertyChanged();
+            }
+        }
+        #endregion
+
+        #region Methods
         /// <summary>
         /// Clears the boards, and the file name and path to the save file.
         /// </summary>
@@ -136,46 +136,9 @@ namespace KanbanBoard.ViewModel
                 //ListOfCompletedWork = _boardContainer[2][0].PostItsInCategory;
             }
         }
+#endregion
 
-        ///// <summary>
-        ///// Provides access to the List Of To do
-        ///// </summary>
-        //public ObservableCollection<PostItModel> ListOfToDo
-        //{
-        //    get { return _categories[EnumCategories.ToDo].PostItsInCategory; }
-        //    set
-        //    {
-        //        _categories[EnumCategories.ToDo].PostItsInCategory = value;
-        //        OnPropertyChanged();
-        //    }
-        //}
-
-        ///// <summary>
-        ///// Provides access to the Lisf Of Work In Progress.
-        ///// </summary>
-        //public ObservableCollection<PostItModel> ListOfWorkInProgress
-        //{
-        //    get { return _categories[EnumCategories.WorkInProgress].PostItsInCategory; }
-        //    set
-        //    {
-        //        _categories[EnumCategories.WorkInProgress].PostItsInCategory = value;
-        //        OnPropertyChanged();
-        //    }
-        //}
-
-        ///// <summary>
-        ///// Provides access to the list of Completed Work.
-        ///// </summary>
-        //public ObservableCollection<PostItModel> ListOfCompletedWork
-        //{
-        //    get { return _categories[EnumCategories.CompletedWork].PostItsInCategory; }
-        //    set
-        //    {
-        //        _categories[EnumCategories.CompletedWork].PostItsInCategory = value;
-        //        OnPropertyChanged();
-        //    }
-        //}
-
+        #region Commands
         /// <summary>
         /// The command used to initiate the board reset.
         /// </summary>
@@ -211,17 +174,9 @@ namespace KanbanBoard.ViewModel
             get { return _saveCommand; }
             set { _saveCommand = value; }
         }
+#endregion
 
-        public Dictionary<EnumCategories, CategoryViewModel> Categories
-        {
-            get { return _categories; }
-            set
-            {
-                _categories = value; 
-                OnPropertyChanged();
-            }
-        }
-        
+        #region Gong drag and drop
         /// <summary>
         ///  Updates the current drag state.
         ///  Remarks:
@@ -246,11 +201,9 @@ namespace KanbanBoard.ViewModel
         public void Drop(IDropInfo dropInfo)
         {
             KeyValuePair<EnumCategories, CategoryViewModel> keyValuePair = (KeyValuePair<EnumCategories, CategoryViewModel>)dropInfo.TargetItem;
-            //CategoryViewModel postItcCollection = (CategoryViewModel)dropInfo.TargetItem;
             PostItModel postIt = (PostItModel)dropInfo.Data;
             keyValuePair.Value.PostItsInCategory.Add(postIt);
 
-            //postItcCollection.PostItsInCategory.Add(postIt);
 
             if (keyValuePair.Value.CategoryName == EnumCategories.ToDo)
             {
@@ -268,7 +221,9 @@ namespace KanbanBoard.ViewModel
             }
             ((IList)dropInfo.DragInfo.SourceCollection).Remove(postIt);
         }
+        #endregion
 
+        #region PropertyChanged
         public event PropertyChangedEventHandler PropertyChanged;
 
         [NotifyPropertyChangedInvocator]
@@ -277,5 +232,6 @@ namespace KanbanBoard.ViewModel
             PropertyChangedEventHandler handler = PropertyChanged;
             if (handler != null) handler(this, new PropertyChangedEventArgs(propertyName));
         }
+        #endregion
     }
 }

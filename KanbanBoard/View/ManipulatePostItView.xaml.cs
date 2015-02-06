@@ -12,6 +12,8 @@ namespace KanbanBoard.View
     {
         private EnumCategories _selectedCategory;
 
+        // TODO: Create functionality to select an employee
+        
         public ManipulatePostItView(EnumCategories selectedCategory, MainViewModel viewModel_MainView)
         {
             _selectedCategory = selectedCategory;

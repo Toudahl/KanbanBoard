@@ -16,6 +16,7 @@ using Microsoft.Win32;
 
 namespace KanbanBoard.ViewModel
 {
+    
     public class MainViewModel: IDropTarget, INotifyPropertyChanged
     {
         // Contains the categories.

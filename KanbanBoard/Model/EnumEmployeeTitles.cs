@@ -6,6 +6,7 @@
         ProductManager,
         ScrumMaster,
         Developer,
+        SeniorDeveloper,
         SoftwareArchitect,
     }
 }

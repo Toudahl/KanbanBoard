@@ -72,6 +72,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Model\CategoryModel.cs" />
     <Compile Include="Model\EmployeeModel.cs" />
     <Compile Include="Model\EnumCategories.cs" />
     <Compile Include="Model\EnumEmployeeTitles.cs" />
@@ -84,6 +85,7 @@
     <Compile Include="Properties\Annotations.cs" />
     <Compile Include="RelayCommand\RelayCommand.cs" />
     <Compile Include="ViewModel\CategoryViewModel.cs" />
+    <Compile Include="ViewModel\EmployeeViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\ManipulatePostItViewModel.cs" />
     <Compile Include="View\ManipulatePostItView.xaml.cs">

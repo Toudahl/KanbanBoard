@@ -51,13 +51,13 @@ namespace KanbanBoard.ViewModel
             #endregion
 
             #region Prepare the dialogs
-            // Prepare command for Save As feature
+            // Prepare dialog for Save As feature
             _saveAsFileDialog = new SaveFileDialog();
             _saveAsFileDialog.AddExtension = true;
             _saveAsFileDialog.CheckPathExists = true;
             _saveAsFileDialog.Filter = _compatibleFiles;
 
-            // Prepare command for Load feature
+            // Prepare dialog for Load feature
             _openFileDialog = new OpenFileDialog();
             _openFileDialog.AddExtension = true;
             _openFileDialog.CheckPathExists = true;
@@ -66,6 +66,9 @@ namespace KanbanBoard.ViewModel
         }
 
         #region Properties
+        /// <summary>
+        /// Use this property to access the categories of the board
+        /// </summary>
         public Dictionary<EnumCategories, CategoryViewModel> Categories
         {
             get { return _categories; }
@@ -77,7 +80,7 @@ namespace KanbanBoard.ViewModel
         }
         #endregion
 
-        #region Methods
+        #region Methods for commands
         /// <summary>
         /// Clears the boards, and the file name and path to the save file.
         /// </summary>
@@ -136,7 +139,7 @@ namespace KanbanBoard.ViewModel
                 //ListOfCompletedWork = _boardContainer[2][0].PostItsInCategory;
             }
         }
-#endregion
+        #endregion
 
         #region Commands
         /// <summary>
@@ -174,7 +177,7 @@ namespace KanbanBoard.ViewModel
             get { return _saveCommand; }
             set { _saveCommand = value; }
         }
-#endregion
+        #endregion
 
         #region Gong drag and drop
         /// <summary>

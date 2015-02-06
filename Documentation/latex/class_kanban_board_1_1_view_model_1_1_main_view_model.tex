@@ -9,19 +9,15 @@ Inheritance diagram for Kanban\+Board.\+View\+Model.\+Main\+View\+Model\+:\begin
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \hyperlink{class_kanban_board_1_1_view_model_1_1_main_view_model_afeac47ff8c81ee187966b321dcd0adfd}{Drag\+Over} (I\+Drop\+Info drop\+Info)
+void \hyperlink{class_kanban_board_1_1_view_model_1_1_main_view_model_add23d90d0faec4c4d77bb3762d0215c7}{Drag\+Over} (I\+Drop\+Info drag\+Info)
 \begin{DoxyCompactList}\small\item\em Updates the current drag state. Remarks\+: To allow a drop at the current drag position, the Gong\+Solutions.\+Wpf.\+Drag\+Drop.\+Drop\+Info.\+Effects property on drop\+Info should be set to a value other than System.\+Windows.\+Drag\+Drop\+Effects.\+None and Gong\+Solutions.\+Wpf.\+Drag\+Drop.\+Drop\+Info.\+Data should be set to a non-\/null value. \end{DoxyCompactList}\item 
 void \hyperlink{class_kanban_board_1_1_view_model_1_1_main_view_model_a8a289987889845510435516f3699495c}{Drop} (I\+Drop\+Info drop\+Info)
 \begin{DoxyCompactList}\small\item\em Performs a drop. And changes the colour of the posit it, according to the target. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Properties}
 \begin{DoxyCompactItemize}
 \item 
-Observable\+Collection$<$ \hyperlink{class_kanban_board_1_1_model_1_1_post_it_model}{Post\+It\+Model} $>$ \hyperlink{class_kanban_board_1_1_view_model_1_1_main_view_model_a250c79012624be5145f7a08ce9fdd4d8}{List\+Of\+To\+Do}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\begin{DoxyCompactList}\small\item\em Provides access to the List Of To do \end{DoxyCompactList}\item 
-Observable\+Collection$<$ \hyperlink{class_kanban_board_1_1_model_1_1_post_it_model}{Post\+It\+Model} $>$ \hyperlink{class_kanban_board_1_1_view_model_1_1_main_view_model_ac28a6f8225d24e60ea7f1196cbf8d6a3}{List\+Of\+Work\+In\+Progress}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\begin{DoxyCompactList}\small\item\em Provides access to the Lisf Of Work In Progress. \end{DoxyCompactList}\item 
-Observable\+Collection$<$ \hyperlink{class_kanban_board_1_1_model_1_1_post_it_model}{Post\+It\+Model} $>$ \hyperlink{class_kanban_board_1_1_view_model_1_1_main_view_model_a6ecd7d9718b6e320441c5938dc1c01eb}{List\+Of\+Completed\+Work}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\begin{DoxyCompactList}\small\item\em Provides access to the list of Completed Work. \end{DoxyCompactList}\item 
+Dictionary$<$ Enum\+Categories, \hyperlink{class_kanban_board_1_1_view_model_1_1_category_view_model}{Category\+View\+Model} $>$ \hyperlink{class_kanban_board_1_1_view_model_1_1_main_view_model_a32bb0ead5d4aeb8664990a3ba13d5305}{Categories}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Use this property to access the categories of the board \end{DoxyCompactList}\item 
 I\+Command \hyperlink{class_kanban_board_1_1_view_model_1_1_main_view_model_ac8874b3c893afb269198991fb7780d3e}{New\+Command}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
 \begin{DoxyCompactList}\small\item\em The command used to initiate the board reset. \end{DoxyCompactList}\item 
 I\+Command \hyperlink{class_kanban_board_1_1_view_model_1_1_main_view_model_a67c109d76784dcd84a0b3601689518e9}{Save\+As\+Dialog\+Command}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
@@ -29,13 +25,7 @@ I\+Command \hyperlink{class_kanban_board_1_1_view_model_1_1_main_view_model_a67c
 I\+Command \hyperlink{class_kanban_board_1_1_view_model_1_1_main_view_model_ac78c41a4e5c852c2afdd853439def3b0}{Load\+From\+Dialog\+Command}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
 \begin{DoxyCompactList}\small\item\em The command used to initiate the Load from dialog \end{DoxyCompactList}\item 
 I\+Command \hyperlink{class_kanban_board_1_1_view_model_1_1_main_view_model_ae8b5f8979602622e17bc76d377c8b4c2}{Save\+Command}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\begin{DoxyCompactList}\small\item\em The command used to initaite saving \end{DoxyCompactList}\item 
-I\+Collection\+View \hyperlink{class_kanban_board_1_1_view_model_1_1_main_view_model_a4896420588efd2aad29351a8d8d53657}{To\+Do\+Category}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\begin{DoxyCompactList}\small\item\em Provides access to the category container -\/ used as drop target for the postits \end{DoxyCompactList}\item 
-I\+Collection\+View \hyperlink{class_kanban_board_1_1_view_model_1_1_main_view_model_abab8ec3a18854b226218782bcbee971b}{Work\+In\+Progress\+Category}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\begin{DoxyCompactList}\small\item\em Provides access to the category container -\/ used as drop target for the postits \end{DoxyCompactList}\item 
-I\+Collection\+View \hyperlink{class_kanban_board_1_1_view_model_1_1_main_view_model_aa3cb439ea891ec13ad4ab256efa0fc2a}{Completed\+Category}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\begin{DoxyCompactList}\small\item\em Provides access to the category container -\/ used as drop target for the postits \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The command used to initaite saving \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -43,27 +33,27 @@ void \hyperlink{class_kanban_board_1_1_view_model_1_1_main_view_model_a7762a9f23
 \begin{DoxyCompactList}\small\item\em Clears the boards, and the file name and path to the save file. \end{DoxyCompactList}\item 
 void \hyperlink{class_kanban_board_1_1_view_model_1_1_main_view_model_aa9116851f4b8e55c05045900745e4c39}{Save\+Board} ()
 \begin{DoxyCompactList}\small\item\em Saves the board to a file, using the allready set file name and path. If it has not been set, it will open the \hyperlink{class_kanban_board_1_1_view_model_1_1_main_view_model_abdee48fdc9e1e61ffe046dc1d13c59dd}{Save\+As\+Dialog()} \end{DoxyCompactList}\item 
-void \hyperlink{class_kanban_board_1_1_view_model_1_1_main_view_model_aeb9121b810fcc08bc9fbcc26c02092b5}{Load\+From\+Dialog} ()
-\begin{DoxyCompactList}\small\item\em Opens the Load dialog, and allows the user to pick the desired Kanban Board file \end{DoxyCompactList}\item 
 void \hyperlink{class_kanban_board_1_1_view_model_1_1_main_view_model_abdee48fdc9e1e61ffe046dc1d13c59dd}{Save\+As\+Dialog} ()
-\begin{DoxyCompactList}\small\item\em Opens the Save As dialog, and allow the user to pick the location and name for storing the Kanban Board file \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Opens the Save As dialog, and allow the user to pick the location and name for storing the Kanban Board file \end{DoxyCompactList}\item 
+void \hyperlink{class_kanban_board_1_1_view_model_1_1_main_view_model_aeb9121b810fcc08bc9fbcc26c02092b5}{Load\+From\+Dialog} ()
+\begin{DoxyCompactList}\small\item\em Opens the Load dialog, and allows the user to pick the desired Kanban Board file \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Member Function Documentation}
-\hypertarget{class_kanban_board_1_1_view_model_1_1_main_view_model_afeac47ff8c81ee187966b321dcd0adfd}{}\index{Kanban\+Board\+::\+View\+Model\+::\+Main\+View\+Model@{Kanban\+Board\+::\+View\+Model\+::\+Main\+View\+Model}!Drag\+Over@{Drag\+Over}}
+\hypertarget{class_kanban_board_1_1_view_model_1_1_main_view_model_add23d90d0faec4c4d77bb3762d0215c7}{}\index{Kanban\+Board\+::\+View\+Model\+::\+Main\+View\+Model@{Kanban\+Board\+::\+View\+Model\+::\+Main\+View\+Model}!Drag\+Over@{Drag\+Over}}
 \index{Drag\+Over@{Drag\+Over}!Kanban\+Board\+::\+View\+Model\+::\+Main\+View\+Model@{Kanban\+Board\+::\+View\+Model\+::\+Main\+View\+Model}}
 \subsubsection[{Drag\+Over}]{\setlength{\rightskip}{0pt plus 5cm}void Kanban\+Board.\+View\+Model.\+Main\+View\+Model.\+Drag\+Over (
 \begin{DoxyParamCaption}
-\item[{I\+Drop\+Info}]{drop\+Info}
+\item[{I\+Drop\+Info}]{drag\+Info}
 \end{DoxyParamCaption}
-)}\label{class_kanban_board_1_1_view_model_1_1_main_view_model_afeac47ff8c81ee187966b321dcd0adfd}
+)}\label{class_kanban_board_1_1_view_model_1_1_main_view_model_add23d90d0faec4c4d77bb3762d0215c7}
 
 
 Updates the current drag state. Remarks\+: To allow a drop at the current drag position, the Gong\+Solutions.\+Wpf.\+Drag\+Drop.\+Drop\+Info.\+Effects property on drop\+Info should be set to a value other than System.\+Windows.\+Drag\+Drop\+Effects.\+None and Gong\+Solutions.\+Wpf.\+Drag\+Drop.\+Drop\+Info.\+Data should be set to a non-\/null value. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em drop\+Info} & Information about the drag.\\
+{\em drag\+Info} & Information about the drag.\\
 \hline
 \end{DoxyParams}
 \hypertarget{class_kanban_board_1_1_view_model_1_1_main_view_model_a8a289987889845510435516f3699495c}{}\index{Kanban\+Board\+::\+View\+Model\+::\+Main\+View\+Model@{Kanban\+Board\+::\+View\+Model\+::\+Main\+View\+Model}!Drop@{Drop}}
@@ -129,33 +119,12 @@ Saves the board to a file, using the allready set file name and path. If it has 
 
 
 \subsection{Property Documentation}
-\hypertarget{class_kanban_board_1_1_view_model_1_1_main_view_model_aa3cb439ea891ec13ad4ab256efa0fc2a}{}\index{Kanban\+Board\+::\+View\+Model\+::\+Main\+View\+Model@{Kanban\+Board\+::\+View\+Model\+::\+Main\+View\+Model}!Completed\+Category@{Completed\+Category}}
-\index{Completed\+Category@{Completed\+Category}!Kanban\+Board\+::\+View\+Model\+::\+Main\+View\+Model@{Kanban\+Board\+::\+View\+Model\+::\+Main\+View\+Model}}
-\subsubsection[{Completed\+Category}]{\setlength{\rightskip}{0pt plus 5cm}I\+Collection\+View Kanban\+Board.\+View\+Model.\+Main\+View\+Model.\+Completed\+Category\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_kanban_board_1_1_view_model_1_1_main_view_model_aa3cb439ea891ec13ad4ab256efa0fc2a}
+\hypertarget{class_kanban_board_1_1_view_model_1_1_main_view_model_a32bb0ead5d4aeb8664990a3ba13d5305}{}\index{Kanban\+Board\+::\+View\+Model\+::\+Main\+View\+Model@{Kanban\+Board\+::\+View\+Model\+::\+Main\+View\+Model}!Categories@{Categories}}
+\index{Categories@{Categories}!Kanban\+Board\+::\+View\+Model\+::\+Main\+View\+Model@{Kanban\+Board\+::\+View\+Model\+::\+Main\+View\+Model}}
+\subsubsection[{Categories}]{\setlength{\rightskip}{0pt plus 5cm}Dictionary$<$Enum\+Categories, {\bf Category\+View\+Model}$>$ Kanban\+Board.\+View\+Model.\+Main\+View\+Model.\+Categories\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_kanban_board_1_1_view_model_1_1_main_view_model_a32bb0ead5d4aeb8664990a3ba13d5305}
 
 
-Provides access to the category container -\/ used as drop target for the postits 
-
-\hypertarget{class_kanban_board_1_1_view_model_1_1_main_view_model_a6ecd7d9718b6e320441c5938dc1c01eb}{}\index{Kanban\+Board\+::\+View\+Model\+::\+Main\+View\+Model@{Kanban\+Board\+::\+View\+Model\+::\+Main\+View\+Model}!List\+Of\+Completed\+Work@{List\+Of\+Completed\+Work}}
-\index{List\+Of\+Completed\+Work@{List\+Of\+Completed\+Work}!Kanban\+Board\+::\+View\+Model\+::\+Main\+View\+Model@{Kanban\+Board\+::\+View\+Model\+::\+Main\+View\+Model}}
-\subsubsection[{List\+Of\+Completed\+Work}]{\setlength{\rightskip}{0pt plus 5cm}Observable\+Collection$<${\bf Post\+It\+Model}$>$ Kanban\+Board.\+View\+Model.\+Main\+View\+Model.\+List\+Of\+Completed\+Work\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_kanban_board_1_1_view_model_1_1_main_view_model_a6ecd7d9718b6e320441c5938dc1c01eb}
-
-
-Provides access to the list of Completed Work. 
-
-\hypertarget{class_kanban_board_1_1_view_model_1_1_main_view_model_a250c79012624be5145f7a08ce9fdd4d8}{}\index{Kanban\+Board\+::\+View\+Model\+::\+Main\+View\+Model@{Kanban\+Board\+::\+View\+Model\+::\+Main\+View\+Model}!List\+Of\+To\+Do@{List\+Of\+To\+Do}}
-\index{List\+Of\+To\+Do@{List\+Of\+To\+Do}!Kanban\+Board\+::\+View\+Model\+::\+Main\+View\+Model@{Kanban\+Board\+::\+View\+Model\+::\+Main\+View\+Model}}
-\subsubsection[{List\+Of\+To\+Do}]{\setlength{\rightskip}{0pt plus 5cm}Observable\+Collection$<${\bf Post\+It\+Model}$>$ Kanban\+Board.\+View\+Model.\+Main\+View\+Model.\+List\+Of\+To\+Do\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_kanban_board_1_1_view_model_1_1_main_view_model_a250c79012624be5145f7a08ce9fdd4d8}
-
-
-Provides access to the List Of To do 
-
-\hypertarget{class_kanban_board_1_1_view_model_1_1_main_view_model_ac28a6f8225d24e60ea7f1196cbf8d6a3}{}\index{Kanban\+Board\+::\+View\+Model\+::\+Main\+View\+Model@{Kanban\+Board\+::\+View\+Model\+::\+Main\+View\+Model}!List\+Of\+Work\+In\+Progress@{List\+Of\+Work\+In\+Progress}}
-\index{List\+Of\+Work\+In\+Progress@{List\+Of\+Work\+In\+Progress}!Kanban\+Board\+::\+View\+Model\+::\+Main\+View\+Model@{Kanban\+Board\+::\+View\+Model\+::\+Main\+View\+Model}}
-\subsubsection[{List\+Of\+Work\+In\+Progress}]{\setlength{\rightskip}{0pt plus 5cm}Observable\+Collection$<${\bf Post\+It\+Model}$>$ Kanban\+Board.\+View\+Model.\+Main\+View\+Model.\+List\+Of\+Work\+In\+Progress\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_kanban_board_1_1_view_model_1_1_main_view_model_ac28a6f8225d24e60ea7f1196cbf8d6a3}
-
-
-Provides access to the Lisf Of Work In Progress. 
+Use this property to access the categories of the board 
 
 \hypertarget{class_kanban_board_1_1_view_model_1_1_main_view_model_ac78c41a4e5c852c2afdd853439def3b0}{}\index{Kanban\+Board\+::\+View\+Model\+::\+Main\+View\+Model@{Kanban\+Board\+::\+View\+Model\+::\+Main\+View\+Model}!Load\+From\+Dialog\+Command@{Load\+From\+Dialog\+Command}}
 \index{Load\+From\+Dialog\+Command@{Load\+From\+Dialog\+Command}!Kanban\+Board\+::\+View\+Model\+::\+Main\+View\+Model@{Kanban\+Board\+::\+View\+Model\+::\+Main\+View\+Model}}
@@ -184,20 +153,6 @@ The command used to initiate the Save As dialog
 
 
 The command used to initaite saving 
-
-\hypertarget{class_kanban_board_1_1_view_model_1_1_main_view_model_a4896420588efd2aad29351a8d8d53657}{}\index{Kanban\+Board\+::\+View\+Model\+::\+Main\+View\+Model@{Kanban\+Board\+::\+View\+Model\+::\+Main\+View\+Model}!To\+Do\+Category@{To\+Do\+Category}}
-\index{To\+Do\+Category@{To\+Do\+Category}!Kanban\+Board\+::\+View\+Model\+::\+Main\+View\+Model@{Kanban\+Board\+::\+View\+Model\+::\+Main\+View\+Model}}
-\subsubsection[{To\+Do\+Category}]{\setlength{\rightskip}{0pt plus 5cm}I\+Collection\+View Kanban\+Board.\+View\+Model.\+Main\+View\+Model.\+To\+Do\+Category\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_kanban_board_1_1_view_model_1_1_main_view_model_a4896420588efd2aad29351a8d8d53657}
-
-
-Provides access to the category container -\/ used as drop target for the postits 
-
-\hypertarget{class_kanban_board_1_1_view_model_1_1_main_view_model_abab8ec3a18854b226218782bcbee971b}{}\index{Kanban\+Board\+::\+View\+Model\+::\+Main\+View\+Model@{Kanban\+Board\+::\+View\+Model\+::\+Main\+View\+Model}!Work\+In\+Progress\+Category@{Work\+In\+Progress\+Category}}
-\index{Work\+In\+Progress\+Category@{Work\+In\+Progress\+Category}!Kanban\+Board\+::\+View\+Model\+::\+Main\+View\+Model@{Kanban\+Board\+::\+View\+Model\+::\+Main\+View\+Model}}
-\subsubsection[{Work\+In\+Progress\+Category}]{\setlength{\rightskip}{0pt plus 5cm}I\+Collection\+View Kanban\+Board.\+View\+Model.\+Main\+View\+Model.\+Work\+In\+Progress\+Category\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_kanban_board_1_1_view_model_1_1_main_view_model_abab8ec3a18854b226218782bcbee971b}
-
-
-Provides access to the category container -\/ used as drop target for the postits 
 
 
 

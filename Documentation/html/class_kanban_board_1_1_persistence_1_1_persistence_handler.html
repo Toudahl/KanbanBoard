@@ -109,6 +109,7 @@ $(document).ready(function(){initNavTree('class_kanban_board_1_1_persistence_1_1
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#properties">Properties</a> &#124;
 <a href="class_kanban_board_1_1_persistence_1_1_persistence_handler-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">KanbanBoard.Persistence.PersistenceHandler Class Reference</div>  </div>
@@ -123,21 +124,29 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_kanban_board_1_1_persistence_1_1_persistence_handler_1_1_json_persistence.html">JsonPersistence</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class will use the newtonsoft json package to serialize and deserialize  <a href="class_kanban_board_1_1_persistence_1_1_persistence_handler_1_1_json_persistence.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_kanban_board_1_1_persistence_1_1_persistence_handler_1_1_xml_persistence.html">XmlPersistence</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a868a7554ddbb067280b79d3f91abcb0c"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_kanban_board_1_1_persistence_1_1_persistence_handler.html#a868a7554ddbb067280b79d3f91abcb0c">Save</a> (List&lt; List&lt; <a class="el" href="class_kanban_board_1_1_view_model_1_1_category_view_model.html">CategoryViewModel</a> &gt;&gt; informationToSave, string fileName)</td></tr>
-<tr class="memdesc:a868a7554ddbb067280b79d3f91abcb0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Uses the persistence type set by <a class="el" href="class_kanban_board_1_1_persistence_1_1_persistence_handler.html#a3fd5c28d09ade9618010f89167b72a86" title="Set the type of persistence used. ">SetPersistenceType()</a> to save the post its. Default is <a class="el" href="class_kanban_board_1_1_persistence_1_1_persistence_handler_1_1_json_persistence.html" title="This class will use the newtonsoft json package to serialize and deserialize ">JsonPersistence</a>  <a href="#a868a7554ddbb067280b79d3f91abcb0c">More...</a><br /></td></tr>
-<tr class="separator:a868a7554ddbb067280b79d3f91abcb0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a71a5355e5b5a3f2f910527dca8b60a03"><td class="memItemLeft" align="right" valign="top">static List&lt; List&lt; <a class="el" href="class_kanban_board_1_1_view_model_1_1_category_view_model.html">CategoryViewModel</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_kanban_board_1_1_persistence_1_1_persistence_handler.html#a71a5355e5b5a3f2f910527dca8b60a03">Load</a> (string fileName)</td></tr>
-<tr class="memdesc:a71a5355e5b5a3f2f910527dca8b60a03"><td class="mdescLeft">&#160;</td><td class="mdescRight">Uses the persistence type set by <a class="el" href="class_kanban_board_1_1_persistence_1_1_persistence_handler.html#a3fd5c28d09ade9618010f89167b72a86" title="Set the type of persistence used. ">SetPersistenceType()</a> to load the post its. Default is <a class="el" href="class_kanban_board_1_1_persistence_1_1_persistence_handler_1_1_json_persistence.html" title="This class will use the newtonsoft json package to serialize and deserialize ">JsonPersistence</a>  <a href="#a71a5355e5b5a3f2f910527dca8b60a03">More...</a><br /></td></tr>
-<tr class="separator:a71a5355e5b5a3f2f910527dca8b60a03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3128665c736adbb33e2d9645f97b1ba"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_kanban_board_1_1_persistence_1_1_persistence_handler.html#ae3128665c736adbb33e2d9645f97b1ba">Save</a> (Dictionary&lt; EnumCategories, <a class="el" href="class_kanban_board_1_1_view_model_1_1_category_view_model.html">CategoryViewModel</a> &gt; informationToSave, string fileName)</td></tr>
+<tr class="memdesc:ae3128665c736adbb33e2d9645f97b1ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Uses the persistence type set by <a class="el" href="class_kanban_board_1_1_persistence_1_1_persistence_handler.html#a3fd5c28d09ade9618010f89167b72a86" title="Set the type of persistence used. ">SetPersistenceType()</a> to save the post its. Default is <a class="el" href="class_kanban_board_1_1_persistence_1_1_persistence_handler_1_1_json_persistence.html" title="This class will use the newtonsoft json package to serialize and deserialize ">JsonPersistence</a>  <a href="#ae3128665c736adbb33e2d9645f97b1ba">More...</a><br /></td></tr>
+<tr class="separator:ae3128665c736adbb33e2d9645f97b1ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0401af2501b53fdbe0645ea36d4d25ce"><td class="memItemLeft" align="right" valign="top">static Dictionary&lt; EnumCategories, <a class="el" href="class_kanban_board_1_1_view_model_1_1_category_view_model.html">CategoryViewModel</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_kanban_board_1_1_persistence_1_1_persistence_handler.html#a0401af2501b53fdbe0645ea36d4d25ce">Load</a> (string fileName)</td></tr>
+<tr class="memdesc:a0401af2501b53fdbe0645ea36d4d25ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Uses the persistence type set by <a class="el" href="class_kanban_board_1_1_persistence_1_1_persistence_handler.html#a3fd5c28d09ade9618010f89167b72a86" title="Set the type of persistence used. ">SetPersistenceType()</a> to load the post its. Default is <a class="el" href="class_kanban_board_1_1_persistence_1_1_persistence_handler_1_1_json_persistence.html" title="This class will use the newtonsoft json package to serialize and deserialize ">JsonPersistence</a>  <a href="#a0401af2501b53fdbe0645ea36d4d25ce">More...</a><br /></td></tr>
+<tr class="separator:a0401af2501b53fdbe0645ea36d4d25ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3fd5c28d09ade9618010f89167b72a86"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_kanban_board_1_1_persistence_1_1_persistence_handler.html#a3fd5c28d09ade9618010f89167b72a86">SetPersistenceType</a> (EnumPersistenceOptions persistenceType)</td></tr>
 <tr class="memdesc:a3fd5c28d09ade9618010f89167b72a86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the type of persistence used.  <a href="#a3fd5c28d09ade9618010f89167b72a86">More...</a><br /></td></tr>
 <tr class="separator:a3fd5c28d09ade9618010f89167b72a86"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5ac8e076f0238a233f6a0cee5190b01a"><td class="memItemLeft" align="right" valign="top">static EnumPersistenceOptions&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_kanban_board_1_1_persistence_1_1_persistence_handler.html#a5ac8e076f0238a233f6a0cee5190b01a">GetPersistenceOptions</a> ()</td></tr>
 <tr class="memdesc:a5ac8e076f0238a233f6a0cee5190b01a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns currently selected persistence type  <a href="#a5ac8e076f0238a233f6a0cee5190b01a">More...</a><br /></td></tr>
 <tr class="separator:a5ac8e076f0238a233f6a0cee5190b01a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
+Properties</h2></td></tr>
+<tr class="memitem:adf44508ce2098268782b787d86675b4b"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_kanban_board_1_1_persistence_1_1_persistence_handler.html#adf44508ce2098268782b787d86675b4b">CompatibleFiles</a><code> [get, private set]</code></td></tr>
+<tr class="memdesc:adf44508ce2098268782b787d86675b4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">A string suitable for use in dialogs Filter property.  <a href="#adf44508ce2098268782b787d86675b4b">More...</a><br /></td></tr>
+<tr class="separator:adf44508ce2098268782b787d86675b4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Handles the different types of persistence </p>
@@ -168,7 +177,7 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a71a5355e5b5a3f2f910527dca8b60a03"></a>
+<a class="anchor" id="a0401af2501b53fdbe0645ea36d4d25ce"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -176,7 +185,7 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static List&lt;List&lt;<a class="el" href="class_kanban_board_1_1_view_model_1_1_category_view_model.html">CategoryViewModel</a>&gt; &gt; KanbanBoard.Persistence.PersistenceHandler.Load </td>
+          <td class="memname">static Dictionary&lt;EnumCategories, <a class="el" href="class_kanban_board_1_1_view_model_1_1_category_view_model.html">CategoryViewModel</a>&gt; KanbanBoard.Persistence.PersistenceHandler.Load </td>
           <td>(</td>
           <td class="paramtype">string&#160;</td>
           <td class="paramname"><em>fileName</em></td><td>)</td>
@@ -201,7 +210,7 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a868a7554ddbb067280b79d3f91abcb0c"></a>
+<a class="anchor" id="ae3128665c736adbb33e2d9645f97b1ba"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -211,7 +220,7 @@ Static Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">static void KanbanBoard.Persistence.PersistenceHandler.Save </td>
           <td>(</td>
-          <td class="paramtype">List&lt; List&lt; <a class="el" href="class_kanban_board_1_1_view_model_1_1_category_view_model.html">CategoryViewModel</a> &gt;&gt;&#160;</td>
+          <td class="paramtype">Dictionary&lt; EnumCategories, <a class="el" href="class_kanban_board_1_1_view_model_1_1_category_view_model.html">CategoryViewModel</a> &gt;&#160;</td>
           <td class="paramname"><em>informationToSave</em>, </td>
         </tr>
         <tr>
@@ -276,6 +285,29 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<h2 class="groupheader">Property Documentation</h2>
+<a class="anchor" id="adf44508ce2098268782b787d86675b4b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string KanbanBoard.Persistence.PersistenceHandler.CompatibleFiles</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">get</span><span class="mlabel">private set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>A string suitable for use in dialogs Filter property. </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>d:/Dokumenter/Visual Studio 2013/Projects/2. Semester/KanbanBoard/KanbanBoard/Persistence/PersistenceHandler.cs</li>
 </ul>
@@ -285,7 +317,7 @@ Static Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespace_kanban_board.html">KanbanBoard</a></li><li class="navelem"><a class="el" href="namespace_kanban_board_1_1_persistence.html">Persistence</a></li><li class="navelem"><a class="el" href="class_kanban_board_1_1_persistence_1_1_persistence_handler.html">PersistenceHandler</a></li>
-    <li class="footer">Generated on Thu Feb 5 2015 16:40:34 for Kanban Board by
+    <li class="footer">Generated on Fri Feb 6 2015 21:33:00 for Kanban Board by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

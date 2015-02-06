@@ -14,9 +14,9 @@ Inheritance diagram for Kanban\+Board.\+Persistence.\+Persistence\+Handler.\+Jso
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \hyperlink{class_kanban_board_1_1_persistence_1_1_persistence_handler_1_1_json_persistence_af52abfa1b88d8c2066b202e1463469cf}{Save} (List$<$ List$<$ \hyperlink{class_kanban_board_1_1_view_model_1_1_category_view_model}{Category\+View\+Model} $>$$>$ information\+To\+Save, string file\+Name)
+void \hyperlink{class_kanban_board_1_1_persistence_1_1_persistence_handler_1_1_json_persistence_a925b52aa9fac036eaa854ab9f3be1e88}{Save} (Dictionary$<$ Enum\+Categories, \hyperlink{class_kanban_board_1_1_view_model_1_1_category_view_model}{Category\+View\+Model} $>$ information\+To\+Save, string file\+Name)
 \begin{DoxyCompactList}\small\item\em Saves the post its in the categories. \end{DoxyCompactList}\item 
-List$<$ List$<$ \hyperlink{class_kanban_board_1_1_view_model_1_1_category_view_model}{Category\+View\+Model} $>$ $>$ \hyperlink{class_kanban_board_1_1_persistence_1_1_persistence_handler_1_1_json_persistence_a0c9c4ad5ccdac78bb3083850f45d691b}{Load} (string file\+Name)
+Dictionary$<$ Enum\+Categories, \hyperlink{class_kanban_board_1_1_view_model_1_1_category_view_model}{Category\+View\+Model} $>$ \hyperlink{class_kanban_board_1_1_persistence_1_1_persistence_handler_1_1_json_persistence_a03590c4676da93617e2b6738e22f5844}{Load} (string file\+Name)
 \begin{DoxyCompactList}\small\item\em Loads the post its from a file \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -26,13 +26,13 @@ This class will use the newtonsoft json package to serialize and deserialize
 
 
 \subsection{Member Function Documentation}
-\hypertarget{class_kanban_board_1_1_persistence_1_1_persistence_handler_1_1_json_persistence_a0c9c4ad5ccdac78bb3083850f45d691b}{}\index{Kanban\+Board\+::\+Persistence\+::\+Persistence\+Handler\+::\+Json\+Persistence@{Kanban\+Board\+::\+Persistence\+::\+Persistence\+Handler\+::\+Json\+Persistence}!Load@{Load}}
+\hypertarget{class_kanban_board_1_1_persistence_1_1_persistence_handler_1_1_json_persistence_a03590c4676da93617e2b6738e22f5844}{}\index{Kanban\+Board\+::\+Persistence\+::\+Persistence\+Handler\+::\+Json\+Persistence@{Kanban\+Board\+::\+Persistence\+::\+Persistence\+Handler\+::\+Json\+Persistence}!Load@{Load}}
 \index{Load@{Load}!Kanban\+Board\+::\+Persistence\+::\+Persistence\+Handler\+::\+Json\+Persistence@{Kanban\+Board\+::\+Persistence\+::\+Persistence\+Handler\+::\+Json\+Persistence}}
-\subsubsection[{Load}]{\setlength{\rightskip}{0pt plus 5cm}List$<$List$<${\bf Category\+View\+Model}$>$ $>$ Kanban\+Board.\+Persistence.\+Persistence\+Handler.\+Json\+Persistence.\+Load (
+\subsubsection[{Load}]{\setlength{\rightskip}{0pt plus 5cm}Dictionary$<$Enum\+Categories, {\bf Category\+View\+Model}$>$ Kanban\+Board.\+Persistence.\+Persistence\+Handler.\+Json\+Persistence.\+Load (
 \begin{DoxyParamCaption}
 \item[{string}]{file\+Name}
 \end{DoxyParamCaption}
-)}\label{class_kanban_board_1_1_persistence_1_1_persistence_handler_1_1_json_persistence_a0c9c4ad5ccdac78bb3083850f45d691b}
+)}\label{class_kanban_board_1_1_persistence_1_1_persistence_handler_1_1_json_persistence_a03590c4676da93617e2b6738e22f5844}
 
 
 Loads the post its from a file 
@@ -49,14 +49,14 @@ The post its that was loaded
 
 Implements \hyperlink{interface_kanban_board_1_1_persistence_1_1_i_persistence}{Kanban\+Board.\+Persistence.\+I\+Persistence}.
 
-\hypertarget{class_kanban_board_1_1_persistence_1_1_persistence_handler_1_1_json_persistence_af52abfa1b88d8c2066b202e1463469cf}{}\index{Kanban\+Board\+::\+Persistence\+::\+Persistence\+Handler\+::\+Json\+Persistence@{Kanban\+Board\+::\+Persistence\+::\+Persistence\+Handler\+::\+Json\+Persistence}!Save@{Save}}
+\hypertarget{class_kanban_board_1_1_persistence_1_1_persistence_handler_1_1_json_persistence_a925b52aa9fac036eaa854ab9f3be1e88}{}\index{Kanban\+Board\+::\+Persistence\+::\+Persistence\+Handler\+::\+Json\+Persistence@{Kanban\+Board\+::\+Persistence\+::\+Persistence\+Handler\+::\+Json\+Persistence}!Save@{Save}}
 \index{Save@{Save}!Kanban\+Board\+::\+Persistence\+::\+Persistence\+Handler\+::\+Json\+Persistence@{Kanban\+Board\+::\+Persistence\+::\+Persistence\+Handler\+::\+Json\+Persistence}}
 \subsubsection[{Save}]{\setlength{\rightskip}{0pt plus 5cm}void Kanban\+Board.\+Persistence.\+Persistence\+Handler.\+Json\+Persistence.\+Save (
 \begin{DoxyParamCaption}
-\item[{List$<$ List$<$ {\bf Category\+View\+Model} $>$$>$}]{information\+To\+Save, }
+\item[{Dictionary$<$ Enum\+Categories, {\bf Category\+View\+Model} $>$}]{information\+To\+Save, }
 \item[{string}]{file\+Name}
 \end{DoxyParamCaption}
-)}\label{class_kanban_board_1_1_persistence_1_1_persistence_handler_1_1_json_persistence_af52abfa1b88d8c2066b202e1463469cf}
+)}\label{class_kanban_board_1_1_persistence_1_1_persistence_handler_1_1_json_persistence_a925b52aa9fac036eaa854ab9f3be1e88}
 
 
 Saves the post its in the categories. 

@@ -128,22 +128,22 @@ Inheritance diagram for KanbanBoard.Persistence.PersistenceHandler.JsonPersisten
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:af52abfa1b88d8c2066b202e1463469cf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_kanban_board_1_1_persistence_1_1_persistence_handler_1_1_json_persistence.html#af52abfa1b88d8c2066b202e1463469cf">Save</a> (List&lt; List&lt; <a class="el" href="class_kanban_board_1_1_view_model_1_1_category_view_model.html">CategoryViewModel</a> &gt;&gt; informationToSave, string fileName)</td></tr>
-<tr class="memdesc:af52abfa1b88d8c2066b202e1463469cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Saves the post its in the categories.  <a href="#af52abfa1b88d8c2066b202e1463469cf">More...</a><br /></td></tr>
-<tr class="separator:af52abfa1b88d8c2066b202e1463469cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0c9c4ad5ccdac78bb3083850f45d691b"><td class="memItemLeft" align="right" valign="top">List&lt; List&lt; <a class="el" href="class_kanban_board_1_1_view_model_1_1_category_view_model.html">CategoryViewModel</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_kanban_board_1_1_persistence_1_1_persistence_handler_1_1_json_persistence.html#a0c9c4ad5ccdac78bb3083850f45d691b">Load</a> (string fileName)</td></tr>
-<tr class="memdesc:a0c9c4ad5ccdac78bb3083850f45d691b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads the post its from a file  <a href="#a0c9c4ad5ccdac78bb3083850f45d691b">More...</a><br /></td></tr>
-<tr class="separator:a0c9c4ad5ccdac78bb3083850f45d691b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a925b52aa9fac036eaa854ab9f3be1e88"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_kanban_board_1_1_persistence_1_1_persistence_handler_1_1_json_persistence.html#a925b52aa9fac036eaa854ab9f3be1e88">Save</a> (Dictionary&lt; EnumCategories, <a class="el" href="class_kanban_board_1_1_view_model_1_1_category_view_model.html">CategoryViewModel</a> &gt; informationToSave, string fileName)</td></tr>
+<tr class="memdesc:a925b52aa9fac036eaa854ab9f3be1e88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Saves the post its in the categories.  <a href="#a925b52aa9fac036eaa854ab9f3be1e88">More...</a><br /></td></tr>
+<tr class="separator:a925b52aa9fac036eaa854ab9f3be1e88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03590c4676da93617e2b6738e22f5844"><td class="memItemLeft" align="right" valign="top">Dictionary&lt; EnumCategories, <a class="el" href="class_kanban_board_1_1_view_model_1_1_category_view_model.html">CategoryViewModel</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_kanban_board_1_1_persistence_1_1_persistence_handler_1_1_json_persistence.html#a03590c4676da93617e2b6738e22f5844">Load</a> (string fileName)</td></tr>
+<tr class="memdesc:a03590c4676da93617e2b6738e22f5844"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads the post its from a file  <a href="#a03590c4676da93617e2b6738e22f5844">More...</a><br /></td></tr>
+<tr class="separator:a03590c4676da93617e2b6738e22f5844"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This class will use the newtonsoft json package to serialize and deserialize </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a0c9c4ad5ccdac78bb3083850f45d691b"></a>
+<a class="anchor" id="a03590c4676da93617e2b6738e22f5844"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">List&lt;List&lt;<a class="el" href="class_kanban_board_1_1_view_model_1_1_category_view_model.html">CategoryViewModel</a>&gt; &gt; KanbanBoard.Persistence.PersistenceHandler.JsonPersistence.Load </td>
+          <td class="memname">Dictionary&lt;EnumCategories, <a class="el" href="class_kanban_board_1_1_view_model_1_1_category_view_model.html">CategoryViewModel</a>&gt; KanbanBoard.Persistence.PersistenceHandler.JsonPersistence.Load </td>
           <td>(</td>
           <td class="paramtype">string&#160;</td>
           <td class="paramname"><em>fileName</em></td><td>)</td>
@@ -165,14 +165,14 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="af52abfa1b88d8c2066b202e1463469cf"></a>
+<a class="anchor" id="a925b52aa9fac036eaa854ab9f3be1e88"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void KanbanBoard.Persistence.PersistenceHandler.JsonPersistence.Save </td>
           <td>(</td>
-          <td class="paramtype">List&lt; List&lt; <a class="el" href="class_kanban_board_1_1_view_model_1_1_category_view_model.html">CategoryViewModel</a> &gt;&gt;&#160;</td>
+          <td class="paramtype">Dictionary&lt; EnumCategories, <a class="el" href="class_kanban_board_1_1_view_model_1_1_category_view_model.html">CategoryViewModel</a> &gt;&#160;</td>
           <td class="paramname"><em>informationToSave</em>, </td>
         </tr>
         <tr>
@@ -211,7 +211,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespace_kanban_board.html">KanbanBoard</a></li><li class="navelem"><a class="el" href="namespace_kanban_board_1_1_persistence.html">Persistence</a></li><li class="navelem"><a class="el" href="class_kanban_board_1_1_persistence_1_1_persistence_handler.html">PersistenceHandler</a></li><li class="navelem"><a class="el" href="class_kanban_board_1_1_persistence_1_1_persistence_handler_1_1_json_persistence.html">JsonPersistence</a></li>
-    <li class="footer">Generated on Thu Feb 5 2015 16:40:35 for Kanban Board by
+    <li class="footer">Generated on Fri Feb 6 2015 21:33:00 for Kanban Board by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

@@ -1,5 +1,5 @@
 var class_kanban_board_1_1_persistence_1_1_persistence_handler_1_1_json_persistence =
 [
-    [ "Load", "class_kanban_board_1_1_persistence_1_1_persistence_handler_1_1_json_persistence.html#a0c9c4ad5ccdac78bb3083850f45d691b", null ],
-    [ "Save", "class_kanban_board_1_1_persistence_1_1_persistence_handler_1_1_json_persistence.html#af52abfa1b88d8c2066b202e1463469cf", null ]
+    [ "Load", "class_kanban_board_1_1_persistence_1_1_persistence_handler_1_1_json_persistence.html#a03590c4676da93617e2b6738e22f5844", null ],
+    [ "Save", "class_kanban_board_1_1_persistence_1_1_persistence_handler_1_1_json_persistence.html#a925b52aa9fac036eaa854ab9f3be1e88", null ]
 ];

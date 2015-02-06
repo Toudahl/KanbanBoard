@@ -26,9 +26,6 @@ namespace KanbanBoard.ViewModel
 
         // Contains the actual postits in the Specific category
         private Dictionary<EnumCategories, CategoryViewModel> _categories; // Attempting to refactor
-        private CategoryViewModel _toDoCategory;
-        private CategoryViewModel _workInProgressCategory;
-        private CategoryViewModel _completedWorkCategory;
 
         // Commands for various actions
         private ICommand _newCommand;
@@ -45,36 +42,17 @@ namespace KanbanBoard.ViewModel
 
         public MainViewModel()
         {
-            //// Instantiate the categories in the board.
-            //_toDoCategory = new CategoryViewModel(EnumCategories.ToDo);
-            //_workInProgressCategory = new CategoryViewModel(EnumCategories.WorkInProgress);
-            //_completedWorkCategory = new CategoryViewModel(EnumCategories.CompletedWork);
+            // Instantiate the categories in the board.
             _categories = new Dictionary<EnumCategories, CategoryViewModel>();
             _categories[EnumCategories.ToDo] = new CategoryViewModel(EnumCategories.ToDo);
             _categories[EnumCategories.WorkInProgress] = new CategoryViewModel(EnumCategories.WorkInProgress);
             _categories[EnumCategories.CompletedWork] = new CategoryViewModel(EnumCategories.CompletedWork);
-
-            // And the containers for them.
-            _toDoCategoryContainer = new List<CategoryViewModel>();
-            _workInProgressCategoryContainer = new List<CategoryViewModel>();
-            _completedWorkCategoryContainer = new List<CategoryViewModel>();
-
-
-            // Put the categories in the containers.
-            _toDoCategoryContainer.Add(_categories[EnumCategories.ToDo]);
-            _workInProgressCategoryContainer.Add(_categories[EnumCategories.WorkInProgress]);
-            _completedWorkCategoryContainer.Add(_categories[EnumCategories.CompletedWork]);
 
             // Put the containers in the board container, used for persistence purposes.
             _boardContainer = new List<List<CategoryViewModel>>();
             _boardContainer.Add(_toDoCategoryContainer);
             _boardContainer.Add(_workInProgressCategoryContainer);
             _boardContainer.Add(_completedWorkCategoryContainer);
-
-            // Treat the following properties as the same type as the argument
-            ToDoCategory = CollectionViewSource.GetDefaultView(_toDoCategoryContainer);
-            WorkInProgressCategory = CollectionViewSource.GetDefaultView(_workInProgressCategoryContainer);
-            CompletedCategory = CollectionViewSource.GetDefaultView(_completedWorkCategoryContainer);
 
             // Reset board, and create "new" board.
             _newCommand = new RelayCommand(NewBoard);
@@ -232,20 +210,15 @@ namespace KanbanBoard.ViewModel
             set { _saveCommand = value; }
         }
 
-        /// <summary>
-        /// Provides access to the category container - used as drop target for the postits
-        /// </summary>
-        public ICollectionView ToDoCategory { get; set; }
-
-        /// <summary>
-        /// Provides access to the category container - used as drop target for the postits
-        /// </summary>
-        public ICollectionView WorkInProgressCategory { get; set; }
-
-        /// <summary>
-        /// Provides access to the category container - used as drop target for the postits
-        /// </summary>
-        public ICollectionView CompletedCategory { get; set; }
+        public Dictionary<EnumCategories, CategoryViewModel> Categories
+        {
+            get { return _categories; }
+            set
+            {
+                _categories = value; 
+                OnPropertyChanged();
+            }
+        }
         
         /// <summary>
         ///  Updates the current drag state.
@@ -254,13 +227,13 @@ namespace KanbanBoard.ViewModel
         ///  property on dropInfo should be set to a value other than System.Windows.DragDropEffects.None
         ///  and GongSolutions.Wpf.DragDrop.DropInfo.Data should be set to a non-null value.
         /// </summary>
-        /// <param name="dropInfo">Information about the drag.</param>
-        public void DragOver(IDropInfo dropInfo)
+        /// <param name="dragInfo">Information about the drag.</param>
+        public void DragOver(IDropInfo dragInfo)
         {
-            if (dropInfo.Data is PostItModel && dropInfo.TargetItem is CategoryViewModel)
+            if (dragInfo.Data is PostItModel && dragInfo.TargetItem is KeyValuePair<EnumCategories, CategoryViewModel>)
             {
-                dropInfo.DropTargetAdorner = DropTargetAdorners.Highlight;
-                dropInfo.Effects = DragDropEffects.Move;
+                dragInfo.DropTargetAdorner = DropTargetAdorners.Highlight;
+                dragInfo.Effects = DragDropEffects.Move;
             }
         }
 
@@ -270,21 +243,24 @@ namespace KanbanBoard.ViewModel
         /// <param name="dropInfo">Information about the drop.</param>
         public void Drop(IDropInfo dropInfo)
         {
-            CategoryViewModel postItcCollection = (CategoryViewModel)dropInfo.TargetItem;
+            KeyValuePair<EnumCategories, CategoryViewModel> keyValuePair = (KeyValuePair<EnumCategories, CategoryViewModel>)dropInfo.TargetItem;
+            //CategoryViewModel postItcCollection = (CategoryViewModel)dropInfo.TargetItem;
             PostItModel postIt = (PostItModel)dropInfo.Data;
-            postItcCollection.PostItsInCategory.Add(postIt);
+            keyValuePair.Value.PostItsInCategory.Add(postIt);
 
-            if (postItcCollection.CategoryName == EnumCategories.ToDo)
+            //postItcCollection.PostItsInCategory.Add(postIt);
+
+            if (keyValuePair.Value.CategoryName == EnumCategories.ToDo)
             {
                 postIt.SolidColorBrush = new SolidColorBrush(Colors.Red);
             }
 
-            if (postItcCollection.CategoryName == EnumCategories.WorkInProgress)
+            if (keyValuePair.Value.CategoryName == EnumCategories.WorkInProgress)
             {
                 postIt.SolidColorBrush = new SolidColorBrush(Colors.Yellow);
             }
 
-            if (postItcCollection.CategoryName == EnumCategories.CompletedWork)
+            if (keyValuePair.Value.CategoryName == EnumCategories.CompletedWork)
             {
                 postIt.SolidColorBrush = new SolidColorBrush(Colors.Green);
             }

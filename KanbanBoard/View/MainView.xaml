@@ -44,14 +44,20 @@
         <ListBox
             Grid.Column="0"
             Grid.Row="1"
-            ItemsSource="{Binding ToDoCategory, Mode=TwoWay}" 
+            Grid.ColumnSpan="3"
+            ItemsSource="{Binding Categories, Mode=TwoWay}" 
             dd:DragDrop.IsDragSource="True"
             dd:DragDrop.IsDropTarget="True"
             dd:DragDrop.DropHandler="{Binding}">
+            <ListBox.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <StackPanel Orientation="Horizontal"/>
+                </ItemsPanelTemplate>
+            </ListBox.ItemsPanel>
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <Grid>
-                        <Label Content="To Do" HorizontalAlignment="Center"></Label>
+                        <Label Content="{Binding Value.CategoryName}"/>
                     </Grid>
                 </DataTemplate>
             </ListBox.ItemTemplate>
@@ -89,21 +95,6 @@
             </ListView.ItemTemplate>
         </ListView>
 
-        <ListBox
-            Grid.Column="1"
-            Grid.Row="1"
-            ItemsSource="{Binding WorkInProgressCategory, Mode=TwoWay}" 
-            dd:DragDrop.IsDragSource="True"
-            dd:DragDrop.IsDropTarget="True"
-            dd:DragDrop.DropHandler="{Binding}">
-            <ListBox.ItemTemplate>
-                <DataTemplate>
-                    <Grid>
-                        <Label Content="Work in progress" HorizontalAlignment="Center"></Label>
-                    </Grid>
-                </DataTemplate>
-            </ListBox.ItemTemplate>
-        </ListBox>
 
         <ListView 
             VerticalAlignment="Top" 
@@ -136,22 +127,6 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-
-        <ListBox 
-            Grid.Column="2"
-            Grid.Row="1"
-            ItemsSource="{Binding CompletedCategory, Mode=TwoWay}"
-            dd:DragDrop.IsDragSource="True"
-            dd:DragDrop.IsDropTarget="True" 
-            dd:DragDrop.DropHandler="{Binding}">
-            <ListBox.ItemTemplate>
-                <DataTemplate>
-                    <Grid>
-                        <Label Content="Completed tasks" HorizontalAlignment="Center"></Label>
-                    </Grid>
-                </DataTemplate>
-            </ListBox.ItemTemplate>
-        </ListBox>
 
         <ListView 
             VerticalAlignment="Top"

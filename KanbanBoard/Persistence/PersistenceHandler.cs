@@ -11,8 +11,10 @@ namespace KanbanBoard.Persistence
     /// </summary>
     static class PersistenceHandler
     {
-        static private IPersistence _persistence = new JsonPersistence();
+        private static IPersistence _persistence = new JsonPersistence();
         private static EnumPersistenceOptions _selectedPersistenceOptions = EnumPersistenceOptions.JsonPersistence;
+        private static string _compatibleFiles = "KanBan Board file (*.kbb)|*.kbb";
+
 
         /// <summary>
         /// Uses the persistence type set by <see cref="SetPersistenceType()"/> to save the post its.
@@ -50,6 +52,10 @@ namespace KanbanBoard.Persistence
                     _selectedPersistenceOptions = EnumPersistenceOptions.JsonPersistence;
                     _persistence = new JsonPersistence();
                     break;
+                case EnumPersistenceOptions.XmlPersistence:
+                    _selectedPersistenceOptions = EnumPersistenceOptions.XmlPersistence;
+                    _persistence = new XmlPersistence();
+                    break;
             }
         }
 
@@ -60,6 +66,15 @@ namespace KanbanBoard.Persistence
         public static EnumPersistenceOptions GetPersistenceOptions()
         {
             return _selectedPersistenceOptions;
+        }
+
+        /// <summary>
+        /// A string suitable for use in dialogs Filter property.
+        /// </summary>
+        public static string CompatibleFiles
+        {
+            get { return _compatibleFiles; }
+            private set { _compatibleFiles = value; }
         }
 
         //TODO: Add other types of persistence.
@@ -96,5 +111,19 @@ namespace KanbanBoard.Persistence
         }
         #endregion
 
+        private class XmlPersistence : IPersistence
+        {
+            public void Save(List<List<CategoryViewModel>> informationToSave, string fileName)
+            {
+                throw new System.NotImplementedException();
+            }
+
+            public List<List<CategoryViewModel>> Load(string fileName)
+            {
+                throw new System.NotImplementedException();
+            }
+        }
+
     }
+
 }

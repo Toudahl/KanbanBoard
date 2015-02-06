@@ -11,16 +11,24 @@ namespace KanbanBoard.Model
         // TODO: Move category details here, and refactor the CategoryViewModel
         
 
-        private List<PostItModel> _postIts;
+        private List<PostItModel> _postItsInCategory;
         private EnumCategories _category;
         private string _categoryTitle;
         private string _categoryDetails;
 
-
-        public List<PostItModel> PostIts
+        public CategoryModel(EnumCategories category, string categoryTitle, string categoryDetails)
         {
-            get { return _postIts; }
-            set { _postIts = value; }
+            _category = category;
+            _categoryTitle = categoryTitle;
+            _categoryDetails = categoryDetails;
+            _postItsInCategory = new List<PostItModel>();
+        }
+
+
+        public List<PostItModel> PostItsInCategory
+        {
+            get { return _postItsInCategory; }
+            set { _postItsInCategory = value; }
         }
 
         public EnumCategories Category

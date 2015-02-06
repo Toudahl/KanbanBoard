@@ -25,6 +25,7 @@ namespace KanbanBoard.ViewModel
         private List<CategoryViewModel> _completedWorkCategoryContainer;
 
         // Contains the actual postits in the Specific category
+        private Dictionary<EnumCategories, CategoryViewModel> _categories; // Attempting to refactor
         private CategoryViewModel _toDoCategory;
         private CategoryViewModel _workInProgressCategory;
         private CategoryViewModel _completedWorkCategory;
@@ -39,15 +40,20 @@ namespace KanbanBoard.ViewModel
         private SaveFileDialog _saveAsFileDialog;
         private OpenFileDialog _openFileDialog;
         private string _boardFileNameAndPath;
-        private const string COMPATIBLE_FILES = "KanBan Board file (*.kbb)|*.kbb";
+        private readonly string _compatibleFiles = PersistenceHandler.CompatibleFiles;
         private List<List<CategoryViewModel>> _boardContainer;
 
         public MainViewModel()
         {
-            // Instantiate the categories in the board.
-            _toDoCategory = new CategoryViewModel(EnumCategories.ToDo);
-            _workInProgressCategory = new CategoryViewModel(EnumCategories.WorkInProgress);
-            _completedWorkCategory = new CategoryViewModel(EnumCategories.CompletedWork);
+            //// Instantiate the categories in the board.
+            //_toDoCategory = new CategoryViewModel(EnumCategories.ToDo);
+            //_workInProgressCategory = new CategoryViewModel(EnumCategories.WorkInProgress);
+            //_completedWorkCategory = new CategoryViewModel(EnumCategories.CompletedWork);
+            _categories = new Dictionary<EnumCategories, CategoryViewModel>();
+            _categories[EnumCategories.ToDo] = new CategoryViewModel(EnumCategories.ToDo);
+            _categories[EnumCategories.WorkInProgress] = new CategoryViewModel(EnumCategories.WorkInProgress);
+            _categories[EnumCategories.CompletedWork] = new CategoryViewModel(EnumCategories.CompletedWork);
+
             // And the containers for them.
             _toDoCategoryContainer = new List<CategoryViewModel>();
             _workInProgressCategoryContainer = new List<CategoryViewModel>();
@@ -55,9 +61,9 @@ namespace KanbanBoard.ViewModel
 
 
             // Put the categories in the containers.
-            _toDoCategoryContainer.Add(_toDoCategory);
-            _workInProgressCategoryContainer.Add(_workInProgressCategory);
-            _completedWorkCategoryContainer.Add(_completedWorkCategory);
+            _toDoCategoryContainer.Add(_categories[EnumCategories.ToDo]);
+            _workInProgressCategoryContainer.Add(_categories[EnumCategories.WorkInProgress]);
+            _completedWorkCategoryContainer.Add(_categories[EnumCategories.CompletedWork]);
 
             // Put the containers in the board container, used for persistence purposes.
             _boardContainer = new List<List<CategoryViewModel>>();
@@ -81,14 +87,14 @@ namespace KanbanBoard.ViewModel
             _saveAsFileDialog = new SaveFileDialog();
             _saveAsFileDialog.AddExtension = true;
             _saveAsFileDialog.CheckPathExists = true;
-            _saveAsFileDialog.Filter = COMPATIBLE_FILES;
+            _saveAsFileDialog.Filter = _compatibleFiles;
 
             // Prepare command for Load feature
             _loadFromDialogCommand = new RelayCommand(LoadFromDialog);
             _openFileDialog = new OpenFileDialog();
             _openFileDialog.AddExtension = true;
             _openFileDialog.CheckPathExists = true;
-            _openFileDialog.Filter = COMPATIBLE_FILES;
+            _openFileDialog.Filter = _compatibleFiles;
 
             _boardFileNameAndPath = null;
 
@@ -156,10 +162,10 @@ namespace KanbanBoard.ViewModel
         /// </summary>
         public ObservableCollection<PostItModel> ListOfToDo
         {
-            get { return _toDoCategory.PostItsInCategory; }
+            get { return _categories[EnumCategories.ToDo].PostItsInCategory; }
             set
             {
-                _toDoCategory.PostItsInCategory = value;
+                _categories[EnumCategories.ToDo].PostItsInCategory = value;
                 OnPropertyChanged();
             }
         }
@@ -169,10 +175,10 @@ namespace KanbanBoard.ViewModel
         /// </summary>
         public ObservableCollection<PostItModel> ListOfWorkInProgress
         {
-            get { return _workInProgressCategory.PostItsInCategory; }
+            get { return _categories[EnumCategories.WorkInProgress].PostItsInCategory; }
             set
             {
-                _workInProgressCategory.PostItsInCategory = value;
+                _categories[EnumCategories.WorkInProgress].PostItsInCategory = value;
                 OnPropertyChanged();
             }
         }
@@ -182,10 +188,10 @@ namespace KanbanBoard.ViewModel
         /// </summary>
         public ObservableCollection<PostItModel> ListOfCompletedWork
         {
-            get { return _completedWorkCategory.PostItsInCategory; }
+            get { return _categories[EnumCategories.CompletedWork].PostItsInCategory; }
             set
             {
-                _completedWorkCategory.PostItsInCategory = value;
+                _categories[EnumCategories.CompletedWork].PostItsInCategory = value;
                 OnPropertyChanged();
             }
         }

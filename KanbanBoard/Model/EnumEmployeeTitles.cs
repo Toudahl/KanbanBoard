@@ -7,6 +7,7 @@
         ScrumMaster,
         Developer,
         SeniorDeveloper,
+        LeadDeveloper,
         SoftwareArchitect,
     }
 }

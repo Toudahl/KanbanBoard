@@ -3,5 +3,6 @@
     enum EnumPersistenceOptions
     {
         JsonPersistence,
+        XmlPersistence,
     }
 }

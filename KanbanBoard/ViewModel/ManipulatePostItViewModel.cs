@@ -23,7 +23,7 @@ namespace KanbanBoard.ViewModel
 
             _addCommand = new RelayCommand(Save);
 
-            _responsiblePerson = new EmployeeModel("Morten", "Toudahl", EnumEmployeeTitles.SeniorDeveloper);
+            _responsiblePerson = new EmployeeModel("Morten", "Toudahl", EnumEmployeeTitles.LeadDeveloper);
             _deadline = DateTime.Today.ToString("HH:mm - dd MMMM, yyyy");
 
         }

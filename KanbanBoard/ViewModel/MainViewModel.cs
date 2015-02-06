@@ -20,12 +20,12 @@ namespace KanbanBoard.ViewModel
     public class MainViewModel: IDropTarget, INotifyPropertyChanged
     {
         // Contains the categories.
-        private List<CategoryViewModel> _toDoCategoryContainer;
-        private List<CategoryViewModel> _workInProgressCategoryContainer;
-        private List<CategoryViewModel> _completedWorkCategoryContainer;
+        //private List<CategoryViewModel> _toDoCategoryContainer;
+        //private List<CategoryViewModel> _workInProgressCategoryContainer;
+        //private List<CategoryViewModel> _completedWorkCategoryContainer;
 
         // Contains the actual postits in the Specific category
-        private Dictionary<EnumCategories, CategoryViewModel> _categories; // Attempting to refactor
+        private Dictionary<EnumCategories, CategoryViewModel> _categories;
 
         // Commands for various actions
         private ICommand _newCommand;
@@ -49,10 +49,10 @@ namespace KanbanBoard.ViewModel
             _categories[EnumCategories.CompletedWork] = new CategoryViewModel(EnumCategories.CompletedWork);
 
             // Put the containers in the board container, used for persistence purposes.
-            _boardContainer = new List<List<CategoryViewModel>>();
-            _boardContainer.Add(_toDoCategoryContainer);
-            _boardContainer.Add(_workInProgressCategoryContainer);
-            _boardContainer.Add(_completedWorkCategoryContainer);
+            //_boardContainer = new List<List<CategoryViewModel>>();
+            //_boardContainer.Add(_toDoCategoryContainer);
+            //_boardContainer.Add(_workInProgressCategoryContainer);
+            //_boardContainer.Add(_completedWorkCategoryContainer);
 
             // Reset board, and create "new" board.
             _newCommand = new RelayCommand(NewBoard);
@@ -83,9 +83,10 @@ namespace KanbanBoard.ViewModel
         /// </summary>
         private void NewBoard()
         {
-            ListOfToDo.Clear();
-            ListOfWorkInProgress.Clear();
-            ListOfCompletedWork.Clear();
+            foreach (KeyValuePair<EnumCategories, CategoryViewModel> category in Categories)
+            {
+                category.Value.PostItsInCategory.Clear();
+            }
             _boardFileNameAndPath = null;
         }
 
@@ -98,27 +99,11 @@ namespace KanbanBoard.ViewModel
         {
             if (_boardFileNameAndPath != null)
             {
-                PersistenceHandler.Save(_boardContainer, _boardFileNameAndPath);
+                PersistenceHandler.Save(_categories, _boardFileNameAndPath);
             }
             else
             {
                 SaveAsDialog();
-            }
-        }
-
-        /// <summary>
-        /// Opens the Load dialog, and allows the user to pick the desired Kanban Board file
-        /// </summary>
-        private void LoadFromDialog()
-        {
-            _openFileDialog.ShowDialog();
-            if (_openFileDialog.FileName != "")
-            {
-                _boardFileNameAndPath = _openFileDialog.FileName;
-                _boardContainer = PersistenceHandler.Load(_boardFileNameAndPath);
-                ListOfToDo = _boardContainer[0][0].PostItsInCategory;
-                ListOfWorkInProgress = _boardContainer[1][0].PostItsInCategory;
-                ListOfCompletedWork = _boardContainer[2][0].PostItsInCategory;
             }
         }
 
@@ -131,48 +116,65 @@ namespace KanbanBoard.ViewModel
             if (_saveAsFileDialog.FileName != "")
             {
                 _boardFileNameAndPath = _saveAsFileDialog.FileName;
-                PersistenceHandler.Save(_boardContainer, _boardFileNameAndPath);
+                PersistenceHandler.Save(_categories, _boardFileNameAndPath);
             }
         }
 
+
         /// <summary>
-        /// Provides access to the List Of To do
+        /// Opens the Load dialog, and allows the user to pick the desired Kanban Board file
         /// </summary>
-        public ObservableCollection<PostItModel> ListOfToDo
+        private void LoadFromDialog()
         {
-            get { return _categories[EnumCategories.ToDo].PostItsInCategory; }
-            set
+            _openFileDialog.ShowDialog();
+            if (_openFileDialog.FileName != "")
             {
-                _categories[EnumCategories.ToDo].PostItsInCategory = value;
-                OnPropertyChanged();
+                _boardFileNameAndPath = _openFileDialog.FileName;
+                Categories = PersistenceHandler.Load(_boardFileNameAndPath);
+                //ListOfToDo = _boardContainer[0][0].PostItsInCategory;
+                //ListOfWorkInProgress = _boardContainer[1][0].PostItsInCategory;
+                //ListOfCompletedWork = _boardContainer[2][0].PostItsInCategory;
             }
         }
 
-        /// <summary>
-        /// Provides access to the Lisf Of Work In Progress.
-        /// </summary>
-        public ObservableCollection<PostItModel> ListOfWorkInProgress
-        {
-            get { return _categories[EnumCategories.WorkInProgress].PostItsInCategory; }
-            set
-            {
-                _categories[EnumCategories.WorkInProgress].PostItsInCategory = value;
-                OnPropertyChanged();
-            }
-        }
+        ///// <summary>
+        ///// Provides access to the List Of To do
+        ///// </summary>
+        //public ObservableCollection<PostItModel> ListOfToDo
+        //{
+        //    get { return _categories[EnumCategories.ToDo].PostItsInCategory; }
+        //    set
+        //    {
+        //        _categories[EnumCategories.ToDo].PostItsInCategory = value;
+        //        OnPropertyChanged();
+        //    }
+        //}
 
-        /// <summary>
-        /// Provides access to the list of Completed Work.
-        /// </summary>
-        public ObservableCollection<PostItModel> ListOfCompletedWork
-        {
-            get { return _categories[EnumCategories.CompletedWork].PostItsInCategory; }
-            set
-            {
-                _categories[EnumCategories.CompletedWork].PostItsInCategory = value;
-                OnPropertyChanged();
-            }
-        }
+        ///// <summary>
+        ///// Provides access to the Lisf Of Work In Progress.
+        ///// </summary>
+        //public ObservableCollection<PostItModel> ListOfWorkInProgress
+        //{
+        //    get { return _categories[EnumCategories.WorkInProgress].PostItsInCategory; }
+        //    set
+        //    {
+        //        _categories[EnumCategories.WorkInProgress].PostItsInCategory = value;
+        //        OnPropertyChanged();
+        //    }
+        //}
+
+        ///// <summary>
+        ///// Provides access to the list of Completed Work.
+        ///// </summary>
+        //public ObservableCollection<PostItModel> ListOfCompletedWork
+        //{
+        //    get { return _categories[EnumCategories.CompletedWork].PostItsInCategory; }
+        //    set
+        //    {
+        //        _categories[EnumCategories.CompletedWork].PostItsInCategory = value;
+        //        OnPropertyChanged();
+        //    }
+        //}
 
         /// <summary>
         /// The command used to initiate the board reset.

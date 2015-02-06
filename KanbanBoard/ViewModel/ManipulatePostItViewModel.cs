@@ -35,24 +35,27 @@ namespace KanbanBoard.ViewModel
         /// </summary>
         private void Save()
         {
-            SolidColorBrush redSolidColorBrush = new SolidColorBrush(Colors.Red);
-            SolidColorBrush yellowSolidColorBrush = new SolidColorBrush(Colors.Yellow);
-            SolidColorBrush greenSolidColorBrush = new SolidColorBrush(Colors.Green);
+            SolidColorBrush ColorBrush;
+
+            switch (Category)
+            {
+                case EnumCategories.ToDo:
+                    ColorBrush = new SolidColorBrush(Colors.Red);
+                    break;
+                case EnumCategories.WorkInProgress:
+                    ColorBrush = new SolidColorBrush(Colors.Yellow);
+                    break;
+                case EnumCategories.CompletedWork:
+                    ColorBrush = new SolidColorBrush(Colors.Green);
+                    break;
+                default:
+                    ColorBrush = new SolidColorBrush();
+                    break;
+            }
 
             if (CheckInput())
             {
-                if (Category == EnumCategories.ToDo)
-                {
-                    MainViewModel.ListOfToDo.Add(new PostItModel(_taskName, _taskDetails, _deadline, _responsiblePerson, redSolidColorBrush));
-                }
-                if (Category == EnumCategories.WorkInProgress)
-                {
-                    MainViewModel.ListOfWorkInProgress.Add(new PostItModel(_taskName, _taskDetails, _deadline, _responsiblePerson, yellowSolidColorBrush));
-                }
-                if (Category == EnumCategories.CompletedWork)
-                {
-                    MainViewModel.ListOfCompletedWork.Add(new PostItModel(_taskName, _taskDetails, _deadline, _responsiblePerson, greenSolidColorBrush));
-                }
+                MainViewModel.Categories[Category].PostItsInCategory.Add(new PostItModel(_taskName, _taskDetails, _deadline, _responsiblePerson, ColorBrush));
             }
         }
 

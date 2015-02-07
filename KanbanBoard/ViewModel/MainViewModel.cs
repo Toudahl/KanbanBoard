@@ -56,7 +56,6 @@ namespace KanbanBoard.ViewModel
             Board[EnumCategories.CompletedWork] = new CategoryViewModel(EnumCategories.CompletedWork);
             #endregion
 
-
             #region Instantiate the commands
             _saveAsDialogCommand = new RelayCommand(SaveAsDialog);
             _saveCommand = new RelayCommand(SaveBoard);
@@ -147,7 +146,6 @@ namespace KanbanBoard.ViewModel
             }
         }
 
-
         /// <summary>
         /// Opens the Load dialog, and allows the user to pick the desired Kanban Board file
         /// </summary>
@@ -156,12 +154,14 @@ namespace KanbanBoard.ViewModel
             _openFileDialog.ShowDialog();
             if (_openFileDialog.FileName != "")
             {
-                // TODO: fix this.
                 _boardFileNameAndPath = _openFileDialog.FileName;
                 Board = PersistenceHandler.Load<Dictionary<EnumCategories, CategoryViewModel>>(_boardFileNameAndPath);
             }
         }
 
+        /// <summary>
+        /// Opens the window for adding and editing post its
+        /// </summary>
         private void AddOrEdit()
         {
             addOrEditWindow = new ManipulatePostItView(this);

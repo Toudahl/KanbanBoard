@@ -11,9 +11,7 @@ namespace KanbanBoard.View
     /// </summary>
     public partial class ManipulatePostItView : Window
     {
-
-        // TODO: Create functionality to select an employee
-        
+      
         public ManipulatePostItView(MainViewModel viewModel_MainView)
         {
             InitializeComponent();

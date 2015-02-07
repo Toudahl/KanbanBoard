@@ -7,8 +7,12 @@ using KanbanBoard.Model;
 
 namespace KanbanBoard.ViewModel
 {
+    /// <summary>
+    /// This class handles the adding of post its - and later on will also handle editing the postits.
+    /// </summary>
     class ManipulatePostItViewModel
     {
+        #region Fields
         private MainViewModel _mainViewModel;
         private string _taskName;
         private string _taskDetails;
@@ -16,16 +20,14 @@ namespace KanbanBoard.ViewModel
         private EnumCategories _selectedCategory;
         private ICommand _saveCommand;
         private EmployeeModel _responsiblePerson;
+        private EmployeeViewModel _employeeHandler;
+        #endregion
 
         public ManipulatePostItViewModel()
         {
-            _taskName = null;
-            _taskDetails = null;
+            _employeeHandler = new EmployeeViewModel();
 
             _saveCommand = new RelayCommand(Save);
-
-            _responsiblePerson = new EmployeeModel("Morten", "Toudahl", EnumEmployeeTitles.LeadDeveloper);
-            _deadline = DateTime.Today.ToString("HH:mm - dd MMMM, yyyy");
         }
 
         #region Methods
@@ -58,6 +60,10 @@ namespace KanbanBoard.ViewModel
             {
                 MainViewModel.Board[SelectedCategory].PostItsInCategory.Add(new PostItModel(_taskName, _taskDetails, _deadline, _responsiblePerson, colorBrush));
             }
+            else
+            {
+                //TODO : Make a notification of what is wrong, and dont close the window.
+            }
         }
 
         /// <summary>
@@ -74,11 +80,38 @@ namespace KanbanBoard.ViewModel
             {
                 return false;
             }
+            if (ResponsiblePerson == null)
+            {
+                return false;
+            }
+            if (Deadline == null)
+            {
+                return false;
+            }
             return true;
         }
+        
         #endregion
 
         #region Properties
+        /// <summary>
+        /// Provides access to the properties in <see cref="EmployeeViewModel"/>, which contains the list of employees.
+        /// </summary>
+        public EmployeeViewModel EmployeeHandler
+        {
+            get { return _employeeHandler; }
+            set { _employeeHandler = value; }
+        }
+
+        /// <summary>
+        /// Gets and sets the ResponsiblePerson
+        /// </summary>
+        public EmployeeModel ResponsiblePerson
+        {
+            get { return _responsiblePerson; }
+            set { _responsiblePerson = value; }
+        }
+
         /// <summary>
         /// Provides access to the properties in the <see cref="MainViewModel"/>, which contains the board
         /// </summary>

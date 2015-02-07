@@ -107,11 +107,8 @@ namespace KanbanBoard.Persistence
             /// <returns>The post its that was loaded</returns>
             public T Load<T>(string fileName)
             {
-                // TODO: find out why casting only works when using build in DeserializeObject<>.
                 string readAllText = File.ReadAllText(fileName);
                 return JsonConvert.DeserializeObject<T>(readAllText);
-                //return JsonConvert.DeserializeObject<Dictionary<EnumCategories, CategoryViewModel>>(readAllText);
-                //return JsonConvert.DeserializeObject<object>(readAllText);
             }
         }
         #endregion

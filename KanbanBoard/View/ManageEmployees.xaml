@@ -7,7 +7,11 @@
         <viewModel:EmployeeViewModel/>
     </Window.DataContext>
     <Grid>
-        <ComboBox HorizontalAlignment="Left" Margin="99,46,0,0" VerticalAlignment="Top" Width="120" ItemsSource="{Binding Employees/}"/>
-
+        <ComboBox 
+            HorizontalAlignment="Left"
+            Margin="99,46,0,0"
+            VerticalAlignment="Top"
+            Width="120" 
+            ItemsSource="{Binding Employees, Mode=TwoWay}" />
     </Grid>
 </Window>

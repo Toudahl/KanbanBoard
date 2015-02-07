@@ -1069,6 +1069,72 @@
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
+          <association
+            Id="47a77756-2bdf-420d-ac6b-35c529371b42"
+            isDerived="false"
+            sourceEndRoleName="MainViewModel"
+            targetEndRoleName="AddOrEditCommand"
+            isLeaf="false"
+            isAbstract="false">
+            <interfaceMoniker
+              Id="3a4ab6ff-a1a6-4ac9-881d-fc05aa9a6f2a"
+              LastKnownName="ICommand"
+              LastKnownLocation="Package13_1225.uml" />
+            <description>Property AddOrEditCommand references type ICommand.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="7d0924cb-ba91-4e6a-a454-f3b0a7f62794"
+                  name="MainViewModel"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="53908d59-98f5-48ab-9d32-5bc8aecf249b"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="19e55e37-f9bf-4fee-b817-4490f4ed2f99"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="7cce5efb-7258-415d-ad9b-adce06d96666"
+                  name="AddOrEditCommand"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="66b1c9e9-92b9-402d-a398-3548ba6f94fe"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="03ce7031-2b04-44a6-b173-9da8a353ff45"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
         </targetEnds>
         <ownedAttributesInternal>
           <property
@@ -2140,6 +2206,220 @@
                 LastKnownLocation="Package7_1225.uml" />
             </type_NamedElement>
           </property>
+          <property
+            Id="e9ea0c17-a4a3-4efd-b863-ed2b4fc3e0c6"
+            name="AddOrEditCommand"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="8a86d574-191c-483e-9115-a2447b061364"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FD:%2FDokumenter%2FVisual Studio 2013%2FProjects%2F2. Semester%2FKanbanBoard%2FKanbanBoard%2Fbin%2FDebug%2FKanbanBoard.exe&quot; Namespace%3DKanbanBoard.ViewModel Type%3DMainViewModel Member%3DAddOrEditCommand"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="97ad3685-e0c7-40db-b2f1-d5164d5bb10a"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6a7717dd-e2f9-4831-b9b1-67897fde6a1d">
+                    <propertyInstance
+                      Id="766a7c48-d609-4b5f-b21f-73db29ae291a"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="407478da-44d0-495e-a617-c426f36fe266">
+                    <propertyInstance
+                      Id="41948f19-569f-49e7-9f05-ab3246538ee5"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="efe4d06d-a454-4fb2-ac6b-d2030cf72711">
+                    <propertyInstance
+                      Id="130683a4-ff5f-4d9c-9495-52fd26860137"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ce818d04-d647-4232-8236-42e2ffbad61c">
+                    <propertyInstance
+                      Id="8c447bf7-edf3-49aa-b0b0-8f94108e2c41"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="93d8000a-5427-4e36-9303-192e4cf8f87f">
+                    <propertyInstance
+                      Id="4e651232-8a6e-4aef-87e0-ab5f02c57766"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="932f3d7e-7b52-4fc6-b52e-ceebb9877b67">
+                    <propertyInstance
+                      Id="828bcdc8-198e-47b1-bf7a-0c05dbaac5da"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="16fee27b-eca6-4e7d-8cfe-e28799e65f92">
+                    <propertyInstance
+                      Id="fd266b57-7976-4952-bd4d-73bc7c701a3e"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="3a4ab6ff-a1a6-4ac9-881d-fc05aa9a6f2a"
+                LastKnownName="ICommand"
+                LastKnownLocation="Package13_1225.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="b2e5fa7c-8787-4341-a4bc-6a8684985678"
+            name="_addOrEditCommand"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="9cfc9e6c-7b57-4e80-a6ac-d1ffb1f34ce8"
+                handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2FD:%2FDokumenter%2FVisual Studio 2013%2FProjects%2F2. Semester%2FKanbanBoard%2FKanbanBoard%2Fbin%2FDebug%2FKanbanBoard.exe&quot; Namespace%3DKanbanBoard.ViewModel Type%3DMainViewModel Member%3D_addOrEditCommand"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="813371a7-7942-4470-80d1-c577fe8b11dc"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3add560b-eec0-41d2-805e-de3617d16db2">
+                    <propertyInstance
+                      Id="c1734854-ea72-4218-9582-07de03251ece"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7db7c4a4-d715-437b-ac7e-72e846663604">
+                    <propertyInstance
+                      Id="c315f52b-0dfe-4b14-80d2-7aaf971d3665"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="74a2e6d6-fdd0-45e7-8f80-1a5462dc4766">
+                    <propertyInstance
+                      Id="bba3d405-ad69-4feb-9c86-72319a5b1345"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1807a3f4-b9f6-430c-965a-64c771856a74">
+                    <propertyInstance
+                      Id="bb99941e-0ec5-48c7-9fce-f40828ca54ae"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a8309110-dfcd-400a-88c6-667a94caf96c">
+                    <propertyInstance
+                      Id="58e1ec00-5c48-4ae5-a291-d9ee9b95a743"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="3a4ab6ff-a1a6-4ac9-881d-fc05aa9a6f2a"
+                LastKnownName="ICommand"
+                LastKnownLocation="Package13_1225.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="48410de1-8195-4dc6-b269-1b2ce838818a"
+            name="addOrEditWindow"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="361f5f1d-2797-4874-9afa-c4155cc8061c"
+                handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2FD:%2FDokumenter%2FVisual Studio 2013%2FProjects%2F2. Semester%2FKanbanBoard%2FKanbanBoard%2Fbin%2FDebug%2FKanbanBoard.exe&quot; Namespace%3DKanbanBoard.ViewModel Type%3DMainViewModel Member%3DaddOrEditWindow"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="2b748712-a80d-4515-a9c2-e281171ff0c6"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="02d13610-1ab5-41e9-b05e-79426060b4ba">
+                    <propertyInstance
+                      Id="645ad521-d5d4-4054-9216-7994fd94788c"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d95d71a9-7a04-4984-a74d-4623a2242d74">
+                    <propertyInstance
+                      Id="20d9868e-1945-443d-8dfa-0c8e800ff1d9"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9435137d-b6e9-491c-97de-797d10ce6f48">
+                    <propertyInstance
+                      Id="b3677564-7e25-4ac5-a1be-0179ccc91236"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2655ad4c-0795-4018-b8e9-9a596a0c621d">
+                    <propertyInstance
+                      Id="4e8bb7d4-0138-4c03-aced-c14dc4b10d36"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8842f75f-4211-40a8-ba67-4008a5ca3fff">
+                    <propertyInstance
+                      Id="3d5d07ad-2407-47da-931f-7d59e918f307"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="ff6a3692-875f-4d4e-97ce-ae15cd1bfebf"
+                LastKnownName="ManipulatePostItView"
+                LastKnownLocation="Package_1125.uml" />
+            </type_NamedElement>
+          </property>
         </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
@@ -2666,7 +2946,7 @@
             </ownedParameters>
           </operation>
           <operation
-            Id="cb5aa85b-b8e6-4e6a-970d-1de04c97e17f"
+            Id="e7ce98ac-1e05-43d4-ab7d-0c7c4d9c69fe"
             name="MainViewModel"
             isLeaf="false"
             isStatic="false"
@@ -2675,54 +2955,120 @@
             isQuery="false">
             <referencesInternal>
               <reference
-                Id="b7645b32-3873-4fd6-a742-4a2c7f725c6e"
+                Id="1ef57179-7929-4b63-a8de-e2888481fd15"
                 handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FD:%2FDokumenter%2FVisual Studio 2013%2FProjects%2F2. Semester%2FKanbanBoard%2FKanbanBoard%2Fbin%2FDebug%2FKanbanBoard.exe&quot; Namespace%3DKanbanBoard.ViewModel Type%3DMainViewModel Member%3D.ctor"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
               <stereotypeInstance
-                Id="d9572b60-2620-4230-a9ce-044e000e13f6"
+                Id="2e91bbb7-0860-4466-b808-a64f491e1abf"
                 name="method"
                 profile="CSharpProfile">
                 <propertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="fd56bd62-eb39-4bfa-b626-bf6eb20768e1">
+                    Id="edbe64d2-afaf-46c9-a038-e285f5d453df">
                     <propertyInstance
-                      Id="80179297-5664-41d7-a3ec-e0bc3d147e02"
+                      Id="8e5ffe8f-0059-4240-8387-0b0c7b025d3e"
                       name="ClrAttributes" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="94d3f9d1-63c6-4d57-bd28-6b6a6158f116">
+                    Id="3d329964-dca7-4e25-9866-7b009f4eb02a">
                     <propertyInstance
-                      Id="031e2abf-cc6a-4c9e-8442-17302775c1f6"
+                      Id="b103dd27-fee8-4b78-a017-df543f432921"
                       name="IsPartial"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="dfd9d398-a450-43e4-a955-6b60a513b65c">
+                    Id="bf2a5782-dba3-4e04-a470-0a5a4950bf62">
                     <propertyInstance
-                      Id="867e974d-20e2-4ba7-9adb-71fb4772df20"
+                      Id="21e50f9d-e2c3-4e02-b22e-392827bb81c8"
                       name="IsUnsafe"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="bfdc5f02-5940-4300-a834-e2b1947066ad">
+                    Id="83e9d8c1-1958-4ad5-a2ee-f18a6559771a">
                     <propertyInstance
-                      Id="2d2bcc93-ea4d-4fec-9f13-0afe682aab5f"
+                      Id="2a39d970-66e8-4bd8-b23a-531ef7e739fc"
                       name="Inheritance"
                       value="none" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="16a40ca9-3f56-4dbe-9e22-7e12a9a2fc52">
+                    Id="9e270c41-f677-43a1-b83d-6fef94543a80">
                     <propertyInstance
-                      Id="a55ff08a-7c9b-4f1d-9f26-2330a27eaffb"
+                      Id="a152fee7-8562-43e2-bbf9-1c93364fb410"
                       name="PackageVisibility"
                       value="internal" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="2b01e618-603b-4b26-ab82-d6c0a998d78b">
+                    Id="6ab75284-f8af-4882-85fb-e02fa1a64a13">
                     <propertyInstance
-                      Id="f645ed33-931f-4f06-b00a-a765a5b4b146"
+                      Id="12f8d370-d2bf-4742-bbd8-82081720b506"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="b68ee93c-8846-4bbb-a1b9-e2cef45b3af7"
+            name="AddOrEdit"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="7296ff8d-2da5-4381-a291-3231dc22fbdb"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FD:%2FDokumenter%2FVisual Studio 2013%2FProjects%2F2. Semester%2FKanbanBoard%2FKanbanBoard%2Fbin%2FDebug%2FKanbanBoard.exe&quot; Namespace%3DKanbanBoard.ViewModel Type%3DMainViewModel Member%3DAddOrEdit"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="34e2cfdb-91d7-422d-a238-be814182d7df"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2b5e82e5-b04c-49ad-962c-36e07eeecfd2">
+                    <propertyInstance
+                      Id="f90bb822-6bf5-4efe-b96e-2f0081f4704e"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a2637897-1b52-45b5-bd10-2dc1b61f8f8d">
+                    <propertyInstance
+                      Id="cabd270b-58c2-4251-bb7d-b6bed2fbe930"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1b9fee6f-f07f-4a94-afcb-1114257acfde">
+                    <propertyInstance
+                      Id="e0897895-b201-4e99-b353-598e7f9ecdff"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="782757c9-c7d0-4a2a-b60c-20b3eade27d1">
+                    <propertyInstance
+                      Id="fb74f062-8f67-4731-826a-40cb44765ff8"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8d2d786a-756a-4e7e-88b5-17a58437c625">
+                    <propertyInstance
+                      Id="3bcdd919-2e5a-4d92-8fed-0bb0d2b32392"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="42515a1e-be2a-469c-8776-670bfe5f7a40">
+                    <propertyInstance
+                      Id="3ae2ab05-1543-43c4-a0e5-dff7f4fb37e6"
                       name="params"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
@@ -2858,21 +3204,21 @@
             </relationshipOwnedElementsInternal>
           </association>
           <association
-            Id="c8efb178-c4f2-4e65-bc74-9319acb350d2"
+            Id="f86ee0d0-de46-4539-8aaf-4d0d201f5f31"
             isDerived="false"
             sourceEndRoleName="ManipulatePostItViewModel"
-            targetEndRoleName="Category"
+            targetEndRoleName="SelectedCategory"
             isLeaf="false"
             isAbstract="false">
             <enumerationMoniker
               Id="760903f8-a787-4bbb-8ecc-e3d9c45331d0"
               LastKnownName="EnumCategories"
               LastKnownLocation="Package1_1225.uml" />
-            <description>Property Category references type EnumCategories.</description>
+            <description>Property SelectedCategory references type EnumCategories.</description>
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="ab864944-ac94-4cfd-a698-ebe323128e8a"
+                  Id="a7d221ef-10d4-40bb-b16f-8fc845dbc3f1"
                   name="ManipulatePostItViewModel"
                   isLeaf="false"
                   isStatic="false"
@@ -2884,13 +3230,13 @@
                   isNavigableOwned="false">
                   <lowerValueInternal>
                     <literalString
-                      Id="ced1a70b-b7e5-4126-bc22-fd5c62181201"
+                      Id="80b27e70-25bc-4991-9fea-2e928f95ce37"
                       name="Lower"
                       value="*" />
                   </lowerValueInternal>
                   <upperValueInternal>
                     <literalString
-                      Id="b5da02e4-a288-4f4a-9acc-5e518ff810ce"
+                      Id="3a6a70c7-2d05-4e49-a474-61ecb6fc5cb7"
                       name="Upper"
                       value="*" />
                   </upperValueInternal>
@@ -2898,8 +3244,8 @@
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="7ebb3ec2-6463-48b5-b9ea-2cc500d9fa65"
-                  name="Category"
+                  Id="d13a44cd-3a85-4090-97f5-c6c1916c982b"
+                  name="SelectedCategory"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -2909,13 +3255,13 @@
                   isComposite="false">
                   <lowerValueInternal>
                     <literalString
-                      Id="1a0e1845-a013-471f-bc7c-d83e1d6b82be"
+                      Id="a946d9b1-7336-4ae5-9d70-852aaebc7a18"
                       name="Lower"
                       value="1" />
                   </lowerValueInternal>
                   <upperValueInternal>
                     <literalString
-                      Id="94294ec6-073d-4ea5-be91-37c38060e5de"
+                      Id="749e3748-3ddf-4f8d-9381-edbac64c6d70"
                       name="Upper"
                       value="1" />
                   </upperValueInternal>
@@ -2924,21 +3270,21 @@
             </relationshipOwnedElementsInternal>
           </association>
           <association
-            Id="d1a12e3b-390c-48ab-a0d0-6aa2bb6b0fbd"
+            Id="f7f952a9-c5c7-4b73-a2db-16610a20afae"
             isDerived="false"
             sourceEndRoleName="ManipulatePostItViewModel"
-            targetEndRoleName="AddCommand"
+            targetEndRoleName="SaveCommand"
             isLeaf="false"
             isAbstract="false">
             <interfaceMoniker
               Id="3a4ab6ff-a1a6-4ac9-881d-fc05aa9a6f2a"
               LastKnownName="ICommand"
               LastKnownLocation="Package13_1225.uml" />
-            <description>Property AddCommand references type ICommand.</description>
+            <description>Property SaveCommand references type ICommand.</description>
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="2d3a5484-055a-4ff4-87ac-19c5a96e6fc5"
+                  Id="914beb76-d797-4cd4-98be-ace77abb372f"
                   name="ManipulatePostItViewModel"
                   isLeaf="false"
                   isStatic="false"
@@ -2950,13 +3296,13 @@
                   isNavigableOwned="false">
                   <lowerValueInternal>
                     <literalString
-                      Id="4bb4ac01-2cca-44b5-91e4-4ba5465ed9bf"
+                      Id="ec13d2fa-3d3e-4218-adc7-82a0ead6daf7"
                       name="Lower"
                       value="*" />
                   </lowerValueInternal>
                   <upperValueInternal>
                     <literalString
-                      Id="35faec28-f969-49d3-8a5a-a3e3285ccb45"
+                      Id="f36b6706-ccf3-4c38-97a7-7aaf88ac74dc"
                       name="Upper"
                       value="*" />
                   </upperValueInternal>
@@ -2964,8 +3310,8 @@
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="88106eb8-4aa1-4a1c-963c-a86ed9241e72"
-                  name="AddCommand"
+                  Id="1ce7b922-6f85-4daf-b775-937e9007ab05"
+                  name="SaveCommand"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -2975,13 +3321,13 @@
                   isComposite="false">
                   <lowerValueInternal>
                     <literalString
-                      Id="843d4b31-04da-4620-b528-cc86b7da0dec"
+                      Id="998f1d37-9d74-46d8-a32a-0fdda69f932d"
                       name="Lower"
                       value="1" />
                   </lowerValueInternal>
                   <upperValueInternal>
                     <literalString
-                      Id="61591f55-e0f0-45ed-8fb8-5dc071db4e90"
+                      Id="fb55f04d-3265-49db-b814-63d93d05d299"
                       name="Upper"
                       value="1" />
                   </upperValueInternal>
@@ -3312,166 +3658,6 @@
             </type_NamedElement>
           </property>
           <property
-            Id="cc0888da-3c69-4025-b3c3-b2bd3579a6f0"
-            name="Category"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false">
-            <referencesInternal>
-              <reference
-                Id="c92c11a1-6f1e-40e8-ab0a-10b65fe01fac"
-                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FD:%2FDokumenter%2FVisual Studio 2013%2FProjects%2F2. Semester%2FKanbanBoard%2FKanbanBoard%2Fbin%2FDebug%2FKanbanBoard.exe&quot; Namespace%3DKanbanBoard.ViewModel Type%3DManipulatePostItViewModel Member%3DCategory"
-                tag="ViewCode" />
-            </referencesInternal>
-            <appliedStereotypesInternal>
-              <stereotypeInstance
-                Id="ae44b553-89e9-4e92-b611-ab4d28b8330f"
-                name="property"
-                profile="CSharpProfile">
-                <propertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="737e7869-a89a-4be8-ab2d-f2322c449d43">
-                    <propertyInstance
-                      Id="9a75d8ac-5060-4df4-b202-b8611bc5abfd"
-                      name="ClrAttributes" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="543e9f22-9304-49cc-854f-414cbbdb036f">
-                    <propertyInstance
-                      Id="4a478621-a7a8-4833-8788-ef959fcabc07"
-                      name="Get"
-                      value="public" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="158a574e-6c44-4d92-8812-8b4fb3dbd773">
-                    <propertyInstance
-                      Id="5f9e41bb-4ee1-4df8-8da0-8575ec5f8b31"
-                      name="HasBody"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="d74086eb-cda2-495e-b83d-ed396c0b2969">
-                    <propertyInstance
-                      Id="f0bc45ce-0700-465e-995d-85b0e56f8c48"
-                      name="IsUnsafe"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="9f85e428-0b7b-413d-bab5-35cca70d84e7">
-                    <propertyInstance
-                      Id="82413399-e69a-4b38-8b55-22d6b5622144"
-                      name="Inheritance"
-                      value="none" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="5189857c-4f73-4af8-991d-69b8439078f0">
-                    <propertyInstance
-                      Id="5ec15396-29b5-47c3-a2ba-45ae403ce210"
-                      name="PackageVisibility"
-                      value="internal" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="37ea73e4-ed97-428b-b507-9a501d33c8bf">
-                    <propertyInstance
-                      Id="f3886342-2ca8-40aa-90c7-cee99860f3a4"
-                      name="Set"
-                      value="public" />
-                  </stereotypeInstanceHasPropertyInstances>
-                </propertyInstances>
-              </stereotypeInstance>
-            </appliedStereotypesInternal>
-            <type_NamedElement>
-              <enumerationMoniker
-                Id="760903f8-a787-4bbb-8ecc-e3d9c45331d0"
-                LastKnownName="EnumCategories"
-                LastKnownLocation="Package1_1225.uml" />
-            </type_NamedElement>
-          </property>
-          <property
-            Id="4a42a2a5-24cc-4089-9985-1e6845544949"
-            name="AddCommand"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false">
-            <referencesInternal>
-              <reference
-                Id="84b7c577-9d7f-47ed-87c2-110e452bd921"
-                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FD:%2FDokumenter%2FVisual Studio 2013%2FProjects%2F2. Semester%2FKanbanBoard%2FKanbanBoard%2Fbin%2FDebug%2FKanbanBoard.exe&quot; Namespace%3DKanbanBoard.ViewModel Type%3DManipulatePostItViewModel Member%3DAddCommand"
-                tag="ViewCode" />
-            </referencesInternal>
-            <appliedStereotypesInternal>
-              <stereotypeInstance
-                Id="c1a5aecd-a37a-4171-a0db-ee993d029799"
-                name="property"
-                profile="CSharpProfile">
-                <propertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="55b0c78b-f57f-4fcc-8995-4dffcca5eaf4">
-                    <propertyInstance
-                      Id="572796ad-9eea-45a5-bf0e-d5895c0d48e9"
-                      name="ClrAttributes" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="ff9449db-835c-4098-a7bc-bb61720fbed9">
-                    <propertyInstance
-                      Id="6ec53bba-0b9e-42f6-8f34-f948552cdf5d"
-                      name="Get"
-                      value="public" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="7395a6f7-7175-4ba9-983d-3e66c8edf38c">
-                    <propertyInstance
-                      Id="4fa7fba8-a67e-4470-af1e-7ca4afda2546"
-                      name="HasBody"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="a3ca6b4b-b12a-4c7b-a8f3-c339d3f55002">
-                    <propertyInstance
-                      Id="1542c7d4-0cf6-4079-84b2-324262630737"
-                      name="IsUnsafe"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="478c1f56-5f45-4f32-b55d-405d41790f7f">
-                    <propertyInstance
-                      Id="4ff3d43d-b32a-48a1-ab0c-9e983df527e9"
-                      name="Inheritance"
-                      value="none" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="7c73fceb-1a3e-4dc8-9840-aec13ba1141e">
-                    <propertyInstance
-                      Id="bc32db9c-c6d5-432b-b116-1213fd6ad6b7"
-                      name="PackageVisibility"
-                      value="internal" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="d96f127c-4725-45b7-a564-9128402c4db5">
-                    <propertyInstance
-                      Id="f7cd24e5-f670-4d6e-b463-5eda65f4e535"
-                      name="Set"
-                      value="public" />
-                  </stereotypeInstanceHasPropertyInstances>
-                </propertyInstances>
-              </stereotypeInstance>
-            </appliedStereotypesInternal>
-            <type_NamedElement>
-              <interfaceMoniker
-                Id="3a4ab6ff-a1a6-4ac9-881d-fc05aa9a6f2a"
-                LastKnownName="ICommand"
-                LastKnownLocation="Package13_1225.uml" />
-            </type_NamedElement>
-          </property>
-          <property
             Id="9b1e5732-d0c0-480a-a6e0-88e3388c2999"
             name="_mainViewModel"
             visibility="Private"
@@ -3740,140 +3926,6 @@
             </type_NamedElement>
           </property>
           <property
-            Id="c017aa2f-b985-4154-b755-988050514393"
-            name="_category"
-            visibility="Private"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false">
-            <referencesInternal>
-              <reference
-                Id="393e0601-b016-4241-8495-05b443a858ad"
-                handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2FD:%2FDokumenter%2FVisual Studio 2013%2FProjects%2F2. Semester%2FKanbanBoard%2FKanbanBoard%2Fbin%2FDebug%2FKanbanBoard.exe&quot; Namespace%3DKanbanBoard.ViewModel Type%3DManipulatePostItViewModel Member%3D_category"
-                tag="ViewCode" />
-            </referencesInternal>
-            <appliedStereotypesInternal>
-              <stereotypeInstance
-                Id="6965ea71-16df-4ad8-9ecc-9425a18fcf62"
-                name="field"
-                profile="CSharpProfile">
-                <propertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="0b1d4907-e9bb-423f-9042-b01555fe186d">
-                    <propertyInstance
-                      Id="e025f0a1-3280-4e17-8cf6-80192d813386"
-                      name="ClrAttributes" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="c4204456-9d3e-4461-96b8-10a3816d03cb">
-                    <propertyInstance
-                      Id="fd8bd154-e07b-4fd1-9e4c-028e6fd8f700"
-                      name="IsConst"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="f1e071a2-8e0e-4037-bb9e-ccf157cee711">
-                    <propertyInstance
-                      Id="f0b22edb-5984-474e-9897-4f534d1adaf9"
-                      name="IsNullable"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="e8035b8e-c1d5-4584-b3bb-f6f2ec472b23">
-                    <propertyInstance
-                      Id="8f8873b1-12b7-4df2-8703-1979106e4174"
-                      name="IsVolatile"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="ea9b048e-0bc8-4258-9f1c-cd85f6ce4829">
-                    <propertyInstance
-                      Id="f7d99bdc-91ca-4fa1-b6d1-83f61cf68078"
-                      name="PackageVisibility"
-                      value="internal" />
-                  </stereotypeInstanceHasPropertyInstances>
-                </propertyInstances>
-              </stereotypeInstance>
-            </appliedStereotypesInternal>
-            <type_NamedElement>
-              <enumerationMoniker
-                Id="760903f8-a787-4bbb-8ecc-e3d9c45331d0"
-                LastKnownName="EnumCategories"
-                LastKnownLocation="Package1_1225.uml" />
-            </type_NamedElement>
-          </property>
-          <property
-            Id="12477197-9157-4edc-a45d-0f67bcbe2be1"
-            name="_addCommand"
-            visibility="Private"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false">
-            <referencesInternal>
-              <reference
-                Id="a690e8f5-be24-49c5-8358-f6037a6502e6"
-                handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2FD:%2FDokumenter%2FVisual Studio 2013%2FProjects%2F2. Semester%2FKanbanBoard%2FKanbanBoard%2Fbin%2FDebug%2FKanbanBoard.exe&quot; Namespace%3DKanbanBoard.ViewModel Type%3DManipulatePostItViewModel Member%3D_addCommand"
-                tag="ViewCode" />
-            </referencesInternal>
-            <appliedStereotypesInternal>
-              <stereotypeInstance
-                Id="9584a979-3013-44c9-9c71-4102fc2f84dc"
-                name="field"
-                profile="CSharpProfile">
-                <propertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="80f85008-cfe7-4ffb-8f78-cdc0ea4d9c52">
-                    <propertyInstance
-                      Id="ccd692b8-0c72-44e3-95f8-158513bf1560"
-                      name="ClrAttributes" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="2766cbc1-5ac1-468b-8cd2-339ea501d400">
-                    <propertyInstance
-                      Id="213fb3c1-aa81-4855-8932-b45c65636e9f"
-                      name="IsConst"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="b3e9e118-450f-4551-9acf-ca46e9e3645e">
-                    <propertyInstance
-                      Id="6f55357b-af5d-4099-b2a2-83f23e489115"
-                      name="IsNullable"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="69e4bf3b-88af-4976-91fa-8964cc6a92f1">
-                    <propertyInstance
-                      Id="3d786887-096b-4f17-af05-e8956ac8af12"
-                      name="IsVolatile"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="d83fc9e1-3756-4185-8de7-5bcbf5889793">
-                    <propertyInstance
-                      Id="cfd1e246-0284-4bf4-a044-dc8e82fb8577"
-                      name="PackageVisibility"
-                      value="internal" />
-                  </stereotypeInstanceHasPropertyInstances>
-                </propertyInstances>
-              </stereotypeInstance>
-            </appliedStereotypesInternal>
-            <type_NamedElement>
-              <interfaceMoniker
-                Id="3a4ab6ff-a1a6-4ac9-881d-fc05aa9a6f2a"
-                LastKnownName="ICommand"
-                LastKnownLocation="Package13_1225.uml" />
-            </type_NamedElement>
-          </property>
-          <property
             Id="2ad177c8-529b-41e7-9a3b-2d0068e1b1f8"
             name="_responsiblePerson"
             visibility="Private"
@@ -3938,6 +3990,393 @@
                 Id="b947719e-a082-4cbb-ba18-52a3ae7ceeec"
                 LastKnownName="EmployeeModel"
                 LastKnownLocation="Package1_1225.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="a3379f0b-bac1-45f3-b68b-8c16fa840e71"
+            name="SelectedCategory"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="9e1fb2c4-a579-4897-9437-d89374c591cb"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FD:%2FDokumenter%2FVisual Studio 2013%2FProjects%2F2. Semester%2FKanbanBoard%2FKanbanBoard%2Fbin%2FDebug%2FKanbanBoard.exe&quot; Namespace%3DKanbanBoard.ViewModel Type%3DManipulatePostItViewModel Member%3DSelectedCategory"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="7b1c71e7-b1d3-4de4-ad59-d62a6c682db1"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6cf19077-4fc2-48a2-97fc-90e8e3cd5034">
+                    <propertyInstance
+                      Id="b8a0506f-52a2-4b05-a77a-074d848ef306"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="02ace158-3ce6-4435-9414-3366174b4311">
+                    <propertyInstance
+                      Id="f5c4a6e9-ead9-4ea5-9927-48d090c2db88"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="02ae247a-ffa5-4e08-bca0-5c49c6029c75">
+                    <propertyInstance
+                      Id="b45a1c02-0929-4e09-8932-8773be0cf7ae"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7cb8bf6e-1efa-424f-b381-7b1678b0580d">
+                    <propertyInstance
+                      Id="dc35c098-8b67-4eaf-b161-bbb77c028af2"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6d0191f3-4d8c-4762-b80a-d029912e724b">
+                    <propertyInstance
+                      Id="e848713b-6022-45ed-b657-67d3def74495"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f9b88cfd-ba04-41ed-98d7-0793a62bb23a">
+                    <propertyInstance
+                      Id="66c1f65e-63eb-4786-8b89-a83a4b183676"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c41794f9-cce1-4054-b1ca-70b7cfcb8899">
+                    <propertyInstance
+                      Id="5d236766-3748-4eb4-947a-30483f594290"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <enumerationMoniker
+                Id="760903f8-a787-4bbb-8ecc-e3d9c45331d0"
+                LastKnownName="EnumCategories"
+                LastKnownLocation="Package1_1225.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="93815f66-7c5b-482d-b6f8-faf29918abf5"
+            name="AvailableCategories"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="true"
+            isOrdered="true"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="6f750792-0962-436b-ab6a-5d50b37e352d"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FD:%2FDokumenter%2FVisual Studio 2013%2FProjects%2F2. Semester%2FKanbanBoard%2FKanbanBoard%2Fbin%2FDebug%2FKanbanBoard.exe&quot; Namespace%3DKanbanBoard.ViewModel Type%3DManipulatePostItViewModel Member%3DAvailableCategories"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="dce9316f-adf2-4539-8f62-1a8e377518cd"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="67b321ff-7933-4c2b-ac61-b13c7469be03">
+                    <propertyInstance
+                      Id="a22fdfaf-93ea-4e96-88d8-7c09f8c3f274"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="03f13824-636a-4ecd-b67b-cdc66b7dc0ac">
+                    <propertyInstance
+                      Id="3a7d5188-6e36-4a70-ac52-51f9eb7e71ff"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="00e96ae7-6eb0-4ef3-97f4-fc8091e3b3f2">
+                    <propertyInstance
+                      Id="aecabf8e-bd70-46b2-86df-8b1e02bb9cad"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="978d1ca2-954d-4c22-a844-e8807d27ac93">
+                    <propertyInstance
+                      Id="73d8ef13-9595-4756-b8bf-70fdfbf58d4f"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="bdbbf526-dd72-47c7-ae72-a5204dfb7d20">
+                    <propertyInstance
+                      Id="f6d1b41d-159c-440d-87fd-6a3781ddf1ad"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="34fca1ec-f8d6-4e11-88bf-6952b1b17237">
+                    <propertyInstance
+                      Id="2c65e5d9-caf0-443d-8d00-8a834efa6d12"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="71183afe-c528-4080-9c30-b5f71be8be37">
+                    <propertyInstance
+                      Id="21649cd8-5644-4e4f-8a1c-c5dba379a2df"
+                      name="Set"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <lowerValueInternal>
+              <literalString
+                Id="aeffe852-6d9b-452f-a2ba-e8076059efb5"
+                name="Lower"
+                value="*" />
+            </lowerValueInternal>
+            <upperValueInternal>
+              <literalString
+                Id="9db10367-bcce-4703-a83a-0607f967ac6f"
+                name="Upper"
+                value="*" />
+            </upperValueInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="Modeling.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="13a2cabc-a32c-4876-ba79-7a2bcd67a3fe"
+            name="SaveCommand"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="db564da4-00fe-4101-b6b3-a9b166eacaa4"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FD:%2FDokumenter%2FVisual Studio 2013%2FProjects%2F2. Semester%2FKanbanBoard%2FKanbanBoard%2Fbin%2FDebug%2FKanbanBoard.exe&quot; Namespace%3DKanbanBoard.ViewModel Type%3DManipulatePostItViewModel Member%3DSaveCommand"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="7663bc19-0bb5-4e76-b7f3-adaa383dfbb5"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d9b272b1-fa3c-44eb-b1e4-3105c88fc25e">
+                    <propertyInstance
+                      Id="7f5f4176-39df-43d7-9eb2-8998276e4ea1"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="463a53ed-fd57-4335-9f90-5da42abeef65">
+                    <propertyInstance
+                      Id="8a0cfe0a-5a19-4c31-be4c-f44e78e7ffaa"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0b2e65b2-329f-4ae1-993a-4d22cc8f7f58">
+                    <propertyInstance
+                      Id="cae9fcdd-2e00-4821-9d76-7536425c99df"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="05c7837e-b558-42b7-b09b-f09104505546">
+                    <propertyInstance
+                      Id="748b5933-9c67-48ed-8b65-b86959c38ecb"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="489709d1-a30c-42a5-8e67-68337216646c">
+                    <propertyInstance
+                      Id="246693a9-3071-4dc5-bdae-e1219ed6d85c"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4fcbf829-aaf2-47f3-bd04-daf6a4a3a23f">
+                    <propertyInstance
+                      Id="7aad0ff1-b166-4b65-9b31-b834061972d2"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="353a28c3-a594-4e6c-8c71-0bb1f2388d2e">
+                    <propertyInstance
+                      Id="7709f2e9-fa6f-42c4-9455-51d37157537b"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="3a4ab6ff-a1a6-4ac9-881d-fc05aa9a6f2a"
+                LastKnownName="ICommand"
+                LastKnownLocation="Package13_1225.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="d223c218-7af4-4c62-b163-1ea43db5f7b6"
+            name="_selectedCategory"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="913dc578-cbdb-4ebb-8bed-3431584dacc3"
+                handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2FD:%2FDokumenter%2FVisual Studio 2013%2FProjects%2F2. Semester%2FKanbanBoard%2FKanbanBoard%2Fbin%2FDebug%2FKanbanBoard.exe&quot; Namespace%3DKanbanBoard.ViewModel Type%3DManipulatePostItViewModel Member%3D_selectedCategory"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="03fa23e0-47df-4cbb-ad56-7a651b20a7eb"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7de07cd5-4336-4dd7-ad8e-5015510ad597">
+                    <propertyInstance
+                      Id="d3c2c4d0-2242-4e5f-ae20-c7da73877d1b"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="61eaa931-e15c-4457-8fd6-bc73c32cfd87">
+                    <propertyInstance
+                      Id="5d2a2958-ddf8-43d8-a18d-5b2785b3377b"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6cc90385-83ef-4bba-a51e-f23f0a6f6048">
+                    <propertyInstance
+                      Id="e6902b24-af60-4d1a-8820-81fa8e897615"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="45d2ccf4-142a-4882-8576-7b1977110f6b">
+                    <propertyInstance
+                      Id="89e30419-defc-4f66-a045-42b7dd9ca1b5"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="dfef9c26-46bb-46a2-88ad-4f6396ad38f1">
+                    <propertyInstance
+                      Id="918ffd2a-81d3-417d-bb46-2432a2e2d68a"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <enumerationMoniker
+                Id="760903f8-a787-4bbb-8ecc-e3d9c45331d0"
+                LastKnownName="EnumCategories"
+                LastKnownLocation="Package1_1225.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="8fb8c896-7927-4ff3-9119-a9b1032d4891"
+            name="_saveCommand"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="7210d401-ff0e-4573-b238-d9e9cacc2bd6"
+                handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2FD:%2FDokumenter%2FVisual Studio 2013%2FProjects%2F2. Semester%2FKanbanBoard%2FKanbanBoard%2Fbin%2FDebug%2FKanbanBoard.exe&quot; Namespace%3DKanbanBoard.ViewModel Type%3DManipulatePostItViewModel Member%3D_saveCommand"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="96a59ca7-ca2c-4406-9469-7e321eb6592b"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="edde3001-6c4a-4178-baf3-a9ff22e38944">
+                    <propertyInstance
+                      Id="1ab17058-5447-4a00-bb5b-eb26e8696f9d"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="68306896-72f5-47cc-97b2-7495b5bf5eff">
+                    <propertyInstance
+                      Id="059592e8-12e4-466d-8831-cffb130cc9d4"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="59cf56f8-328c-40e5-938f-e8103e26a454">
+                    <propertyInstance
+                      Id="5097da4b-57fd-4d34-a9d7-3a59d75ba6c7"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="90d83c47-7081-4b99-a7fa-827747bf54ae">
+                    <propertyInstance
+                      Id="110d118a-f024-46c4-90fc-bb744e73ae1f"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e7acf9a4-1a9c-48d6-982f-c54e3df281be">
+                    <propertyInstance
+                      Id="297d1f6d-ac5d-41a0-8d79-637828f6d0ac"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="3a4ab6ff-a1a6-4ac9-881d-fc05aa9a6f2a"
+                LastKnownName="ICommand"
+                LastKnownLocation="Package13_1225.uml" />
             </type_NamedElement>
           </property>
         </ownedAttributesInternal>
@@ -4089,7 +4528,7 @@
             </ownedParameters>
           </operation>
           <operation
-            Id="b18becbb-1b52-4608-a0ba-731a8aa6b974"
+            Id="ae11902f-6f3e-4e5a-825b-3cb9148ef7ba"
             name="ManipulatePostItViewModel"
             isLeaf="false"
             isStatic="false"
@@ -4098,54 +4537,54 @@
             isQuery="false">
             <referencesInternal>
               <reference
-                Id="e6158371-0658-460f-a0c8-6adab38ee114"
+                Id="6f2aa656-6592-45ce-a535-4a3dd1def415"
                 handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FD:%2FDokumenter%2FVisual Studio 2013%2FProjects%2F2. Semester%2FKanbanBoard%2FKanbanBoard%2Fbin%2FDebug%2FKanbanBoard.exe&quot; Namespace%3DKanbanBoard.ViewModel Type%3DManipulatePostItViewModel Member%3D.ctor"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
               <stereotypeInstance
-                Id="c8d2b18c-5494-4395-b708-cba6d72797df"
+                Id="33446b00-52e4-4725-8552-28b6c377391d"
                 name="method"
                 profile="CSharpProfile">
                 <propertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="cd7746e0-eea8-45b9-baf8-9688fa54ebed">
+                    Id="8fd7bbae-e811-4666-97c2-1ce0111b0bc0">
                     <propertyInstance
-                      Id="96289925-c6c9-4a8a-b460-6ed646fe50a3"
+                      Id="4eb1950c-a198-477b-9a5c-415cf474ff0e"
                       name="ClrAttributes" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="82263f2d-c5fc-44c8-9507-aed35b935439">
+                    Id="bca1df8f-25ca-4045-89a9-ab42a3516271">
                     <propertyInstance
-                      Id="8f0fa7dd-b2e2-442b-b992-49ea8e5c9c9b"
+                      Id="a68ffddf-40a7-4684-8793-e326621c1006"
                       name="IsPartial"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="7c6ba7b8-e67d-4db6-bd37-119ca9765e61">
+                    Id="0e5058dc-c5da-4458-b29c-cba3d82ea728">
                     <propertyInstance
-                      Id="05082175-a790-4b9e-97a8-188aeca4ab6f"
+                      Id="153fc713-5e62-4423-a178-e6d36a300007"
                       name="IsUnsafe"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="77df8826-846f-4689-917b-87ba3454a8b4">
+                    Id="61682857-e64d-4ead-b9ec-62dfd8df8f3d">
                     <propertyInstance
-                      Id="4ea7ce56-f154-49ef-9076-cb62df560908"
+                      Id="659493f4-9f10-40b2-aa67-c1c330a66e15"
                       name="Inheritance"
                       value="none" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="fa172d2a-2fd3-404f-9128-a15e80bdbbe0">
+                    Id="746393d8-4510-4f91-bc9e-33080e90d7e5">
                     <propertyInstance
-                      Id="11229ea7-ac54-4b4a-9d72-ed1c0e68e49c"
+                      Id="84fe466c-b618-45c4-83d8-e8991def0998"
                       name="PackageVisibility"
                       value="internal" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="aea4f08f-4ba4-4575-92c6-ded0b25ebf37">
+                    Id="28e88cb8-de59-4498-a20f-c9112929b33e">
                     <propertyInstance
-                      Id="5abd9b21-5246-4670-82fd-893a66497e47"
+                      Id="f0e8925a-6615-4bd8-a939-2120c7301f8f"
                       name="params"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>

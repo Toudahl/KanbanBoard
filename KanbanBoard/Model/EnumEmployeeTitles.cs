@@ -1,6 +1,6 @@
 ﻿namespace KanbanBoard.Model
 {
-    enum EnumEmployeeTitles
+    public enum EnumEmployeeTitles
     {
         CEO,
         ProductManager,

@@ -118,7 +118,7 @@ namespace KanbanBoard.Persistence
         {
             public void Save(object informationToSave, string fileName)
             {
-                throw new System.NotImplementedException();
+                throw new NotImplementedException();
             }
 
             public T Load<T>(string fileName)

@@ -5,13 +5,13 @@ namespace KanbanBoard.Model
     public class PostItModel
     {
         private string _deadline;
-        private PersonModel _responsiblePerson;
+        private EmployeeModel _responsiblePerson;
         private SolidColorBrush _solidColorBrush;
         private string _taskName;
         private string _taskDetails;
         private readonly string DateTimeFormat = "HH:mm - dd MMMM, yyyy";
 
-        public PostItModel(string taskName, string taskDetails, string deadline, PersonModel responsiblePersonModel, SolidColorBrush solidColorBrush)
+        public PostItModel(string taskName, string taskDetails, string deadline, EmployeeModel responsiblePersonModel, SolidColorBrush solidColorBrush)
         {
             _responsiblePerson = responsiblePersonModel;
             _taskName = taskName;
@@ -38,7 +38,7 @@ namespace KanbanBoard.Model
             set { _deadline = value; }
         }
 
-        public PersonModel ResponsiblePerson
+        public EmployeeModel ResponsiblePerson
         {
             get { return _responsiblePerson; }
             set { _responsiblePerson = value; }

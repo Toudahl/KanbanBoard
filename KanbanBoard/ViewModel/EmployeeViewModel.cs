@@ -39,6 +39,7 @@ namespace KanbanBoard.ViewModel
             if (!File.Exists(_fileName))
             {
                 Employees.Add(new EmployeeModel("Dummy", "Data", EnumEmployeeTitles.LeadDeveloper));
+                Employees.Add(new EmployeeModel("Morten", "Toudahl", EnumEmployeeTitles.LeadDeveloper));
                 PersistenceHandler.Save(Employees, _fileName);
             }
             else

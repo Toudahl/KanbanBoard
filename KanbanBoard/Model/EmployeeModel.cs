@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace KanbanBoard.Model
 {
-    class EmployeeModel : PersonModel
+    public class EmployeeModel : PersonModel
     {
         private EnumEmployeeTitles _title;
 
@@ -19,6 +19,11 @@ namespace KanbanBoard.Model
         {
             get { return _title; }
             set { _title = value; }
+        }
+
+        public override string ToString()
+        {
+            return base.ToString() + "," + Title;
         }
     }
 }

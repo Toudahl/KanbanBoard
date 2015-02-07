@@ -1,6 +1,7 @@
 # KanbanBoard
 A simple kanban board made as a "brush up" exercise at the beginning
 of my second semester studying for my AP graduate degree in computer science.
+More than a month christmas vacation will make anyone rusty :)
 
 The board uses Gong drag and drop, and newtonsoft json for persistence.
 

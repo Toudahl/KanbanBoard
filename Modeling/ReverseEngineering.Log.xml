@@ -6,40 +6,70 @@
   <MessageClass Name="Error" Label="Error" Option="Show errors" />
   <MessageClass Name="Property" Label="Property" Option="Show metadata" />
   <MessageClass Name="Diagnostic" Label="Message" Option="Show diagnostic messages" />
-  <Message Timestamp="2015-02-07T08:11:19" Importance="High" Text="Reverse Engineering Started." />
-  <Message Timestamp="2015-02-07T08:11:20" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Boolean' -  (PrimitiveType)" />
-  <Message Timestamp="2015-02-07T08:11:20" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Modeling::KanbanBoard' -  (Package)" />
-  <Message Timestamp="2015-02-07T08:11:20" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Modeling::KanbanBoard::Model' -  (Package)" />
-  <Message Timestamp="2015-02-07T08:11:20" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Modeling::KanbanBoard::Model::EmployeeModel' -  (Class)   (partially reverse engineered - definition not updated) " />
-  <Message Timestamp="2015-02-07T08:11:20" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Modeling::KanbanBoard::Model::EnumCategories' -  (Enumeration)   (partially reverse engineered - definition not updated) " />
-  <Message Timestamp="2015-02-07T08:11:20" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Modeling::KanbanBoard::ViewModel' -  (Package)" />
-  <Message Timestamp="2015-02-07T08:11:20" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Modeling::KanbanBoard::ViewModel::MainViewModel' -  (Class)   (partially reverse engineered - definition not updated) " />
-  <Message Timestamp="2015-02-07T08:11:20" Importance="Medium" Text="Element reverse engineered into the UML model: 'Modeling::KanbanBoard::ViewModel::ManipulatePostItViewModel' -  (Class)" />
-  <Message Timestamp="2015-02-07T08:11:20" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Modeling::KanbanBoard::ViewModel::ManipulatePostItViewModel::_addCommand' -  (Property)" />
-  <Message Timestamp="2015-02-07T08:11:20" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Modeling::KanbanBoard::ViewModel::ManipulatePostItViewModel::_category' -  (Property)" />
-  <Message Timestamp="2015-02-07T08:11:20" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Modeling::KanbanBoard::ViewModel::ManipulatePostItViewModel::_deadline' -  (Property)" />
-  <Message Timestamp="2015-02-07T08:11:20" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Modeling::KanbanBoard::ViewModel::ManipulatePostItViewModel::_mainViewModel' -  (Property)" />
-  <Message Timestamp="2015-02-07T08:11:20" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Modeling::KanbanBoard::ViewModel::ManipulatePostItViewModel::_responsiblePerson' -  (Property)" />
-  <Message Timestamp="2015-02-07T08:11:20" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Modeling::KanbanBoard::ViewModel::ManipulatePostItViewModel::_taskDetails' -  (Property)" />
-  <Message Timestamp="2015-02-07T08:11:20" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Modeling::KanbanBoard::ViewModel::ManipulatePostItViewModel::_taskName' -  (Property)" />
-  <Message Timestamp="2015-02-07T08:11:20" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Modeling::KanbanBoard::ViewModel::ManipulatePostItViewModel::AddCommand' -  (Property)" />
-  <Message Timestamp="2015-02-07T08:11:20" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Modeling::KanbanBoard::ViewModel::ManipulatePostItViewModel::Category' -  (Property)" />
-  <Message Timestamp="2015-02-07T08:11:20" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Modeling::KanbanBoard::ViewModel::ManipulatePostItViewModel::CheckInput' -  (Operation)" />
-  <Message Timestamp="2015-02-07T08:11:20" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Modeling::KanbanBoard::ViewModel::ManipulatePostItViewModel::Deadline' -  (Property)" />
-  <Message Timestamp="2015-02-07T08:11:20" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Modeling::KanbanBoard::ViewModel::ManipulatePostItViewModel::MainViewModel' -  (Property)" />
-  <Message Timestamp="2015-02-07T08:11:20" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Modeling::KanbanBoard::ViewModel::ManipulatePostItViewModel::ManipulatePostItViewModel' -  (Operation)" />
-  <Message Timestamp="2015-02-07T08:11:20" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Modeling::KanbanBoard::ViewModel::ManipulatePostItViewModel::Save' -  (Operation)" />
-  <Message Timestamp="2015-02-07T08:11:20" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Modeling::KanbanBoard::ViewModel::ManipulatePostItViewModel::TaskDetails' -  (Property)" />
-  <Message Timestamp="2015-02-07T08:11:20" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Modeling::KanbanBoard::ViewModel::ManipulatePostItViewModel::TaskName' -  (Property)" />
-  <Message Timestamp="2015-02-07T08:11:20" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Modeling::System' -  (Package)" />
-  <Message Timestamp="2015-02-07T08:11:20" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Modeling::System::Windows' -  (Package)" />
-  <Message Timestamp="2015-02-07T08:11:20" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Modeling::System::Windows::Input' -  (Package)" />
-  <Message Timestamp="2015-02-07T08:11:20" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Modeling::System::Windows::Input::ICommand' -  (Interface)   (partially reverse engineered - definition not updated) " />
-  <Message Timestamp="2015-02-07T08:11:20" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'String' -  (PrimitiveType)" />
-  <Message Timestamp="2015-02-07T08:11:20" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: Modeling::KanbanBoard::ViewModel::ManipulatePostItViewModel to Modeling::KanbanBoard::ViewModel::MainViewModel (Association)" />
-  <Message Timestamp="2015-02-07T08:11:20" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: Modeling::KanbanBoard::ViewModel::ManipulatePostItViewModel to Modeling::KanbanBoard::Model::EnumCategories (Association)" />
-  <Message Timestamp="2015-02-07T08:11:20" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: Modeling::KanbanBoard::ViewModel::ManipulatePostItViewModel to Modeling::System::Windows::Input::ICommand (Association)" />
-  <Message Timestamp="2015-02-07T08:11:20" Importance="High" Text="(1) type(s) fully reverse engineered." />
-  <Message Timestamp="2015-02-07T08:11:20" Importance="High" Text="(4) type(s) partially reverse engineered.  These types were not included in the original selection so their full definitions are not reverse engineered.  Instead, this shallow operation has simply ensured these types exist in the UML model because they are needed in order to fully describe other elements." />
-  <Message Timestamp="2015-02-07T08:11:20" Importance="High" Text="The reverse engineering operation completed with (0) error(s), and (0) warning(s)." />
+  <Message Timestamp="2015-02-07T08:58:19" Importance="High" Text="Reverse Engineering Started." />
+  <Message Timestamp="2015-02-07T08:58:21" Importance="Diagnostic" Text="Element reverse engineered into the UML model: '68be7d1c-4d6f-42ed-9d3e-a97d62a3b871' -  (ClassifierTemplateParameter)" />
+  <Message Timestamp="2015-02-07T08:58:21" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'f0b1680e-1410-4561-a27e-af7daa41c612' -  (ClassifierTemplateParameter)" />
+  <Message Timestamp="2015-02-07T08:58:21" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Modeling::GongSolutions' -  (Package)" />
+  <Message Timestamp="2015-02-07T08:58:21" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Modeling::GongSolutions::Wpf' -  (Package)" />
+  <Message Timestamp="2015-02-07T08:58:21" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Modeling::GongSolutions::Wpf::DragDrop' -  (Package)" />
+  <Message Timestamp="2015-02-07T08:58:21" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Modeling::GongSolutions::Wpf::DragDrop::IDropInfo' -  (Interface)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-02-07T08:58:21" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Modeling::GongSolutions::Wpf::DragDrop::IDropTarget' -  (Interface)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-02-07T08:58:21" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Modeling::KanbanBoard' -  (Package)" />
+  <Message Timestamp="2015-02-07T08:58:21" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Modeling::KanbanBoard::Model' -  (Package)" />
+  <Message Timestamp="2015-02-07T08:58:21" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Modeling::KanbanBoard::Model::EnumCategories' -  (Enumeration)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-02-07T08:58:21" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Modeling::KanbanBoard::ViewModel' -  (Package)" />
+  <Message Timestamp="2015-02-07T08:58:21" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Modeling::KanbanBoard::ViewModel::CategoryViewModel' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-02-07T08:58:21" Importance="Medium" Text="Element reverse engineered into the UML model: 'Modeling::KanbanBoard::ViewModel::MainViewModel' -  (Class)" />
+  <Message Timestamp="2015-02-07T08:58:21" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Modeling::KanbanBoard::ViewModel::MainViewModel::_board' -  (Property)" />
+  <Message Timestamp="2015-02-07T08:58:21" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Modeling::KanbanBoard::ViewModel::MainViewModel::_boardFileNameAndPath' -  (Property)" />
+  <Message Timestamp="2015-02-07T08:58:21" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Modeling::KanbanBoard::ViewModel::MainViewModel::_compatibleFiles' -  (Property)" />
+  <Message Timestamp="2015-02-07T08:58:21" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Modeling::KanbanBoard::ViewModel::MainViewModel::_loadFromDialogCommand' -  (Property)" />
+  <Message Timestamp="2015-02-07T08:58:21" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Modeling::KanbanBoard::ViewModel::MainViewModel::_newCommand' -  (Property)" />
+  <Message Timestamp="2015-02-07T08:58:21" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Modeling::KanbanBoard::ViewModel::MainViewModel::_openFileDialog' -  (Property)" />
+  <Message Timestamp="2015-02-07T08:58:21" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Modeling::KanbanBoard::ViewModel::MainViewModel::_saveAsDialogCommand' -  (Property)" />
+  <Message Timestamp="2015-02-07T08:58:21" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Modeling::KanbanBoard::ViewModel::MainViewModel::_saveAsFileDialog' -  (Property)" />
+  <Message Timestamp="2015-02-07T08:58:21" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Modeling::KanbanBoard::ViewModel::MainViewModel::_saveCommand' -  (Property)" />
+  <Message Timestamp="2015-02-07T08:58:21" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Modeling::KanbanBoard::ViewModel::MainViewModel::Board' -  (Property)" />
+  <Message Timestamp="2015-02-07T08:58:21" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Modeling::KanbanBoard::ViewModel::MainViewModel::DragOver' -  (Operation)" />
+  <Message Timestamp="2015-02-07T08:58:21" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Modeling::KanbanBoard::ViewModel::MainViewModel::DragOver::dragInfo' -  (Parameter)" />
+  <Message Timestamp="2015-02-07T08:58:21" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Modeling::KanbanBoard::ViewModel::MainViewModel::Drop' -  (Operation)" />
+  <Message Timestamp="2015-02-07T08:58:21" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Modeling::KanbanBoard::ViewModel::MainViewModel::Drop::dropInfo' -  (Parameter)" />
+  <Message Timestamp="2015-02-07T08:58:21" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Modeling::KanbanBoard::ViewModel::MainViewModel::LoadFromDialog' -  (Operation)" />
+  <Message Timestamp="2015-02-07T08:58:21" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Modeling::KanbanBoard::ViewModel::MainViewModel::LoadFromDialogCommand' -  (Property)" />
+  <Message Timestamp="2015-02-07T08:58:21" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Modeling::KanbanBoard::ViewModel::MainViewModel::MainViewModel' -  (Operation)" />
+  <Message Timestamp="2015-02-07T08:58:21" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Modeling::KanbanBoard::ViewModel::MainViewModel::NewBoard' -  (Operation)" />
+  <Message Timestamp="2015-02-07T08:58:21" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Modeling::KanbanBoard::ViewModel::MainViewModel::NewCommand' -  (Property)" />
+  <Message Timestamp="2015-02-07T08:58:21" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Modeling::KanbanBoard::ViewModel::MainViewModel::OnPropertyChanged' -  (Operation)" />
+  <Message Timestamp="2015-02-07T08:58:21" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Modeling::KanbanBoard::ViewModel::MainViewModel::OnPropertyChanged::propertyName' -  (Parameter)" />
+  <Message Timestamp="2015-02-07T08:58:21" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Modeling::KanbanBoard::ViewModel::MainViewModel::PropertyChanged' -  (Property)" />
+  <Message Timestamp="2015-02-07T08:58:21" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Modeling::KanbanBoard::ViewModel::MainViewModel::SaveAsDialog' -  (Operation)" />
+  <Message Timestamp="2015-02-07T08:58:21" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Modeling::KanbanBoard::ViewModel::MainViewModel::SaveAsDialogCommand' -  (Property)" />
+  <Message Timestamp="2015-02-07T08:58:21" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Modeling::KanbanBoard::ViewModel::MainViewModel::SaveBoard' -  (Operation)" />
+  <Message Timestamp="2015-02-07T08:58:21" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Modeling::KanbanBoard::ViewModel::MainViewModel::SaveCommand' -  (Property)" />
+  <Message Timestamp="2015-02-07T08:58:21" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Modeling::Microsoft' -  (Package)" />
+  <Message Timestamp="2015-02-07T08:58:21" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Modeling::Microsoft::Win32' -  (Package)" />
+  <Message Timestamp="2015-02-07T08:58:21" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Modeling::Microsoft::Win32::OpenFileDialog' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-02-07T08:58:21" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Modeling::Microsoft::Win32::SaveFileDialog' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-02-07T08:58:21" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Modeling::System' -  (Package)" />
+  <Message Timestamp="2015-02-07T08:58:21" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Modeling::System::Collections' -  (Package)" />
+  <Message Timestamp="2015-02-07T08:58:21" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Modeling::System::Collections::Generic' -  (Package)" />
+  <Message Timestamp="2015-02-07T08:58:21" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Modeling::System::Collections::Generic::Dictionary' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-02-07T08:58:21" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Modeling::System::Collections::Generic::Dictionary&lt;EnumCategories‎, CategoryViewModel‎&gt;' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-02-07T08:58:21" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Modeling::System::ComponentModel' -  (Package)" />
+  <Message Timestamp="2015-02-07T08:58:21" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Modeling::System::ComponentModel::INotifyPropertyChanged' -  (Interface)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-02-07T08:58:21" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Modeling::System::ComponentModel::PropertyChangedEventHandler' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-02-07T08:58:21" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Modeling::System::Windows' -  (Package)" />
+  <Message Timestamp="2015-02-07T08:58:21" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Modeling::System::Windows::Input' -  (Package)" />
+  <Message Timestamp="2015-02-07T08:58:21" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Modeling::System::Windows::Input::ICommand' -  (Interface)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-02-07T08:58:21" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'String' -  (PrimitiveType)" />
+  <Message Timestamp="2015-02-07T08:58:21" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: Modeling::KanbanBoard::ViewModel::MainViewModel to Modeling::System::Collections::Generic::Dictionary&lt;EnumCategories‎, CategoryViewModel‎&gt; (Association)" />
+  <Message Timestamp="2015-02-07T08:58:21" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: Modeling::KanbanBoard::ViewModel::MainViewModel to Modeling::System::Windows::Input::ICommand (Association)" />
+  <Message Timestamp="2015-02-07T08:58:21" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: Modeling::KanbanBoard::ViewModel::MainViewModel to Modeling::System::Windows::Input::ICommand (Association)" />
+  <Message Timestamp="2015-02-07T08:58:21" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: Modeling::KanbanBoard::ViewModel::MainViewModel to Modeling::System::Windows::Input::ICommand (Association)" />
+  <Message Timestamp="2015-02-07T08:58:21" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: Modeling::KanbanBoard::ViewModel::MainViewModel to Modeling::System::Windows::Input::ICommand (Association)" />
+  <Message Timestamp="2015-02-07T08:58:21" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: Modeling::KanbanBoard::ViewModel::MainViewModel to Modeling::GongSolutions::Wpf::DragDrop::IDropTarget (InterfaceRealization)" />
+  <Message Timestamp="2015-02-07T08:58:21" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: Modeling::KanbanBoard::ViewModel::MainViewModel to Modeling::System::ComponentModel::INotifyPropertyChanged (InterfaceRealization)" />
+  <Message Timestamp="2015-02-07T08:58:21" Importance="High" Text="(1) type(s) fully reverse engineered." />
+  <Message Timestamp="2015-02-07T08:58:21" Importance="High" Text="(11) type(s) partially reverse engineered.  These types were not included in the original selection so their full definitions are not reverse engineered.  Instead, this shallow operation has simply ensured these types exist in the UML model because they are needed in order to fully describe other elements." />
+  <Message Timestamp="2015-02-07T08:58:21" Importance="High" Text="The reverse engineering operation completed with (0) error(s), and (0) warning(s)." />
 </Log>

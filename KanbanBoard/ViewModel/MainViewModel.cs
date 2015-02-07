@@ -19,8 +19,9 @@ namespace KanbanBoard.ViewModel
     
     public class MainViewModel: IDropTarget, INotifyPropertyChanged
     {
+        #region Fields
         // The categories
-        private Dictionary<EnumCategories, CategoryViewModel> _categories;
+        private Dictionary<EnumCategories, CategoryViewModel> _board;
 
         // Commands for various actions
         private ICommand _newCommand;
@@ -33,14 +34,17 @@ namespace KanbanBoard.ViewModel
         private OpenFileDialog _openFileDialog;
         private string _boardFileNameAndPath;
         private readonly string _compatibleFiles = PersistenceHandler.CompatibleFiles;
+        #endregion
 
         public MainViewModel()
         {
+            #region Create the board, and add categories to it.
             // Instantiate the categories in the board.
-            Categories = new Dictionary<EnumCategories, CategoryViewModel>();
-            Categories[EnumCategories.ToDo] = new CategoryViewModel(EnumCategories.ToDo);
-            Categories[EnumCategories.WorkInProgress] = new CategoryViewModel(EnumCategories.WorkInProgress);
-            Categories[EnumCategories.CompletedWork] = new CategoryViewModel(EnumCategories.CompletedWork);
+            Board = new Dictionary<EnumCategories, CategoryViewModel>();
+            Board[EnumCategories.ToDo] = new CategoryViewModel(EnumCategories.ToDo);
+            Board[EnumCategories.WorkInProgress] = new CategoryViewModel(EnumCategories.WorkInProgress);
+            Board[EnumCategories.CompletedWork] = new CategoryViewModel(EnumCategories.CompletedWork);
+            #endregion
 
 
             #region Instantiate the commands
@@ -69,12 +73,12 @@ namespace KanbanBoard.ViewModel
         /// <summary>
         /// Use this property to access the categories of the board
         /// </summary>
-        public Dictionary<EnumCategories, CategoryViewModel> Categories
+        public Dictionary<EnumCategories, CategoryViewModel> Board
         {
-            get { return _categories; }
+            get { return _board; }
             set
             {
-                _categories = value;
+                _board = value;
                 OnPropertyChanged();
             }
         }

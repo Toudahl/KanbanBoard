@@ -28,7 +28,7 @@ namespace KanbanBoard.Persistence
             _persistence.Save(informationToSave, fileName);
         }
 
-        //TODO: Make a check on the file beeing loaded to detect what type of persistence was used, and automatically select the correct class to deserialize.
+        // TODO: Make a check on the file beeing loaded to detect what type of persistence was used, and automatically select the correct class to deserialize.
 
         /// <summary>
         /// Uses the persistence type set by <see cref="SetPersistenceType()"/> to load the post its.
@@ -78,7 +78,7 @@ namespace KanbanBoard.Persistence
             private set { _compatibleFiles = value; }
         }
 
-        //TODO: Add other types of persistence.
+        // TODO: Add other types of persistence.
 
         #region JsonPersistence
         /// <summary>

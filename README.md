@@ -31,7 +31,10 @@ functionallity, i will add more features.
 
 Known bugs:
 
-I havnt found any - let me know if you do
+Casting objects deserialized from newtonsoft json only works when using the build in
+JsonConvert.DeserializeObject<T>. If i pass on the object through my PersistenceHandler, and try to cast it
+where it is beeing used. The casting will fail.
+This makes the program unflexible, as i will now have to hardcode for each type in the PersistenceHandler
 
 
 Feel free to use my project. But give credit for it.

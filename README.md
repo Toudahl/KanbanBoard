@@ -7,15 +7,19 @@ The board uses Gong drag and drop, and newtonsoft json for persistence.
 Done refactoring - onwards to more features.
 
 // TODO: Create a way to dynamically add more boards.
+     Atm, I can add a new board by modifying an enum, and adding one line to MainViewModel
 
 // TODO: Create functionallity to add employees
+     Atm, I can currently select from a list of dummy data
 
 // TODO: Add other types of persistence.
+     The PersistenceHandler is ready for a using a new class which handles any type of persistence.
 
-// TODO: Make a check on the file beeing loaded to detect what type of persistence was used, and
-// automatically select the correct class to deserialize.
+// TODO: Make a check on the file beeing loaded to detect what type of persistence was used, and automatically select the correct class to deserialize.
+     Maybe search selected file for patterns specific to each type of supported Persistence?
 
 // TODO: Further clean up of the UI
+     Yep, its ugly - ill get around to making it pretty.
 
 // TODO: Create settings functionallity
 
@@ -26,6 +30,7 @@ Done refactoring - onwards to more features.
      Auto save
      
 // TODO: refactor again at a later point
+     Practice makes perfect.
 
 Known bugs:
 None at the moment.

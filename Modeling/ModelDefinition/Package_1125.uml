@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
   dslVersion="1.0.0.0"
   Id="2d86366d-89e1-4ab6-9fe3-1e0974f2ac9b"
   name="View"
@@ -61,6 +61,64 @@
                 Id="1925e74e-138c-4aa2-8bd2-c5cf6114bbd3">
                 <propertyInstance
                   Id="251c8209-b36b-4a8f-85b1-77ce8f7b07b3"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="7a527c3e-a592-4a23-8a17-fa2e7df6a764"
+        name="ManageEmployees"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="34f97238-9b79-4546-b5db-21e2b1618a97"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FD:%2FDokumenter%2FVisual Studio 2013%2FProjects%2F2. Semester%2FKanbanBoard%2FKanbanBoard%2Fbin%2FDebug%2FKanbanBoard.exe&quot; Namespace%3DKanbanBoard.View Type%3DManageEmployees"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="670c5e2a-8606-40a1-bf77-cd3087b84789"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="d30413f5-e281-498d-8db3-5ab45398059c">
+                <propertyInstance
+                  Id="fa9d9e58-adbf-4c05-b9c0-0e536c089875"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="a1fd34b2-f412-4e67-8101-a87c6f8f17b3">
+                <propertyInstance
+                  Id="6302fe3c-b717-4021-a8a1-3fec28c82c88"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="369f9a67-89de-4f53-8b27-26d4ab09e9e8">
+                <propertyInstance
+                  Id="2b2e124d-50ea-424e-9920-7a768b3be1cf"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="a90478fe-1f7d-47e9-9ee3-692002c518e8">
+                <propertyInstance
+                  Id="c8368bdf-e028-45ba-a26c-f1890e0a77f0"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="6384aee8-a4e7-4799-989d-eeb45491b66e">
+                <propertyInstance
+                  Id="99421df4-30c4-49d7-ada0-482e67742298"
                   name="PackageVisibility"
                   value="internal" />
               </stereotypeInstanceHasPropertyInstances>

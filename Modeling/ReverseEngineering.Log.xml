@@ -6,17 +6,36 @@
   <MessageClass Name="Error" Label="Error" Option="Show errors" />
   <MessageClass Name="Property" Label="Property" Option="Show metadata" />
   <MessageClass Name="Diagnostic" Label="Message" Option="Show diagnostic messages" />
-  <Message Timestamp="2015-02-07T11:27:05" Importance="High" Text="Reverse Engineering Started." />
-  <Message Timestamp="2015-02-07T11:27:05" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Modeling::KanbanBoard' -  (Package)" />
-  <Message Timestamp="2015-02-07T11:27:05" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Modeling::KanbanBoard::Model' -  (Package)" />
-  <Message Timestamp="2015-02-07T11:27:05" Importance="Medium" Text="Element reverse engineered into the UML model: 'Modeling::KanbanBoard::Model::EnumEmployeeTitles' -  (Enumeration)" />
-  <Message Timestamp="2015-02-07T11:27:05" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Modeling::KanbanBoard::Model::EnumEmployeeTitles::CEO' -  (EnumerationLiteral)" />
-  <Message Timestamp="2015-02-07T11:27:05" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Modeling::KanbanBoard::Model::EnumEmployeeTitles::Developer' -  (EnumerationLiteral)" />
-  <Message Timestamp="2015-02-07T11:27:05" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Modeling::KanbanBoard::Model::EnumEmployeeTitles::LeadDeveloper' -  (EnumerationLiteral)" />
-  <Message Timestamp="2015-02-07T11:27:05" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Modeling::KanbanBoard::Model::EnumEmployeeTitles::ProductManager' -  (EnumerationLiteral)" />
-  <Message Timestamp="2015-02-07T11:27:05" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Modeling::KanbanBoard::Model::EnumEmployeeTitles::ScrumMaster' -  (EnumerationLiteral)" />
-  <Message Timestamp="2015-02-07T11:27:05" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Modeling::KanbanBoard::Model::EnumEmployeeTitles::SeniorDeveloper' -  (EnumerationLiteral)" />
-  <Message Timestamp="2015-02-07T11:27:05" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Modeling::KanbanBoard::Model::EnumEmployeeTitles::SoftwareArchitect' -  (EnumerationLiteral)" />
-  <Message Timestamp="2015-02-07T11:27:05" Importance="High" Text="(1) type(s) fully reverse engineered." />
-  <Message Timestamp="2015-02-07T11:27:05" Importance="High" Text="The reverse engineering operation completed with (0) error(s), and (0) warning(s)." />
+  <Message Timestamp="2015-02-07T21:09:06" Importance="High" Text="Reverse Engineering Started." />
+  <Message Timestamp="2015-02-07T21:09:07" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Modeling::KanbanBoard' -  (Package)" />
+  <Message Timestamp="2015-02-07T21:09:07" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Modeling::KanbanBoard::Persistence' -  (Package)" />
+  <Message Timestamp="2015-02-07T21:09:07" Importance="Medium" Text="Element reverse engineered into the UML model: 'Modeling::KanbanBoard::Persistence::EnumPersistenceOptions' -  (Enumeration)" />
+  <Message Timestamp="2015-02-07T21:09:07" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Modeling::KanbanBoard::Persistence::EnumPersistenceOptions::JsonPersistence' -  (EnumerationLiteral)" />
+  <Message Timestamp="2015-02-07T21:09:07" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Modeling::KanbanBoard::Persistence::EnumPersistenceOptions::XmlPersistence' -  (EnumerationLiteral)" />
+  <Message Timestamp="2015-02-07T21:09:07" Importance="Medium" Text="Element reverse engineered into the UML model: 'Modeling::KanbanBoard::Persistence::IPersistence' -  (Interface)" />
+  <Message Timestamp="2015-02-07T21:09:07" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Modeling::KanbanBoard::Persistence::IPersistence::Load‎&lt;T‎&gt;' -  (Operation)" />
+  <Message Timestamp="2015-02-07T21:09:07" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Modeling::KanbanBoard::Persistence::IPersistence::Load‎&lt;T‎&gt;::fileName' -  (Parameter)" />
+  <Message Timestamp="2015-02-07T21:09:07" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Modeling::KanbanBoard::Persistence::IPersistence::Save' -  (Operation)" />
+  <Message Timestamp="2015-02-07T21:09:07" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Modeling::KanbanBoard::Persistence::IPersistence::Save::fileName' -  (Parameter)" />
+  <Message Timestamp="2015-02-07T21:09:07" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Modeling::KanbanBoard::Persistence::IPersistence::Save::informationToSave' -  (Parameter)" />
+  <Message Timestamp="2015-02-07T21:09:07" Importance="Medium" Text="Element reverse engineered into the UML model: 'Modeling::KanbanBoard::Persistence::PersistenceHandler' -  (Class)" />
+  <Message Timestamp="2015-02-07T21:09:07" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Modeling::KanbanBoard::Persistence::PersistenceHandler::_compatibleFiles' -  (Property)" />
+  <Message Timestamp="2015-02-07T21:09:07" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Modeling::KanbanBoard::Persistence::PersistenceHandler::_persistence' -  (Property)" />
+  <Message Timestamp="2015-02-07T21:09:07" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Modeling::KanbanBoard::Persistence::PersistenceHandler::_selectedPersistenceOptions' -  (Property)" />
+  <Message Timestamp="2015-02-07T21:09:07" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Modeling::KanbanBoard::Persistence::PersistenceHandler::CompatibleFiles' -  (Property)" />
+  <Message Timestamp="2015-02-07T21:09:07" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Modeling::KanbanBoard::Persistence::PersistenceHandler::GetPersistenceOptions' -  (Operation)" />
+  <Message Timestamp="2015-02-07T21:09:07" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Modeling::KanbanBoard::Persistence::PersistenceHandler::Load‎&lt;T‎&gt;' -  (Operation)" />
+  <Message Timestamp="2015-02-07T21:09:07" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Modeling::KanbanBoard::Persistence::PersistenceHandler::Load‎&lt;T‎&gt;::fileName' -  (Parameter)" />
+  <Message Timestamp="2015-02-07T21:09:07" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Modeling::KanbanBoard::Persistence::PersistenceHandler::Save' -  (Operation)" />
+  <Message Timestamp="2015-02-07T21:09:07" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Modeling::KanbanBoard::Persistence::PersistenceHandler::Save::fileName' -  (Parameter)" />
+  <Message Timestamp="2015-02-07T21:09:07" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Modeling::KanbanBoard::Persistence::PersistenceHandler::Save::informationToSave' -  (Parameter)" />
+  <Message Timestamp="2015-02-07T21:09:07" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Modeling::KanbanBoard::Persistence::PersistenceHandler::SetPersistenceType' -  (Operation)" />
+  <Message Timestamp="2015-02-07T21:09:07" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Modeling::KanbanBoard::Persistence::PersistenceHandler::SetPersistenceType::persistenceType' -  (Parameter)" />
+  <Message Timestamp="2015-02-07T21:09:07" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Modeling::System' -  (Package)" />
+  <Message Timestamp="2015-02-07T21:09:07" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Modeling::System::Object' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-02-07T21:09:07" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'String' -  (PrimitiveType)" />
+  <Message Timestamp="2015-02-07T21:09:07" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'T' -  (UndefinedType)" />
+  <Message Timestamp="2015-02-07T21:09:07" Importance="High" Text="(3) type(s) fully reverse engineered." />
+  <Message Timestamp="2015-02-07T21:09:07" Importance="High" Text="(1) type(s) partially reverse engineered.  These types were not included in the original selection so their full definitions are not reverse engineered.  Instead, this shallow operation has simply ensured these types exist in the UML model because they are needed in order to fully describe other elements." />
+  <Message Timestamp="2015-02-07T21:09:07" Importance="High" Text="The reverse engineering operation completed with (0) error(s), and (0) warning(s)." />
 </Log>

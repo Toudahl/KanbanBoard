@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
   dslVersion="1.0.0.0"
   Id="d04dc55f-1eba-422a-9841-9b72ab60db4e"
   name="Generic"
@@ -680,6 +680,84 @@
             </ownedParameters>
           </redefinableTemplateSignature>
         </ownedRedefinableTemplateSignatureInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="3f684f2c-7f36-44ac-b9df-c2f503767e5a"
+        name="List&lt;EmployeeModel‎&gt;"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="8e2b609c-27c8-4c0d-a61b-6a148ae576e6"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="a1edd6b3-349c-46df-8aa3-e1b7c96be8d4">
+                <propertyInstance
+                  Id="04008c33-9a21-4cb6-90cb-1177f85de0a8"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="036a7ef3-3230-454b-8f77-7cefa49b5c27">
+                <propertyInstance
+                  Id="a956f567-0ab7-4dd8-9102-eb656e27d94a"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="000d8c8b-5743-4880-b10d-32bb1113cb9e">
+                <propertyInstance
+                  Id="f8882d56-f195-44cb-88b7-6124ca1fa77b"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="7aa38a4b-0df7-45d0-a0a0-4cbb6e27e480">
+                <propertyInstance
+                  Id="c3242848-9b3a-42e8-826b-97c1854ec5d7"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="39b77ee5-d92b-495e-98f6-1651f897da84">
+                <propertyInstance
+                  Id="6141afa0-4f74-4cd8-8532-9129ece179e4"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <signatures>
+          <templateBinding
+            Id="5f224118-a23d-480b-92e5-3290434561b0">
+            <redefinableTemplateSignatureMoniker
+              Id="f1bfb944-0be7-4122-834b-7e597a293cfe"
+              LastKnownLocation="Package7_1225.uml" />
+            <relationshipOwnedElementsInternal>
+              <templateBindingHasTemplateParameterSubstitution>
+                <templateParameterSubstitution
+                  Id="5f48f937-f2df-4817-90b3-7b0cc21cf4af">
+                  <actuals>
+                    <classMoniker
+                      Id="b947719e-a082-4cbb-ba18-52a3ae7ceeec"
+                      LastKnownName="EmployeeModel"
+                      LastKnownLocation="Package1_1225.uml" />
+                  </actuals>
+                  <formal>
+                    <classifierTemplateParameterMoniker
+                      Id="8a5eb2f0-576b-4edd-b8a6-29d75e9a69b7"
+                      LastKnownLocation="Package7_1225.uml" />
+                  </formal>
+                </templateParameterSubstitution>
+              </templateBindingHasTemplateParameterSubstitution>
+            </relationshipOwnedElementsInternal>
+          </templateBinding>
+        </signatures>
       </class>
     </packageHasNamedElement>
   </packagedElements>

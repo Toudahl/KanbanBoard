@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
   dslVersion="1.0.0.0"
   Id="4c2e2687-7739-4627-98b1-dbe8d7f4b549"
   name="Persistence"
@@ -412,6 +412,79 @@
               </stereotypeInstance>
             </appliedStereotypesInternal>
           </operation>
+          <operation
+            Id="bf685bdd-d262-409b-8ace-ef4e7fa08b58"
+            name="Save"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="f80c8242-8f48-4f8a-8cfc-88a53fabe872"
+                  name="informationToSave"
+                  direction="In">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="e5680e7f-051f-44f7-aa46-4a3a0279f72f"
+                      LastKnownName="Object"
+                      LastKnownLocation="Package2_1225.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="419f25a2-4749-4c41-889b-5caa99201d7c"
+                  name="fileName"
+                  direction="In">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="Modeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="6c361448-8f5a-447b-beb2-40e8ddbecc6f"
+            name="Load‎&lt;T‎&gt;"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="b5486459-8fa0-4c45-ad92-c05d41bf0e3b"
+                  name="fileName"
+                  direction="In">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="Modeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="0301c6fa-aa0f-409a-91d3-bd8539d0ede6"
+                  direction="Return">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="32e868d5-65a4-4c30-bc0e-c676f8cfa4fe"
+                      LastKnownName="T"
+                      LastKnownLocation="Package5_1225.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
         </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
@@ -766,104 +839,6 @@
         </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
-            Id="a1634fc9-03b0-4bfb-aa5b-0f30446271c8"
-            name="Load"
-            isLeaf="false"
-            isStatic="true"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <referencesInternal>
-              <reference
-                Id="78fee869-f90a-49a9-bbc8-e84334887f19"
-                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FD:%2FDokumenter%2FVisual Studio 2013%2FProjects%2F2. Semester%2FKanbanBoard%2FKanbanBoard%2Fbin%2FDebug%2FKanbanBoard.exe&quot; Namespace%3DKanbanBoard.Persistence Type%3DPersistenceHandler Member%3D(Name%3DLoad OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)])"
-                tag="ViewCode" />
-            </referencesInternal>
-            <appliedStereotypesInternal>
-              <stereotypeInstance
-                Id="135311ff-a1a6-4ce5-9cf6-36d28543ed25"
-                name="method"
-                profile="CSharpProfile">
-                <propertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="f52e2f66-a4d6-406b-9cfa-dc567ce894ae">
-                    <propertyInstance
-                      Id="04474d10-0fe4-48b5-b67f-f7b5e8a59873"
-                      name="ClrAttributes" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="cc402c9f-47b7-44bb-81ed-3dab88d7572e">
-                    <propertyInstance
-                      Id="87d89cb1-d12d-45e3-b205-bdb0b320d449"
-                      name="IsPartial"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="b6559db1-79e3-4e77-bf45-39fd94b49fc7">
-                    <propertyInstance
-                      Id="27983b4f-19e0-4998-8a9b-dcfa04e31019"
-                      name="IsUnsafe"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="1e48d7c4-ee3c-4309-8a58-4a427034f40c">
-                    <propertyInstance
-                      Id="356d8d5d-d7c6-43af-811a-a967bd3c86e5"
-                      name="Inheritance"
-                      value="none" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="1f4493bb-dc62-4396-9cc7-f52971fb0daf">
-                    <propertyInstance
-                      Id="6714d4cd-cc4b-463b-91c9-22a8a5afe4d4"
-                      name="PackageVisibility"
-                      value="internal" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="6d2dbd5f-75cc-4a79-8503-19a507061006">
-                    <propertyInstance
-                      Id="3f5d728d-442f-4280-bb48-617800d45252"
-                      name="params"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                </propertyInstances>
-              </stereotypeInstance>
-            </appliedStereotypesInternal>
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="141c5667-35c9-401b-9259-6feb04120fa2"
-                  direction="Return">
-                  <type_NamedElement>
-                    <classMoniker
-                      Id="6b5c2d01-67e4-4e3c-a859-0f7fbe4a7241"
-                      LastKnownName="Dictionary&lt;EnumCategories‎, CategoryViewModel‎&gt;"
-                      LastKnownLocation="Package7_1225.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="6092bd26-1068-4624-8ebd-5532047f50cf"
-                  name="fileName"
-                  direction="In">
-                  <referencesInternal>
-                    <reference
-                      Id="e77c816e-9aac-48d1-8bec-c1fda1df4078"
-                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FD:%2FDokumenter%2FVisual Studio 2013%2FProjects%2F2. Semester%2FKanbanBoard%2FKanbanBoard%2Fbin%2FDebug%2FKanbanBoard.exe&quot; Namespace%3DKanbanBoard.Persistence Type%3DPersistenceHandler Member%3D(Name%3DLoad OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3DfileName"
-                      tag="ViewCode" />
-                  </referencesInternal>
-                  <type_NamedElement>
-                    <primitiveTypeMoniker
-                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
-                      LastKnownName="String"
-                      LastKnownLocation="Modeling.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
             Id="d1459901-9b6b-4247-a1b6-e800f7909f52"
             name="SetPersistenceType"
             isLeaf="false"
@@ -1029,7 +1004,7 @@
             </ownedParameters>
           </operation>
           <operation
-            Id="2d8bbdae-e113-4e9e-89b3-45ee769cabc2"
+            Id="5c59fa55-816a-4193-8b33-b472eae71244"
             name="Save"
             isLeaf="false"
             isStatic="true"
@@ -1038,54 +1013,54 @@
             isQuery="false">
             <referencesInternal>
               <reference
-                Id="8254fdbd-483a-4e93-96f4-8b4f4253b92e"
-                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FD:%2FDokumenter%2FVisual Studio 2013%2FProjects%2F2. Semester%2FKanbanBoard%2FKanbanBoard%2Fbin%2FDebug%2FKanbanBoard.exe&quot; Namespace%3DKanbanBoard.Persistence Type%3DPersistenceHandler Member%3D(Name%3DSave OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DDictionary GenericParameterCount%3D2 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FD:%2FDokumenter%2FVisual Studio 2013%2FProjects%2F2. Semester%2FKanbanBoard%2FKanbanBoard%2Fbin%2FDebug%2FKanbanBoard.exe&quot; Namespace%3DKanbanBoard.Model Type%3DEnumCategories)%2C(Assembly%3D&quot;file:%2F%2F%2FD:%2FDokumenter%2FVisual Studio 2013%2FProjects%2F2. Semester%2FKanbanBoard%2FKanbanBoard%2Fbin%2FDebug%2FKanbanBoard.exe&quot; Namespace%3DKanbanBoard.ViewModel Type%3DCategoryViewModel)]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)])"
+                Id="1cc64859-2248-4d84-83b4-6960bc4b6d54"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FD:%2FDokumenter%2FVisual Studio 2013%2FProjects%2F2. Semester%2FKanbanBoard%2FKanbanBoard%2Fbin%2FDebug%2FKanbanBoard.exe&quot; Namespace%3DKanbanBoard.Persistence Type%3DPersistenceHandler Member%3D(Name%3DSave OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)])"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
               <stereotypeInstance
-                Id="4c045dde-a69a-4aa9-a703-a1e70042e28a"
+                Id="3574ef50-d360-4c00-bec1-2302e38e4b52"
                 name="method"
                 profile="CSharpProfile">
                 <propertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="0d2179e5-066d-44af-808e-8d53ef1354ec">
+                    Id="28a627ae-bc63-48ef-8920-33ddd0f11d55">
                     <propertyInstance
-                      Id="eb666bbc-7704-4376-8491-792a5bec87c8"
+                      Id="128340e8-6f89-43c6-b751-365bb3c60f65"
                       name="ClrAttributes" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="ce46fb1b-3dfb-4720-bec7-10f25ccf7fdd">
+                    Id="73a9d5ed-7272-4ce5-9a96-a79e7ba36968">
                     <propertyInstance
-                      Id="64c17e8a-97ef-4244-869d-bfc8ac99adab"
+                      Id="a2fc80ba-ecbc-4676-839c-4ce9e0cbf419"
                       name="IsPartial"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="8c217386-ac38-4e26-81ae-c00a78a23f1b">
+                    Id="2151cab1-2275-4781-ab2d-2bf499e9ab94">
                     <propertyInstance
-                      Id="29ffd9dd-aeac-4613-929a-650dae4b0015"
+                      Id="25ec3f89-f9cb-4d56-9613-95e6e5710740"
                       name="IsUnsafe"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="4f9a067b-4758-44eb-bbc9-0dc42a1cec66">
+                    Id="20d5aa37-adff-4dc6-a3af-1dee14ff3e71">
                     <propertyInstance
-                      Id="aea65702-a868-4a54-b54f-58ddc6e33439"
+                      Id="1e14fa84-f78c-4543-80d5-7ced44171082"
                       name="Inheritance"
                       value="none" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="082963e3-15c7-413e-a7fd-6a92f3af7d8c">
+                    Id="50a89124-5579-43b1-a3a6-6b7f78523ca3">
                     <propertyInstance
-                      Id="0bc17a8d-d72f-4d89-9f83-1ca3175e2e2b"
+                      Id="493a0505-78b3-4e31-bce4-6603223956bc"
                       name="PackageVisibility"
                       value="internal" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="a5adf8e7-8fc6-4793-b475-9e9a58448679">
+                    Id="846f3208-48bf-4e9c-accc-f329945c59d5">
                     <propertyInstance
-                      Id="8e26a885-6b61-4e23-bc49-cab6ccfd95dd"
+                      Id="3bbf8fa2-7a42-43aa-b823-a7adc56c61c0"
                       name="params"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
@@ -1095,32 +1070,130 @@
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="22969ec8-b9f5-4883-873c-fb4aa8aa7a10"
+                  Id="122be025-88e7-497e-bad8-0c5669186aff"
                   name="informationToSave"
                   direction="In">
                   <referencesInternal>
                     <reference
-                      Id="1484fc2f-0402-4b8f-9b88-2d4811ed4eff"
-                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FD:%2FDokumenter%2FVisual Studio 2013%2FProjects%2F2. Semester%2FKanbanBoard%2FKanbanBoard%2Fbin%2FDebug%2FKanbanBoard.exe&quot; Namespace%3DKanbanBoard.Persistence Type%3DPersistenceHandler Member%3D(Name%3DSave OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DDictionary GenericParameterCount%3D2 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FD:%2FDokumenter%2FVisual Studio 2013%2FProjects%2F2. Semester%2FKanbanBoard%2FKanbanBoard%2Fbin%2FDebug%2FKanbanBoard.exe&quot; Namespace%3DKanbanBoard.Model Type%3DEnumCategories)%2C(Assembly%3D&quot;file:%2F%2F%2FD:%2FDokumenter%2FVisual Studio 2013%2FProjects%2F2. Semester%2FKanbanBoard%2FKanbanBoard%2Fbin%2FDebug%2FKanbanBoard.exe&quot; Namespace%3DKanbanBoard.ViewModel Type%3DCategoryViewModel)]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3DinformationToSave"
+                      Id="d6b4cd42-a4f9-49c0-88bf-6bf55f178f8a"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FD:%2FDokumenter%2FVisual Studio 2013%2FProjects%2F2. Semester%2FKanbanBoard%2FKanbanBoard%2Fbin%2FDebug%2FKanbanBoard.exe&quot; Namespace%3DKanbanBoard.Persistence Type%3DPersistenceHandler Member%3D(Name%3DSave OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3DinformationToSave"
                       tag="ViewCode" />
                   </referencesInternal>
                   <type_NamedElement>
                     <classMoniker
-                      Id="6b5c2d01-67e4-4e3c-a859-0f7fbe4a7241"
-                      LastKnownName="Dictionary&lt;EnumCategories‎, CategoryViewModel‎&gt;"
-                      LastKnownLocation="Package7_1225.uml" />
+                      Id="e5680e7f-051f-44f7-aa46-4a3a0279f72f"
+                      LastKnownName="Object"
+                      LastKnownLocation="Package2_1225.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="7a7d4c09-2abd-4add-b534-f0635a2a8316"
+                  Id="df7335c4-7311-4a97-8c31-0ac8d7576f7c"
                   name="fileName"
                   direction="In">
                   <referencesInternal>
                     <reference
-                      Id="361d8e88-a80d-4e72-a87d-6c38f053138c"
-                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FD:%2FDokumenter%2FVisual Studio 2013%2FProjects%2F2. Semester%2FKanbanBoard%2FKanbanBoard%2Fbin%2FDebug%2FKanbanBoard.exe&quot; Namespace%3DKanbanBoard.Persistence Type%3DPersistenceHandler Member%3D(Name%3DSave OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DDictionary GenericParameterCount%3D2 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FD:%2FDokumenter%2FVisual Studio 2013%2FProjects%2F2. Semester%2FKanbanBoard%2FKanbanBoard%2Fbin%2FDebug%2FKanbanBoard.exe&quot; Namespace%3DKanbanBoard.Model Type%3DEnumCategories)%2C(Assembly%3D&quot;file:%2F%2F%2FD:%2FDokumenter%2FVisual Studio 2013%2FProjects%2F2. Semester%2FKanbanBoard%2FKanbanBoard%2Fbin%2FDebug%2FKanbanBoard.exe&quot; Namespace%3DKanbanBoard.ViewModel Type%3DCategoryViewModel)]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3DfileName"
+                      Id="17e5c4c7-4b25-4420-b440-1478512137c2"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FD:%2FDokumenter%2FVisual Studio 2013%2FProjects%2F2. Semester%2FKanbanBoard%2FKanbanBoard%2Fbin%2FDebug%2FKanbanBoard.exe&quot; Namespace%3DKanbanBoard.Persistence Type%3DPersistenceHandler Member%3D(Name%3DSave OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3DfileName"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="Modeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="1265f99d-8057-4613-9529-3fce9ce11448"
+            name="Load‎&lt;T‎&gt;"
+            isLeaf="false"
+            isStatic="true"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="018168c6-e454-4181-8f87-d8619ba37dd8"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FD:%2FDokumenter%2FVisual Studio 2013%2FProjects%2F2. Semester%2FKanbanBoard%2FKanbanBoard%2Fbin%2FDebug%2FKanbanBoard.exe&quot; Namespace%3DKanbanBoard.Persistence Type%3DPersistenceHandler Member%3D(Name%3DLoad GenericParameterCount%3D1 OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="185d26d5-231e-456b-9749-8af94c73690e"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="89aa8929-ef23-4420-848a-1e6740ec9ac9">
+                    <propertyInstance
+                      Id="d6ecda5e-307d-4976-8239-e2da1bef6953"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="04352d72-46a7-48db-a78b-91c7cd8fb23b">
+                    <propertyInstance
+                      Id="86c3006a-cda2-473f-9e09-6afd4557f12e"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="69ac645d-2153-4a81-a407-2cd835706514">
+                    <propertyInstance
+                      Id="ff3a1046-a717-4522-8882-8e1ceed29534"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1c4a8767-3dfe-4bc9-a9ff-c41ce5b2621b">
+                    <propertyInstance
+                      Id="44ecf841-67a2-4232-9253-eaa45c625d3e"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="39381faa-8395-4f64-bf73-b18ee79232df">
+                    <propertyInstance
+                      Id="c257d8bf-d291-425d-ae9c-b23ef6421d0b"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="55e14881-5711-4fff-8096-a1ae05335951">
+                    <propertyInstance
+                      Id="f4dccf90-9a92-4fc4-8176-7892963be667"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="6d522f09-6f4f-4807-9535-5c0c9bf02bbe"
+                  direction="Return">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="32e868d5-65a4-4c30-bc0e-c676f8cfa4fe"
+                      LastKnownName="T"
+                      LastKnownLocation="Package5_1225.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="9d5a096a-84fe-4c8c-bdc2-6b4a09fcc4c2"
+                  name="fileName"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="52fdee32-b62d-4eb3-97a0-2a6a98535252"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FD:%2FDokumenter%2FVisual Studio 2013%2FProjects%2F2. Semester%2FKanbanBoard%2FKanbanBoard%2Fbin%2FDebug%2FKanbanBoard.exe&quot; Namespace%3DKanbanBoard.Persistence Type%3DPersistenceHandler Member%3D(Name%3DLoad GenericParameterCount%3D1 OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3DfileName"
                       tag="ViewCode" />
                   </referencesInternal>
                   <type_NamedElement>
@@ -1187,7 +1260,7 @@
         </appliedStereotypesInternal>
         <ownedOperations>
           <operation
-            Id="0f2a2fe6-6549-4ac5-8176-4773d1f29cf1"
+            Id="27b44bd0-270c-4951-93c7-61e961aadf24"
             name="Save"
             isLeaf="false"
             isStatic="false"
@@ -1196,54 +1269,54 @@
             isQuery="false">
             <referencesInternal>
               <reference
-                Id="f9227984-83d4-461d-ac48-7a95257f13e4"
-                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FD:%2FDokumenter%2FVisual Studio 2013%2FProjects%2F2. Semester%2FKanbanBoard%2FKanbanBoard%2Fbin%2FDebug%2FKanbanBoard.exe&quot; Namespace%3DKanbanBoard.Persistence Type%3DIPersistence Member%3D(Name%3DSave OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DList GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DList GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FD:%2FDokumenter%2FVisual Studio 2013%2FProjects%2F2. Semester%2FKanbanBoard%2FKanbanBoard%2Fbin%2FDebug%2FKanbanBoard.exe&quot; Namespace%3DKanbanBoard.ViewModel Type%3DCategoryViewModel)]))]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)])"
+                Id="6d8f9615-7a03-42b5-81ee-abcd8e0aa32e"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FD:%2FDokumenter%2FVisual Studio 2013%2FProjects%2F2. Semester%2FKanbanBoard%2FKanbanBoard%2Fbin%2FDebug%2FKanbanBoard.exe&quot; Namespace%3DKanbanBoard.Persistence Type%3DIPersistence Member%3D(Name%3DSave OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)])"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
               <stereotypeInstance
-                Id="20dd013b-2b19-4ccc-a486-d41aaf6fd114"
+                Id="8ebc3420-f509-4123-880e-3d9cf2d334dc"
                 name="method"
                 profile="CSharpProfile">
                 <propertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="cd6cd592-154a-4572-85a3-de7a1e34378b">
+                    Id="ee861f82-f67e-4769-9297-3d79363b45b3">
                     <propertyInstance
-                      Id="ece44226-cc05-47f8-9d26-ab01404763a7"
+                      Id="cec6260f-173d-4646-ad57-2a708df7a1ad"
                       name="ClrAttributes" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="a8f08bea-16fd-46af-9f59-23917cedb222">
+                    Id="b4792a4b-ffd7-4e99-8386-b03782d8f923">
                     <propertyInstance
-                      Id="84a7a5c8-bd07-4552-b356-acdae169c587"
+                      Id="845e0d69-85b6-4f5f-8b48-63e207e2162e"
                       name="IsPartial"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="71b93035-9238-45b7-927a-7a77b92dd80c">
+                    Id="9b7a5c87-0e23-4837-9ca0-657f811096f4">
                     <propertyInstance
-                      Id="93fd0679-5868-4aa5-b81d-625c0a37f79c"
+                      Id="fdfae50f-7afc-4e91-a19a-2d036999c4e5"
                       name="IsUnsafe"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="910eab63-b98a-42a7-8e61-8e174b3bc0d5">
+                    Id="d8179d56-8967-4640-8db3-61f8204cab92">
                     <propertyInstance
-                      Id="38e2369c-a569-482b-b0f2-125a404cc3ae"
+                      Id="93ed9075-b3a7-4a6a-ab54-3ba7b52bc6f8"
                       name="Inheritance"
                       value="none" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="62ce02b2-0d8a-4740-abf2-07c96f894179">
+                    Id="6ca6daca-f4f9-4806-bd41-5847d4af2bec">
                     <propertyInstance
-                      Id="eaf7f384-381b-414c-965a-ba3e968d14f1"
+                      Id="c5eda647-9a92-4581-ac0d-6948bff19162"
                       name="PackageVisibility"
                       value="internal" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="d07bc1fd-10c6-49d5-b03d-b016ccbd0d27">
+                    Id="9bf557a9-0180-4c65-b089-31f679da1452">
                     <propertyInstance
-                      Id="746636f2-e6df-4d56-b05c-d2e89bbde7d5"
+                      Id="09fc33af-a0aa-47af-ba27-0f9a8a5737ac"
                       name="params"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
@@ -1253,32 +1326,32 @@
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="9afd5c26-f200-4cd7-bd2c-30bad4f835bd"
+                  Id="89bacdbb-975e-45ab-98b2-0695e5c85801"
                   name="informationToSave"
                   direction="In">
                   <referencesInternal>
                     <reference
-                      Id="f4954305-043e-4a1b-89ad-dbd0a258ee53"
-                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FD:%2FDokumenter%2FVisual Studio 2013%2FProjects%2F2. Semester%2FKanbanBoard%2FKanbanBoard%2Fbin%2FDebug%2FKanbanBoard.exe&quot; Namespace%3DKanbanBoard.Persistence Type%3DIPersistence Member%3D(Name%3DSave OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DList GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DList GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FD:%2FDokumenter%2FVisual Studio 2013%2FProjects%2F2. Semester%2FKanbanBoard%2FKanbanBoard%2Fbin%2FDebug%2FKanbanBoard.exe&quot; Namespace%3DKanbanBoard.ViewModel Type%3DCategoryViewModel)]))]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3DinformationToSave"
+                      Id="550b9969-8147-4723-af8b-ba29c66c4825"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FD:%2FDokumenter%2FVisual Studio 2013%2FProjects%2F2. Semester%2FKanbanBoard%2FKanbanBoard%2Fbin%2FDebug%2FKanbanBoard.exe&quot; Namespace%3DKanbanBoard.Persistence Type%3DIPersistence Member%3D(Name%3DSave OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3DinformationToSave"
                       tag="ViewCode" />
                   </referencesInternal>
                   <type_NamedElement>
                     <classMoniker
-                      Id="b84a7230-5839-402b-bbfd-7782a0b749f6"
-                      LastKnownName="List&lt;List‎&lt;CategoryViewModel‎&gt;‎&gt;"
-                      LastKnownLocation="Package7_1225.uml" />
+                      Id="e5680e7f-051f-44f7-aa46-4a3a0279f72f"
+                      LastKnownName="Object"
+                      LastKnownLocation="Package2_1225.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="e583278e-78aa-4de4-960d-e7eb6df5f957"
+                  Id="1ad791bc-7ae2-4d40-8071-33343892b355"
                   name="fileName"
                   direction="In">
                   <referencesInternal>
                     <reference
-                      Id="d4342ab1-a69c-478a-b9a5-4dac69ea445e"
-                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FD:%2FDokumenter%2FVisual Studio 2013%2FProjects%2F2. Semester%2FKanbanBoard%2FKanbanBoard%2Fbin%2FDebug%2FKanbanBoard.exe&quot; Namespace%3DKanbanBoard.Persistence Type%3DIPersistence Member%3D(Name%3DSave OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DList GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DList GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FD:%2FDokumenter%2FVisual Studio 2013%2FProjects%2F2. Semester%2FKanbanBoard%2FKanbanBoard%2Fbin%2FDebug%2FKanbanBoard.exe&quot; Namespace%3DKanbanBoard.ViewModel Type%3DCategoryViewModel)]))]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3DfileName"
+                      Id="b1772ce7-d603-4b2a-8d82-dfafb0d8b35f"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FD:%2FDokumenter%2FVisual Studio 2013%2FProjects%2F2. Semester%2FKanbanBoard%2FKanbanBoard%2Fbin%2FDebug%2FKanbanBoard.exe&quot; Namespace%3DKanbanBoard.Persistence Type%3DIPersistence Member%3D(Name%3DSave OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3DfileName"
                       tag="ViewCode" />
                   </referencesInternal>
                   <type_NamedElement>
@@ -1292,8 +1365,8 @@
             </ownedParameters>
           </operation>
           <operation
-            Id="962eeaf4-0efb-493c-9990-c52ce961600e"
-            name="Load"
+            Id="d942c13f-7a27-4e95-88df-7bfb0aace20f"
+            name="Load‎&lt;T‎&gt;"
             isLeaf="false"
             isStatic="false"
             isAbstract="true"
@@ -1301,54 +1374,54 @@
             isQuery="false">
             <referencesInternal>
               <reference
-                Id="28f91304-2836-418a-95ba-d8d7950b88be"
-                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FD:%2FDokumenter%2FVisual Studio 2013%2FProjects%2F2. Semester%2FKanbanBoard%2FKanbanBoard%2Fbin%2FDebug%2FKanbanBoard.exe&quot; Namespace%3DKanbanBoard.Persistence Type%3DIPersistence Member%3D(Name%3DLoad OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)])"
+                Id="0de7b012-35ee-4967-bc12-dae5d82a3d21"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FD:%2FDokumenter%2FVisual Studio 2013%2FProjects%2F2. Semester%2FKanbanBoard%2FKanbanBoard%2Fbin%2FDebug%2FKanbanBoard.exe&quot; Namespace%3DKanbanBoard.Persistence Type%3DIPersistence Member%3D(Name%3DLoad GenericParameterCount%3D1 OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)])"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
               <stereotypeInstance
-                Id="8c0d90f6-afd0-4c22-8759-3350f694450b"
+                Id="9be8e190-2275-4a56-bbbf-cde9780bf7d3"
                 name="method"
                 profile="CSharpProfile">
                 <propertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="c9daa28e-b31f-4509-8c6a-76d290ff5e77">
+                    Id="f6cb5a58-394f-4555-b247-5885d8f79bf0">
                     <propertyInstance
-                      Id="79535e83-0b82-4388-a108-118eec2f7e3d"
+                      Id="5067fc85-9ea6-47c0-b569-943428ae73d6"
                       name="ClrAttributes" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="e2c4655d-c581-4d68-9d85-86a074c0c809">
+                    Id="2fb8c847-f3c1-41c8-a6b2-c41282d9f064">
                     <propertyInstance
-                      Id="541275da-9cfa-4c4f-93c8-ff432a97898b"
+                      Id="8a19dc25-487b-4a3b-a577-6438a9533d6a"
                       name="IsPartial"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="91b30fd6-0389-482b-80aa-43123b89bfb1">
+                    Id="4322d4ce-f9a0-4c7a-a732-898a915436fd">
                     <propertyInstance
-                      Id="13110fd8-e634-47a0-b8a2-3e1c763458df"
+                      Id="5ae34ae6-6323-4452-8eb6-a73b71f675d4"
                       name="IsUnsafe"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="734d4cc9-a907-4c08-846f-9bb8d6cec6cc">
+                    Id="289913a9-f1b3-4c2e-ba96-0af58f91137d">
                     <propertyInstance
-                      Id="b55d2c63-f22c-4e9f-b340-f090cc4c501b"
+                      Id="21b8879d-d037-4d8e-b6e7-473c4361e253"
                       name="Inheritance"
                       value="none" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="ee6a7127-5e7a-4084-9911-1f8f9ab16090">
+                    Id="aebac013-3ca5-4a7e-84bc-d1d21b331e34">
                     <propertyInstance
-                      Id="a00677ea-8860-4ecb-980e-08871b2592fa"
+                      Id="218e499c-01f0-478d-8246-199e63b2a399"
                       name="PackageVisibility"
                       value="internal" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="f1aa865b-70ad-46c4-9311-043d4d25fe6b">
+                    Id="de4bfe7a-7ce7-4c3f-a284-b47040dc9628">
                     <propertyInstance
-                      Id="975f2144-721e-4700-8b1d-c25be181dbea"
+                      Id="5991ad7a-bd12-4a9a-9763-befc21973e61"
                       name="params"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
@@ -1358,25 +1431,25 @@
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="c3103c66-52b6-4467-ac92-b8e6dfb29e91"
+                  Id="af55fd1d-aa19-4d52-9c39-021669a43597"
                   direction="Return">
                   <type_NamedElement>
-                    <classMoniker
-                      Id="b84a7230-5839-402b-bbfd-7782a0b749f6"
-                      LastKnownName="List&lt;List‎&lt;CategoryViewModel‎&gt;‎&gt;"
-                      LastKnownLocation="Package7_1225.uml" />
+                    <undefinedTypeMoniker
+                      Id="32e868d5-65a4-4c30-bc0e-c676f8cfa4fe"
+                      LastKnownName="T"
+                      LastKnownLocation="Package5_1225.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="f272a42e-30aa-4ff0-86f0-9504e54d843b"
+                  Id="bdbb14d6-b82c-4edb-a41b-a173ee91f2c0"
                   name="fileName"
                   direction="In">
                   <referencesInternal>
                     <reference
-                      Id="8528161f-0128-4d65-80a0-c396ab0b2dd8"
-                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FD:%2FDokumenter%2FVisual Studio 2013%2FProjects%2F2. Semester%2FKanbanBoard%2FKanbanBoard%2Fbin%2FDebug%2FKanbanBoard.exe&quot; Namespace%3DKanbanBoard.Persistence Type%3DIPersistence Member%3D(Name%3DLoad OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3DfileName"
+                      Id="bd825b77-5ecb-42d0-bf44-b999df6fe55a"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FD:%2FDokumenter%2FVisual Studio 2013%2FProjects%2F2. Semester%2FKanbanBoard%2FKanbanBoard%2Fbin%2FDebug%2FKanbanBoard.exe&quot; Namespace%3DKanbanBoard.Persistence Type%3DIPersistence Member%3D(Name%3DLoad GenericParameterCount%3D1 OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3DfileName"
                       tag="ViewCode" />
                   </referencesInternal>
                   <type_NamedElement>
@@ -1391,6 +1464,18 @@
           </operation>
         </ownedOperations>
       </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="32e868d5-65a4-4c30-bc0e-c676f8cfa4fe"
+        name="T">
+        <referencesInternal>
+          <reference
+            Id="5594303c-b78e-4fe3-a11f-9f75e28d3b54"
+            handle="viewcode://./CodeSchema_GenericParameter?Assembly%3D&quot;file:%2F%2F%2FD:%2FDokumenter%2FVisual Studio 2013%2FProjects%2F2. Semester%2FKanbanBoard%2FKanbanBoard%2Fbin%2FDebug%2FKanbanBoard.exe&quot; Namespace%3DKanbanBoard.Persistence Type%3DPersistenceHandler Member%3D(Name%3DLoad GenericParameterCount%3D1 OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3D0"
+            tag="ViewCode" />
+        </referencesInternal>
+      </undefinedType>
     </packageHasNamedElement>
   </packagedElements>
 </package>

@@ -7,6 +7,8 @@ The board uses Gong drag and drop, and newtonsoft json for persistence.
 I am currently in the process of refactoring the board. When i am done with the current
 functionallity, i will add more features.
 
+// TODO: Create a way to dynamically add more boards.
+
 // TODO: Create functionallity to add employees
 
 // TODO: Create functionality to select an employee

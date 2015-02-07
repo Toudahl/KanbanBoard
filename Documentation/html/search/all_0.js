@@ -1,8 +1,5 @@
 var searchData=
 [
-  ['canexecute',['CanExecute',['../class_helper_classes_1_1_relay_command.html#a1e2d080059a2f0f7cd455af612d77bbe',1,'HelperClasses::RelayCommand']]],
-  ['canexecutechanged',['CanExecuteChanged',['../class_helper_classes_1_1_relay_command.html#a2e0f01d199cf4ba351ba10aa7c9c85c4',1,'HelperClasses::RelayCommand']]],
-  ['categories',['Categories',['../class_kanban_board_1_1_view_model_1_1_main_view_model.html#a32bb0ead5d4aeb8664990a3ba13d5305',1,'KanbanBoard::ViewModel::MainViewModel']]],
-  ['categoryviewmodel',['CategoryViewModel',['../class_kanban_board_1_1_view_model_1_1_category_view_model.html',1,'KanbanBoard::ViewModel']]],
-  ['compatiblefiles',['CompatibleFiles',['../class_kanban_board_1_1_persistence_1_1_persistence_handler.html#adf44508ce2098268782b787d86675b4b',1,'KanbanBoard::Persistence::PersistenceHandler']]]
+  ['addoreditcommand',['AddOrEditCommand',['../class_kanban_board_1_1_view_model_1_1_main_view_model.html#aca8e2783e1e09e01a344d0cc63ad025e',1,'KanbanBoard::ViewModel::MainViewModel']]],
+  ['availablecategories',['AvailableCategories',['../class_kanban_board_1_1_view_model_1_1_manipulate_post_it_view_model.html#ac0b86404ff141146093ab1dd29b9cb02',1,'KanbanBoard::ViewModel::ManipulatePostItViewModel']]]
 ];

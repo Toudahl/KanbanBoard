@@ -17,7 +17,9 @@ using Microsoft.Win32;
 
 namespace KanbanBoard.ViewModel
 {
-    
+    /// <summary>
+    /// This class handles the Main window, and holds all the information regarding the board(s)
+    /// </summary>
     public class MainViewModel: IDropTarget, INotifyPropertyChanged
     {
         #region Fields

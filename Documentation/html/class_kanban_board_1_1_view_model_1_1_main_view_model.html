@@ -115,6 +115,9 @@ $(document).ready(function(){initNavTree('class_kanban_board_1_1_view_model_1_1_
 <div class="title">KanbanBoard.ViewModel.MainViewModel Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>This class handles the Main window, and holds all the information regarding the board(s)  
+ <a href="class_kanban_board_1_1_view_model_1_1_main_view_model.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for KanbanBoard.ViewModel.MainViewModel:</div>
 <div class="dyncontent">
@@ -135,9 +138,9 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
 Properties</h2></td></tr>
-<tr class="memitem:a32bb0ead5d4aeb8664990a3ba13d5305"><td class="memItemLeft" align="right" valign="top">Dictionary&lt; EnumCategories, <a class="el" href="class_kanban_board_1_1_view_model_1_1_category_view_model.html">CategoryViewModel</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_kanban_board_1_1_view_model_1_1_main_view_model.html#a32bb0ead5d4aeb8664990a3ba13d5305">Categories</a><code> [get, set]</code></td></tr>
-<tr class="memdesc:a32bb0ead5d4aeb8664990a3ba13d5305"><td class="mdescLeft">&#160;</td><td class="mdescRight">Use this property to access the categories of the board  <a href="#a32bb0ead5d4aeb8664990a3ba13d5305">More...</a><br /></td></tr>
-<tr class="separator:a32bb0ead5d4aeb8664990a3ba13d5305"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62b89fc11389cbf9678cb470ca9e179a"><td class="memItemLeft" align="right" valign="top">Dictionary&lt; EnumCategories, <a class="el" href="class_kanban_board_1_1_view_model_1_1_category_view_model.html">CategoryViewModel</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_kanban_board_1_1_view_model_1_1_main_view_model.html#a62b89fc11389cbf9678cb470ca9e179a">Board</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a62b89fc11389cbf9678cb470ca9e179a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Use this property to access the categories of the board  <a href="#a62b89fc11389cbf9678cb470ca9e179a">More...</a><br /></td></tr>
+<tr class="separator:a62b89fc11389cbf9678cb470ca9e179a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac8874b3c893afb269198991fb7780d3e"><td class="memItemLeft" align="right" valign="top">ICommand&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_kanban_board_1_1_view_model_1_1_main_view_model.html#ac8874b3c893afb269198991fb7780d3e">NewCommand</a><code> [get, set]</code></td></tr>
 <tr class="memdesc:ac8874b3c893afb269198991fb7780d3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The command used to initiate the board reset.  <a href="#ac8874b3c893afb269198991fb7780d3e">More...</a><br /></td></tr>
 <tr class="separator:ac8874b3c893afb269198991fb7780d3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -150,6 +153,9 @@ Properties</h2></td></tr>
 <tr class="memitem:ae8b5f8979602622e17bc76d377c8b4c2"><td class="memItemLeft" align="right" valign="top">ICommand&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_kanban_board_1_1_view_model_1_1_main_view_model.html#ae8b5f8979602622e17bc76d377c8b4c2">SaveCommand</a><code> [get, set]</code></td></tr>
 <tr class="memdesc:ae8b5f8979602622e17bc76d377c8b4c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">The command used to initaite saving  <a href="#ae8b5f8979602622e17bc76d377c8b4c2">More...</a><br /></td></tr>
 <tr class="separator:ae8b5f8979602622e17bc76d377c8b4c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca8e2783e1e09e01a344d0cc63ad025e"><td class="memItemLeft" align="right" valign="top">ICommand&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_kanban_board_1_1_view_model_1_1_main_view_model.html#aca8e2783e1e09e01a344d0cc63ad025e">AddOrEditCommand</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:aca8e2783e1e09e01a344d0cc63ad025e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used for opening the add / edit window  <a href="#aca8e2783e1e09e01a344d0cc63ad025e">More...</a><br /></td></tr>
+<tr class="separator:aca8e2783e1e09e01a344d0cc63ad025e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
@@ -166,7 +172,9 @@ Private Member Functions</h2></td></tr>
 <tr class="memdesc:aeb9121b810fcc08bc9fbcc26c02092b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Opens the Load dialog, and allows the user to pick the desired Kanban Board file  <a href="#aeb9121b810fcc08bc9fbcc26c02092b5">More...</a><br /></td></tr>
 <tr class="separator:aeb9121b810fcc08bc9fbcc26c02092b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>This class handles the Main window, and holds all the information regarding the board(s) </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="add23d90d0faec4c4d77bb3762d0215c7"></a>
 <div class="memitem">
 <div class="memproto">
@@ -316,7 +324,7 @@ Private Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>
-<a class="anchor" id="a32bb0ead5d4aeb8664990a3ba13d5305"></a>
+<a class="anchor" id="aca8e2783e1e09e01a344d0cc63ad025e"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -324,7 +332,29 @@ Private Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Dictionary&lt;EnumCategories, <a class="el" href="class_kanban_board_1_1_view_model_1_1_category_view_model.html">CategoryViewModel</a>&gt; KanbanBoard.ViewModel.MainViewModel.Categories</td>
+          <td class="memname">ICommand KanbanBoard.ViewModel.MainViewModel.AddOrEditCommand</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Used for opening the add / edit window </p>
+
+</div>
+</div>
+<a class="anchor" id="a62b89fc11389cbf9678cb470ca9e179a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Dictionary&lt;EnumCategories, <a class="el" href="class_kanban_board_1_1_view_model_1_1_category_view_model.html">CategoryViewModel</a>&gt; KanbanBoard.ViewModel.MainViewModel.Board</td>
         </tr>
       </table>
   </td>
@@ -435,7 +465,7 @@ Private Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespace_kanban_board.html">KanbanBoard</a></li><li class="navelem"><a class="el" href="namespace_kanban_board_1_1_view_model.html">ViewModel</a></li><li class="navelem"><a class="el" href="class_kanban_board_1_1_view_model_1_1_main_view_model.html">MainViewModel</a></li>
-    <li class="footer">Generated on Fri Feb 6 2015 21:34:44 for Kanban Board by
+    <li class="footer">Generated on Sat Feb 7 2015 11:32:17 for Kanban Board by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

@@ -1201,6 +1201,45 @@
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
+          <association
+            Id="4b5bd970-77fb-4bd9-af88-f6ba96371e61"
+            isDerived="false"
+            sourceEndRoleName="MainViewModel"
+            targetEndRoleName="PersistenceHandler"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="f0a6a529-22c4-43ae-8ab0-2bbad2b182f7"
+              LastKnownName="PersistenceHandler"
+              LastKnownLocation="Package5_1225.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="dd76fb8e-2ee2-4635-b257-dedd5d0caf91"
+                  name="MainViewModel"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="40fd8a14-8bb4-4462-9fa5-d61c022e944b"
+                  name="PersistenceHandler"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
         </targetEnds>
         <ownedAttributesInternal>
           <property

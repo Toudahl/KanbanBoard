@@ -554,6 +554,47 @@
               LastKnownLocation="Package5_1225.uml" />
           </dependency>
         </suppliersInternal>
+        <targetEnds>
+          <association
+            Id="cfdf6b6b-c6e6-4432-b628-a2d89a4e58f1"
+            isDerived="false"
+            sourceEndRoleName="PersistenceHandler"
+            targetEndRoleName="EnumPersistenceOptions"
+            isLeaf="false"
+            isAbstract="false">
+            <enumerationMoniker
+              Id="9608d58c-c745-4dbc-91d7-d3fe39c3c9d6"
+              LastKnownName="EnumPersistenceOptions"
+              LastKnownLocation="Package5_1225.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="7f88cddd-b983-490c-9a4e-6712ebd37bef"
+                  name="PersistenceHandler"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="6e9ccf17-05c4-4bb8-ae6e-3ca5bcffaee2"
+                  name="EnumPersistenceOptions"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
           <property
             Id="d8082137-220d-4d17-ad02-320eaf596f7b"

@@ -520,42 +520,42 @@
         </appliedStereotypesInternal>
         <elementDefinition Id="abf644f7-3927-4227-814d-3055aaac6684" />
         <targetEnds>
-          <association Id="e6fedb1c-09e7-485a-b054-1a16f3ce4936" isDerived="false" sourceEndRoleName="PostItModel" targetEndRoleName="ResponsiblePerson" isLeaf="false" isAbstract="false">
-            <classMoniker Id="916c71ef-f0e4-4096-90d1-ff8452ce36d4" LastKnownName="PersonModel" />
-            <description>Property ResponsiblePerson references type PersonModel.</description>
+          <association Id="66a20bfe-8e5a-4a62-8569-561b4a00fda4" isDerived="false" sourceEndRoleName="PostItModel" targetEndRoleName="ResponsiblePerson" isLeaf="false" isAbstract="false">
+            <classMoniker Id="04559882-657d-42dd-b067-268874812ea7" LastKnownName="EmployeeModel" />
+            <description>Property ResponsiblePerson references type EmployeeModel.</description>
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
-                <memberEnd Id="64a6ebc3-730b-41a7-83ba-4f07ad812394" name="PostItModel" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                <memberEnd Id="2d9c6ca8-2dea-4e62-8868-34212ddeb557" name="PostItModel" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
                   <lowerValueInternal>
-                    <literalString Id="d41447d9-18cd-4150-93e9-3eb651d285c1" name="Lower" value="*">
-                      <elementDefinition Id="2dab4b73-c478-4175-916d-4c232027ac74" />
+                    <literalString Id="7df4b2d8-5e95-4657-a271-5d5971ef7f67" name="Lower" value="*">
+                      <elementDefinition Id="34433491-79b1-44d9-896d-a6b739fdd9ce" />
                     </literalString>
                   </lowerValueInternal>
                   <upperValueInternal>
-                    <literalString Id="33bf1b1b-9ef7-4ea4-90a1-421b94c044b2" name="Upper" value="*">
-                      <elementDefinition Id="369ea56c-8618-4944-9c76-833c91fbdfb9" />
+                    <literalString Id="84ac4ba8-8f89-4dbe-aee3-0223ceba8548" name="Upper" value="*">
+                      <elementDefinition Id="65cb225b-52c7-4242-8525-d4d65ca1881d" />
                     </literalString>
                   </upperValueInternal>
-                  <elementDefinition Id="30ffd042-1c2d-4eda-8c8b-b32742e86e68" />
+                  <elementDefinition Id="761e4e0b-df1c-460a-bc4d-2947744b9d4a" />
                 </memberEnd>
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
-                <memberEnd Id="4ceb1e48-0cca-4707-97d1-c8a8af0badbb" name="ResponsiblePerson" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                <memberEnd Id="d69f9cf8-f437-48ac-a44d-a0580405b8ae" name="ResponsiblePerson" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
                   <lowerValueInternal>
-                    <literalString Id="18c0bd40-c2cc-4827-9e12-d567284d965f" name="Lower" value="1">
-                      <elementDefinition Id="42d4790d-ef4b-489d-af18-6cd85e9ed782" />
+                    <literalString Id="6f3512fa-d713-4677-9540-62d4a6e9ce9f" name="Lower" value="1">
+                      <elementDefinition Id="9af50fbb-eef9-4b4d-8e4e-0b394514d67f" />
                     </literalString>
                   </lowerValueInternal>
                   <upperValueInternal>
-                    <literalString Id="9a4baecd-ff21-4944-a00d-f2ab1c3fc38d" name="Upper" value="1">
-                      <elementDefinition Id="21bd5a36-ff0a-4347-bd04-61601a9a4a53" />
+                    <literalString Id="0ceae411-4aa2-4b20-bf72-861e94ad27b6" name="Upper" value="1">
+                      <elementDefinition Id="8574ce3d-9b31-4143-8bf4-d52ddc73e5c9" />
                     </literalString>
                   </upperValueInternal>
-                  <elementDefinition Id="65fdd321-82c4-41f3-8939-86422bb8ecf6" />
+                  <elementDefinition Id="3494f101-508b-4f20-8d44-d0a143d58647" />
                 </memberEnd>
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
-            <elementDefinition Id="359f2644-65ec-4051-bbb4-e04840d11071" />
+            <elementDefinition Id="f9bceca4-69b6-4ea1-9549-9c2edc461dec" />
           </association>
         </targetEnds>
         <ownedAttributesInternal>
@@ -796,7 +796,7 @@
             </appliedStereotypesInternal>
             <elementDefinition Id="8f78be47-b94c-40a5-ac8b-e4aaa4b12394" />
             <type_NamedElement>
-              <referencedTypeMoniker Id="77425071-c4cf-4e06-8174-d7f71c4d526d" LastKnownName="PersonModel" />
+              <referencedTypeMoniker Id="c3dc0d36-7983-473c-8a0e-2adbeb82770b" LastKnownName="EmployeeModel" />
             </type_NamedElement>
           </property>
           <property Id="99a5dc16-8eae-411b-bee9-c0eb7129d144" name="SolidColorBrush" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
@@ -952,7 +952,7 @@
             </appliedStereotypesInternal>
             <elementDefinition Id="921977d4-1e52-4fa0-a1f4-30038a995574" />
             <type_NamedElement>
-              <referencedTypeMoniker Id="77425071-c4cf-4e06-8174-d7f71c4d526d" LastKnownName="PersonModel" />
+              <referencedTypeMoniker Id="c3dc0d36-7983-473c-8a0e-2adbeb82770b" LastKnownName="EmployeeModel" />
             </type_NamedElement>
           </property>
           <property Id="64d3f731-1db8-429e-915e-d96e3bd0ffea" name="_solidColorBrush" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
@@ -1149,117 +1149,117 @@
           </property>
         </ownedAttributesInternal>
         <ownedOperationsInternal>
-          <operation Id="f4ce8983-d0ef-4d6e-8008-d98fd9c6f317" name="PostItModel" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+          <operation Id="6e047144-b499-405e-9f20-1e78379ff93f" name="PostItModel" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <referencesInternal>
-              <reference Id="c5f1482f-8fda-4e7b-a05f-2d35fc21522b" handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FD:%2FDokumenter%2FVisual Studio 2013%2FProjects%2F2. Semester%2FKanbanBoard%2FKanbanBoard%2Fbin%2FDebug%2FKanbanBoard.exe&quot; Namespace%3DKanbanBoard.Model Type%3DPostItModel Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FD:%2FDokumenter%2FVisual Studio 2013%2FProjects%2F2. Semester%2FKanbanBoard%2FKanbanBoard%2Fbin%2FDebug%2FKanbanBoard.exe&quot; Namespace%3DKanbanBoard.Model Type%3DPersonModel)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2FPresentationCore.dll&quot; Namespace%3DSystem.Windows.Media Type%3DSolidColorBrush)])" tag="ViewCode">
-                <elementDefinition Id="c05df496-0728-4633-ac1d-4d2c7ef696a0" />
+              <reference Id="a8b1c8ac-721c-424b-acfe-4fb19130737b" handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FD:%2FDokumenter%2FVisual Studio 2013%2FProjects%2F2. Semester%2FKanbanBoard%2FKanbanBoard%2Fbin%2FDebug%2FKanbanBoard.exe&quot; Namespace%3DKanbanBoard.Model Type%3DPostItModel Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FD:%2FDokumenter%2FVisual Studio 2013%2FProjects%2F2. Semester%2FKanbanBoard%2FKanbanBoard%2Fbin%2FDebug%2FKanbanBoard.exe&quot; Namespace%3DKanbanBoard.Model Type%3DEmployeeModel)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2FPresentationCore.dll&quot; Namespace%3DSystem.Windows.Media Type%3DSolidColorBrush)])" tag="ViewCode">
+                <elementDefinition Id="8a96259d-bef2-4019-96b9-2b3c3e016168" />
               </reference>
             </referencesInternal>
             <appliedStereotypesInternal>
-              <stereotypeInstance Id="960e86b0-e2c7-4f04-b3f7-b99101a75731" name="method" profile="CSharpProfile">
-                <elementDefinition Id="f1a00c12-5ecb-4626-89b3-9fa38ae476c4" />
+              <stereotypeInstance Id="edd0ec8a-c9c8-4ba0-91ea-b86584a67e58" name="method" profile="CSharpProfile">
+                <elementDefinition Id="ae33b920-eba5-41c3-92c7-412e1c6e7fed" />
                 <propertyInstances>
-                  <stereotypeInstanceHasPropertyInstances Id="0536391b-08ac-4ac1-9105-050e7983047f">
-                    <propertyInstance Id="59e7a7af-c9c3-4295-a060-6a73d953e161" name="ClrAttributes">
-                      <elementDefinition Id="c99af779-f472-47df-842c-6797e338b6d4" />
+                  <stereotypeInstanceHasPropertyInstances Id="5ddd6865-9389-43e8-8c09-7eb207e09566">
+                    <propertyInstance Id="b2cd00d6-24c6-4409-9413-051e0101b964" name="ClrAttributes">
+                      <elementDefinition Id="56e270e5-8299-46eb-a2f1-161b462bf427" />
                     </propertyInstance>
-                    <elementDefinition Id="1ba2ff95-0169-4dbe-900d-c87c8aaafdd1" />
+                    <elementDefinition Id="41f5014c-9627-4483-8b4f-d5a732ea3f47" />
                   </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances Id="4fee558d-c187-4200-aebf-53c3b70c8384">
-                    <propertyInstance Id="32cf76ab-46d9-4ba6-9514-98b1eb589d63" name="IsPartial" value="false">
-                      <elementDefinition Id="d3b2d499-5fe5-48b4-b1a6-6d062dcf849b" />
+                  <stereotypeInstanceHasPropertyInstances Id="a4cf06e4-629d-40cc-abd3-ac6d24e3a19b">
+                    <propertyInstance Id="b361c21b-96da-4287-abd8-6f3dbe3539ac" name="IsPartial" value="false">
+                      <elementDefinition Id="04179060-7546-4a7f-9e89-73b10bfb1593" />
                     </propertyInstance>
-                    <elementDefinition Id="368bb952-4dc1-426e-95bf-76ead1b3f439" />
+                    <elementDefinition Id="854ba2d0-b2cf-44ed-9921-4fa3b0e8d34c" />
                   </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances Id="03b3fcf8-ae6a-43c9-813c-bf06ee6b9d8e">
-                    <propertyInstance Id="cf5441e5-2d8b-4bac-9035-8a180e8116b5" name="IsUnsafe" value="false">
-                      <elementDefinition Id="1253f725-e071-4a83-925f-553426bf08de" />
+                  <stereotypeInstanceHasPropertyInstances Id="41f232da-fb97-4a3c-a53b-fc9edb884abd">
+                    <propertyInstance Id="9a53a1e4-1d7b-4ca7-a31c-0240a85739c6" name="IsUnsafe" value="false">
+                      <elementDefinition Id="b400997f-4c06-4430-bc7c-0fb4f8401663" />
                     </propertyInstance>
-                    <elementDefinition Id="c48b7fcc-1e7d-45bf-9dc2-77174b0cf91a" />
+                    <elementDefinition Id="a30d2182-d3a8-4d78-94ef-d355dea2b137" />
                   </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances Id="fefc633e-4fb0-40b7-8908-447b9df79a4b">
-                    <propertyInstance Id="22a4ef31-d797-4ea8-88ac-1dccc4cda6c5" name="Inheritance" value="none">
-                      <elementDefinition Id="a1ce5d1d-910e-42fc-9d4c-8ace8cc706e3" />
+                  <stereotypeInstanceHasPropertyInstances Id="7ff70c3a-e453-4385-9da7-062b3e9671e8">
+                    <propertyInstance Id="c98eb5fc-cbe7-40e5-965f-1b916be6bcb0" name="Inheritance" value="none">
+                      <elementDefinition Id="20a82a22-8e86-46fb-958a-f9589513ccc8" />
                     </propertyInstance>
-                    <elementDefinition Id="5155372f-e8c0-4f52-baa2-378ff6450068" />
+                    <elementDefinition Id="decf9dfc-7e9a-4272-98ca-ed2929e30814" />
                   </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances Id="fb2bb656-d09d-44ba-ae01-83693f9ec236">
-                    <propertyInstance Id="414800bf-c6e2-4b0c-abc0-a85931ab5235" name="PackageVisibility" value="internal">
-                      <elementDefinition Id="6e5deefb-f9d1-484f-bbc9-df9839703f2b" />
+                  <stereotypeInstanceHasPropertyInstances Id="38aa9bc5-3af4-4c2b-a623-31fcb7f995eb">
+                    <propertyInstance Id="a97eee62-edf9-4622-9634-b5872ca23c53" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="102f7bce-d25a-4f75-8eca-e19bf18f8218" />
                     </propertyInstance>
-                    <elementDefinition Id="7942daf3-1c81-4bd6-8397-7e4e30840d20" />
+                    <elementDefinition Id="acaa7a51-0ab2-4bee-9005-390ab2c5efad" />
                   </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances Id="e41d8bed-6c92-4005-b3df-bc6aeebf28d4">
-                    <propertyInstance Id="5dfbc49f-614d-434a-80ab-f73941869207" name="params" value="false">
-                      <elementDefinition Id="ee6a8da7-e88d-4ab7-9163-fc6b685eeab2" />
+                  <stereotypeInstanceHasPropertyInstances Id="20c04ef7-6109-4af7-8cac-0566749f4a11">
+                    <propertyInstance Id="ea6f5a50-c0f1-43bd-9e20-8175f74e1c87" name="params" value="false">
+                      <elementDefinition Id="1da898e5-9295-41d2-b992-246ad267b027" />
                     </propertyInstance>
-                    <elementDefinition Id="bb2b20a8-3936-431f-a1ab-9ba2d5029dcc" />
+                    <elementDefinition Id="5d4036b0-d47c-4014-b485-9fbf81d98382" />
                   </stereotypeInstanceHasPropertyInstances>
                 </propertyInstances>
               </stereotypeInstance>
             </appliedStereotypesInternal>
-            <elementDefinition Id="5e3856d4-6ab0-4195-9193-584ee589d74d" />
+            <elementDefinition Id="e9081b3c-c5a5-4fbd-9c06-faf6d3b4f0a2" />
             <ownedParameters>
               <operationHasOwnedParameters>
-                <parameter Id="6dafb1ad-bfa8-482e-82fc-93c1d80eca61" name="taskName" direction="In">
+                <parameter Id="6fa0cde0-9e9a-48b5-a2c7-d66860633e2d" name="taskName" direction="In">
                   <referencesInternal>
-                    <reference Id="c9ee5d8d-7a7f-4006-af44-48ef8abeff9f" handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FD:%2FDokumenter%2FVisual Studio 2013%2FProjects%2F2. Semester%2FKanbanBoard%2FKanbanBoard%2Fbin%2FDebug%2FKanbanBoard.exe&quot; Namespace%3DKanbanBoard.Model Type%3DPostItModel Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FD:%2FDokumenter%2FVisual Studio 2013%2FProjects%2F2. Semester%2FKanbanBoard%2FKanbanBoard%2Fbin%2FDebug%2FKanbanBoard.exe&quot; Namespace%3DKanbanBoard.Model Type%3DPersonModel)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2FPresentationCore.dll&quot; Namespace%3DSystem.Windows.Media Type%3DSolidColorBrush)]) ParameterIdentifier%3DtaskName" tag="ViewCode">
-                      <elementDefinition Id="43acfa3a-8620-4cee-9e78-fa971f3d6bad" />
+                    <reference Id="88c2b6fb-7358-495f-8eed-3c5b0ba5bc64" handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FD:%2FDokumenter%2FVisual Studio 2013%2FProjects%2F2. Semester%2FKanbanBoard%2FKanbanBoard%2Fbin%2FDebug%2FKanbanBoard.exe&quot; Namespace%3DKanbanBoard.Model Type%3DPostItModel Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FD:%2FDokumenter%2FVisual Studio 2013%2FProjects%2F2. Semester%2FKanbanBoard%2FKanbanBoard%2Fbin%2FDebug%2FKanbanBoard.exe&quot; Namespace%3DKanbanBoard.Model Type%3DEmployeeModel)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2FPresentationCore.dll&quot; Namespace%3DSystem.Windows.Media Type%3DSolidColorBrush)]) ParameterIdentifier%3DtaskName" tag="ViewCode">
+                      <elementDefinition Id="b8e9d82c-9049-44e1-ade1-8ccb580672ce" />
                     </reference>
                   </referencesInternal>
-                  <elementDefinition Id="33c061bc-88e7-4b39-a1cf-0027530bc972" />
+                  <elementDefinition Id="3720566e-8d07-4489-8dbc-6d5caa11a356" />
                   <type_NamedElement>
                     <referencedTypeMoniker Id="6153a61e-a927-4c2c-a3fc-f4fb7082dd02" LastKnownName="String" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
-                <parameter Id="b385dd53-af11-4376-914a-2b675aeacf3e" name="taskDetails" direction="In">
+                <parameter Id="827ddfe2-4286-405a-ac95-33179034127b" name="taskDetails" direction="In">
                   <referencesInternal>
-                    <reference Id="d7707d70-a8d3-4990-ab65-cb82fd8c5bdb" handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FD:%2FDokumenter%2FVisual Studio 2013%2FProjects%2F2. Semester%2FKanbanBoard%2FKanbanBoard%2Fbin%2FDebug%2FKanbanBoard.exe&quot; Namespace%3DKanbanBoard.Model Type%3DPostItModel Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FD:%2FDokumenter%2FVisual Studio 2013%2FProjects%2F2. Semester%2FKanbanBoard%2FKanbanBoard%2Fbin%2FDebug%2FKanbanBoard.exe&quot; Namespace%3DKanbanBoard.Model Type%3DPersonModel)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2FPresentationCore.dll&quot; Namespace%3DSystem.Windows.Media Type%3DSolidColorBrush)]) ParameterIdentifier%3DtaskDetails" tag="ViewCode">
-                      <elementDefinition Id="10f1284c-a318-4242-8e80-baef819e3f8d" />
+                    <reference Id="420ea8e8-760e-48be-836e-91c6582c59df" handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FD:%2FDokumenter%2FVisual Studio 2013%2FProjects%2F2. Semester%2FKanbanBoard%2FKanbanBoard%2Fbin%2FDebug%2FKanbanBoard.exe&quot; Namespace%3DKanbanBoard.Model Type%3DPostItModel Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FD:%2FDokumenter%2FVisual Studio 2013%2FProjects%2F2. Semester%2FKanbanBoard%2FKanbanBoard%2Fbin%2FDebug%2FKanbanBoard.exe&quot; Namespace%3DKanbanBoard.Model Type%3DEmployeeModel)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2FPresentationCore.dll&quot; Namespace%3DSystem.Windows.Media Type%3DSolidColorBrush)]) ParameterIdentifier%3DtaskDetails" tag="ViewCode">
+                      <elementDefinition Id="4b8c3e26-fbbf-4964-907b-efaf38202244" />
                     </reference>
                   </referencesInternal>
-                  <elementDefinition Id="f9fdbcc2-4873-45fa-8555-7fa280cba2e9" />
+                  <elementDefinition Id="f02619e7-7ab0-41a1-9a0a-389f446f6b15" />
                   <type_NamedElement>
                     <referencedTypeMoniker Id="6153a61e-a927-4c2c-a3fc-f4fb7082dd02" LastKnownName="String" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
-                <parameter Id="2be064ae-713b-4b36-b3df-c318d2418d16" name="deadline" direction="In">
+                <parameter Id="b19fd9bd-dd2c-4ea5-9055-16234410f993" name="deadline" direction="In">
                   <referencesInternal>
-                    <reference Id="050d4b96-ef17-4d9c-9e3c-d4ab695d8f8d" handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FD:%2FDokumenter%2FVisual Studio 2013%2FProjects%2F2. Semester%2FKanbanBoard%2FKanbanBoard%2Fbin%2FDebug%2FKanbanBoard.exe&quot; Namespace%3DKanbanBoard.Model Type%3DPostItModel Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FD:%2FDokumenter%2FVisual Studio 2013%2FProjects%2F2. Semester%2FKanbanBoard%2FKanbanBoard%2Fbin%2FDebug%2FKanbanBoard.exe&quot; Namespace%3DKanbanBoard.Model Type%3DPersonModel)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2FPresentationCore.dll&quot; Namespace%3DSystem.Windows.Media Type%3DSolidColorBrush)]) ParameterIdentifier%3Ddeadline" tag="ViewCode">
-                      <elementDefinition Id="5116f9bc-0a8a-421f-acd5-78e8bac05db2" />
+                    <reference Id="656bc5c6-2d74-4c2d-95f4-ab41cd5aaf6f" handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FD:%2FDokumenter%2FVisual Studio 2013%2FProjects%2F2. Semester%2FKanbanBoard%2FKanbanBoard%2Fbin%2FDebug%2FKanbanBoard.exe&quot; Namespace%3DKanbanBoard.Model Type%3DPostItModel Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FD:%2FDokumenter%2FVisual Studio 2013%2FProjects%2F2. Semester%2FKanbanBoard%2FKanbanBoard%2Fbin%2FDebug%2FKanbanBoard.exe&quot; Namespace%3DKanbanBoard.Model Type%3DEmployeeModel)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2FPresentationCore.dll&quot; Namespace%3DSystem.Windows.Media Type%3DSolidColorBrush)]) ParameterIdentifier%3Ddeadline" tag="ViewCode">
+                      <elementDefinition Id="fb5295b0-6345-45d8-8c76-fb87ebfbe5ce" />
                     </reference>
                   </referencesInternal>
-                  <elementDefinition Id="ede55188-3d7b-40d4-ba36-25554a454d79" />
+                  <elementDefinition Id="bd065b74-6ba8-42eb-9052-e67c6f316967" />
                   <type_NamedElement>
                     <referencedTypeMoniker Id="6153a61e-a927-4c2c-a3fc-f4fb7082dd02" LastKnownName="String" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
-                <parameter Id="81a9f129-f0ae-47ca-bfb9-edc31ed4d158" name="responsiblePersonModel" direction="In">
+                <parameter Id="d19980bf-1b9a-4f0c-bcaa-1693ed630b4b" name="responsiblePersonModel" direction="In">
                   <referencesInternal>
-                    <reference Id="154ec42b-0689-4dea-8e93-f8619f894aff" handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FD:%2FDokumenter%2FVisual Studio 2013%2FProjects%2F2. Semester%2FKanbanBoard%2FKanbanBoard%2Fbin%2FDebug%2FKanbanBoard.exe&quot; Namespace%3DKanbanBoard.Model Type%3DPostItModel Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FD:%2FDokumenter%2FVisual Studio 2013%2FProjects%2F2. Semester%2FKanbanBoard%2FKanbanBoard%2Fbin%2FDebug%2FKanbanBoard.exe&quot; Namespace%3DKanbanBoard.Model Type%3DPersonModel)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2FPresentationCore.dll&quot; Namespace%3DSystem.Windows.Media Type%3DSolidColorBrush)]) ParameterIdentifier%3DresponsiblePersonModel" tag="ViewCode">
-                      <elementDefinition Id="968aa080-639a-4057-a032-e7f37bec6015" />
+                    <reference Id="22fb0933-afd6-471a-92b1-170a1f97dee9" handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FD:%2FDokumenter%2FVisual Studio 2013%2FProjects%2F2. Semester%2FKanbanBoard%2FKanbanBoard%2Fbin%2FDebug%2FKanbanBoard.exe&quot; Namespace%3DKanbanBoard.Model Type%3DPostItModel Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FD:%2FDokumenter%2FVisual Studio 2013%2FProjects%2F2. Semester%2FKanbanBoard%2FKanbanBoard%2Fbin%2FDebug%2FKanbanBoard.exe&quot; Namespace%3DKanbanBoard.Model Type%3DEmployeeModel)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2FPresentationCore.dll&quot; Namespace%3DSystem.Windows.Media Type%3DSolidColorBrush)]) ParameterIdentifier%3DresponsiblePersonModel" tag="ViewCode">
+                      <elementDefinition Id="c8172ede-086c-4a57-a4c9-44b522f26e90" />
                     </reference>
                   </referencesInternal>
-                  <elementDefinition Id="12ae0c90-cd41-4512-b79a-adcf8ddbc61c" />
+                  <elementDefinition Id="113ce435-cf35-4d99-b48d-63441d40cc1f" />
                   <type_NamedElement>
-                    <referencedTypeMoniker Id="77425071-c4cf-4e06-8174-d7f71c4d526d" LastKnownName="PersonModel" />
+                    <referencedTypeMoniker Id="c3dc0d36-7983-473c-8a0e-2adbeb82770b" LastKnownName="EmployeeModel" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
-                <parameter Id="aac44d7d-c64c-40c0-9175-f5d911f97b7b" name="solidColorBrush" direction="In">
+                <parameter Id="95d9dacb-341c-4588-b334-ab52afdfb454" name="solidColorBrush" direction="In">
                   <referencesInternal>
-                    <reference Id="7aba10a7-e54f-4654-a234-4ccd415b26a5" handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FD:%2FDokumenter%2FVisual Studio 2013%2FProjects%2F2. Semester%2FKanbanBoard%2FKanbanBoard%2Fbin%2FDebug%2FKanbanBoard.exe&quot; Namespace%3DKanbanBoard.Model Type%3DPostItModel Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FD:%2FDokumenter%2FVisual Studio 2013%2FProjects%2F2. Semester%2FKanbanBoard%2FKanbanBoard%2Fbin%2FDebug%2FKanbanBoard.exe&quot; Namespace%3DKanbanBoard.Model Type%3DPersonModel)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2FPresentationCore.dll&quot; Namespace%3DSystem.Windows.Media Type%3DSolidColorBrush)]) ParameterIdentifier%3DsolidColorBrush" tag="ViewCode">
-                      <elementDefinition Id="d9a165f4-3c35-420b-b6c5-e0277748cc20" />
+                    <reference Id="3784b9e8-6428-4b05-bcc6-99731f980e8e" handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FD:%2FDokumenter%2FVisual Studio 2013%2FProjects%2F2. Semester%2FKanbanBoard%2FKanbanBoard%2Fbin%2FDebug%2FKanbanBoard.exe&quot; Namespace%3DKanbanBoard.Model Type%3DPostItModel Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FD:%2FDokumenter%2FVisual Studio 2013%2FProjects%2F2. Semester%2FKanbanBoard%2FKanbanBoard%2Fbin%2FDebug%2FKanbanBoard.exe&quot; Namespace%3DKanbanBoard.Model Type%3DEmployeeModel)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2FPresentationCore.dll&quot; Namespace%3DSystem.Windows.Media Type%3DSolidColorBrush)]) ParameterIdentifier%3DsolidColorBrush" tag="ViewCode">
+                      <elementDefinition Id="7293f973-6a37-4a2e-bba1-b326758228bc" />
                     </reference>
                   </referencesInternal>
-                  <elementDefinition Id="c2743110-9dad-4645-9dd9-3405fa4e9257" />
+                  <elementDefinition Id="895870a1-9b19-4874-a451-1ee2af2c26c4" />
                   <type_NamedElement>
                     <referencedTypeMoniker Id="7f1e5b69-aa38-489c-b556-5dfcf33ef1d8" LastKnownName="SolidColorBrush" />
                   </type_NamedElement>
@@ -1270,11 +1270,6 @@
         </ownedOperationsInternal>
       </class>
     </logicalClassDesignerModelHasTypes>
-    <packageHasNamedElement>
-      <referencedType Id="77425071-c4cf-4e06-8174-d7f71c4d526d" name="PersonModel" isAbstract="false" isLeaf="false" cachedFullName="Modeling::KanbanBoard::Model::PersonModel">
-        <elementDefinition Id="d97c531e-cad0-44dc-a8f9-a9ff243deeb0" />
-      </referencedType>
-    </packageHasNamedElement>
     <packageHasNamedElement>
       <referencedType Id="7f1e5b69-aa38-489c-b556-5dfcf33ef1d8" name="SolidColorBrush" isAbstract="false" isLeaf="false" cachedFullName="Modeling::System::Windows::Media::SolidColorBrush">
         <elementDefinition Id="26f7fc53-c9e0-479d-bb3d-d379b4439010" />
@@ -1768,6 +1763,24 @@
           </stereotypeInstance>
         </appliedStereotypesInternal>
         <elementDefinition Id="2b9e0975-4b72-4c74-ac9e-9c60b13d06f2" />
+        <targetEnds>
+          <association Id="e69107b7-341f-4c8d-8923-e7cc166712a1" isDerived="false" sourceEndRoleName="MainViewModel" targetEndRoleName="PersistenceHandler" isLeaf="false" isAbstract="false">
+            <classMoniker Id="c9d09285-4504-4ffb-8bf5-242638914e1e" LastKnownName="PersistenceHandler" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="1108442e-1270-4197-824e-dd681e8ea228" name="MainViewModel" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="dd76fb8e-2ee2-4635-b257-dedd5d0caf91" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="13ae95e4-53bd-4a43-ae0c-7b6499017a57" name="PersistenceHandler" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="40fd8a14-8bb4-4462-9fa5-d61c022e944b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="4b5bd970-77fb-4bd9-af88-f6ba96371e61" />
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
           <property Id="2221a7c3-d766-4337-bda4-2a9ab95cb2ec" name="NewCommand" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <referencesInternal>
@@ -4755,7 +4768,7 @@
       </referencedType>
     </packageHasNamedElement>
     <logicalClassDesignerModelHasTypes>
-      <class Id="04559882-657d-42dd-b067-268874812ea7" name="EmployeeModel" visibility="Package" isAbstract="false" isLeaf="false" isActiveClass="false">
+      <class Id="04559882-657d-42dd-b067-268874812ea7" name="EmployeeModel" isAbstract="false" isLeaf="false" isActiveClass="false">
         <referencesInternal>
           <reference Id="f58acef3-0138-4a6f-9f5a-149487129e4e" handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FD:%2FDokumenter%2FVisual Studio 2013%2FProjects%2F2. Semester%2FKanbanBoard%2FKanbanBoard%2Fbin%2FDebug%2FKanbanBoard.exe&quot; Namespace%3DKanbanBoard.Model Type%3DEmployeeModel" tag="ViewCode">
             <elementDefinition Id="fe937c9f-e94c-4744-a153-d756fa29ab12" />
@@ -5047,6 +5060,67 @@
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
+          <operation Id="fa1b8c82-2761-43ee-96a1-f89398d6bfa6" name="ToString" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <referencesInternal>
+              <reference Id="10ffef6f-91fb-4dce-acd5-ed1b42d07558" handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FD:%2FDokumenter%2FVisual Studio 2013%2FProjects%2F2. Semester%2FKanbanBoard%2FKanbanBoard%2Fbin%2FDebug%2FKanbanBoard.exe&quot; Namespace%3DKanbanBoard.Model Type%3DEmployeeModel Member%3DToString" tag="ViewCode">
+                <elementDefinition Id="a0e0463a-6555-4994-8d7f-40c4497e912d" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="5b50e1f9-ca70-4904-b166-c1dafca525f5" name="method" profile="CSharpProfile">
+                <elementDefinition Id="eb098ca7-30df-4b0a-b94b-e674b88023be" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="5980ac7e-a368-4238-8de0-164c681f5f47">
+                    <propertyInstance Id="226a91cb-15f7-4e62-af6f-40aaadb0dbb3" name="ClrAttributes">
+                      <elementDefinition Id="cb66b9f1-0a09-4b3c-93ad-942aeaee86bc" />
+                    </propertyInstance>
+                    <elementDefinition Id="92a1a0f0-ea80-4b71-bb16-e128399afc9d" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="af0b081f-9183-4ce2-87bf-5009014d8dd8">
+                    <propertyInstance Id="9203a6cb-865a-4611-adaa-05c670240a53" name="IsPartial" value="false">
+                      <elementDefinition Id="a679dd19-c2d2-4edb-b280-a3082298498e" />
+                    </propertyInstance>
+                    <elementDefinition Id="a98d0f32-16ad-49f9-b350-e90265ed743a" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="524eb9fc-87f8-4bf2-9d0d-373757165d28">
+                    <propertyInstance Id="28b3f3ac-ab97-4fce-a5e3-1242f446f8af" name="IsUnsafe" value="false">
+                      <elementDefinition Id="7e828bac-44dd-4136-bbfc-306178df8bb1" />
+                    </propertyInstance>
+                    <elementDefinition Id="f9365625-5c45-443e-9614-4a6fe15be0af" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="48dc65a7-c9b2-46c2-8035-58dfba3fefeb">
+                    <propertyInstance Id="3d2e0b17-0d1a-4796-b8b4-4a759ae58f52" name="Inheritance" value="none">
+                      <elementDefinition Id="ffe7f5ed-06d3-4b50-bca0-c123c65f2d9a" />
+                    </propertyInstance>
+                    <elementDefinition Id="a888bbd0-d32c-4e26-a81a-bc250c9589bf" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="b3a2bbd0-5558-4493-91ad-1c4edd426917">
+                    <propertyInstance Id="8bdd4381-0b16-47d1-a231-74c7c8cebf56" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="eecccc3e-55a2-476e-96d8-552345334b8d" />
+                    </propertyInstance>
+                    <elementDefinition Id="42eca613-8acb-4651-a391-23f4294d68c1" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="8be887a2-a182-4d3d-86ea-ffd2bbe9a3a9">
+                    <propertyInstance Id="974ad69c-db95-4e06-9557-61b756b7b25f" name="params" value="false">
+                      <elementDefinition Id="423a2e4a-b359-465c-b1bb-2d7256f86681" />
+                    </propertyInstance>
+                    <elementDefinition Id="3e915689-f868-4a2a-91a4-52a808a9c874" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="9c964a98-8dea-4f22-881d-765c484027be" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="a71085b4-f22e-4f2f-a902-ed132ba439fa" direction="Return">
+                  <elementDefinition Id="b438a587-857b-4ef0-9515-922e5004f9f2" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="6153a61e-a927-4c2c-a3fc-f4fb7082dd02" LastKnownName="String" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
         </ownedOperationsInternal>
       </class>
     </logicalClassDesignerModelHasTypes>
@@ -5056,7 +5130,7 @@
       </referencedType>
     </packageHasNamedElement>
     <logicalClassDesignerModelHasTypes>
-      <enumeration Id="759d758a-bde3-4245-8eff-3edfe7155968" name="EnumEmployeeTitles" visibility="Package" isAbstract="false" isLeaf="false">
+      <enumeration Id="759d758a-bde3-4245-8eff-3edfe7155968" name="EnumEmployeeTitles" isAbstract="false" isLeaf="false">
         <referencesInternal>
           <reference Id="d85bad3e-8355-49ee-8065-9e9aee66c47f" handle="viewcode://./CodeSchema_Enum?Assembly%3D&quot;file:%2F%2F%2FD:%2FDokumenter%2FVisual Studio 2013%2FProjects%2F2. Semester%2FKanbanBoard%2FKanbanBoard%2Fbin%2FDebug%2FKanbanBoard.exe&quot; Namespace%3DKanbanBoard.Model Type%3DEnumEmployeeTitles" tag="ViewCode">
             <elementDefinition Id="37ca5361-c346-4238-b1e6-34592493f99d" />
@@ -5199,6 +5273,24 @@
             <elementDefinition Id="bf39d70f-2c81-42aa-9004-f0b3064c02dc" />
           </dependency>
         </suppliersInternal>
+        <targetEnds>
+          <association Id="d6726341-b1bc-45d1-88eb-be631a14c1f1" isDerived="false" sourceEndRoleName="PersistenceHandler" targetEndRoleName="EnumPersistenceOptions" isLeaf="false" isAbstract="false">
+            <enumerationMoniker Id="492f9281-b905-44ef-b121-84a7c0eb69d6" LastKnownName="EnumPersistenceOptions" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="48bf8877-9852-4065-a0d8-78f44418c894" name="PersistenceHandler" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="7f88cddd-b983-490c-9a4e-6712ebd37bef" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="a2868296-5451-4d91-849b-a226cb90c096" name="EnumPersistenceOptions" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="6e9ccf17-05c4-4bb8-ae6e-3ca5bcffaee2" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="cfdf6b6b-c6e6-4432-b628-a2d89a4e58f1" />
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
           <property Id="364063fe-f677-4bac-8409-7bf605252579" name="_persistence" visibility="Private" isLeaf="false" isStatic="true" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <referencesInternal>
@@ -6006,59 +6098,6 @@
       </referencedType>
     </packageHasNamedElement>
     <logicalClassDesignerModelHasTypes>
-      <enumeration Id="85424f5f-cfdd-43ac-b5c5-55f207c67283" name="EnumPersistenceOptions" visibility="Package" isAbstract="false" isLeaf="false">
-        <referencesInternal>
-          <reference Id="860dd830-096b-449c-8f90-59961c340c36" handle="viewcode://./CodeSchema_Enum?Assembly%3D&quot;file:%2F%2F%2FD:%2FDokumenter%2FVisual Studio 2013%2FProjects%2F2. Semester%2FKanbanBoard%2FKanbanBoard%2Fbin%2FDebug%2FKanbanBoard.exe&quot; Namespace%3DKanbanBoard.Persistence Type%3DEnumPersistenceOptions" tag="ViewCode">
-            <elementDefinition Id="6f0a266b-3543-4980-b87f-3757e8023121" />
-          </reference>
-        </referencesInternal>
-        <appliedStereotypesInternal>
-          <stereotypeInstance Id="1e6e437a-f1f8-4345-81eb-f894efb1a0bf" name="enum" profile="CSharpProfile">
-            <elementDefinition Id="f53f6c21-2f91-4652-b047-1d263b8fe612" />
-            <propertyInstances>
-              <stereotypeInstanceHasPropertyInstances Id="510b9f94-efbf-49aa-ae0b-20c856be2fdc">
-                <propertyInstance Id="b31d28d8-fb0a-4818-8d0d-955d7bad5fc8" name="ClrAttributes">
-                  <elementDefinition Id="e446a573-17c0-45e1-83cc-8fb1b6514487" />
-                </propertyInstance>
-                <elementDefinition Id="51bc21b5-ac40-4e16-9201-3e8bf3cdbe51" />
-              </stereotypeInstanceHasPropertyInstances>
-              <stereotypeInstanceHasPropertyInstances Id="6495c19a-9b55-44fa-aca3-5119dd59f999">
-                <propertyInstance Id="bd737c3d-525d-4746-90ca-016b024e4f85" name="BaseType" value="int">
-                  <elementDefinition Id="9e8d8e21-a005-4454-b39b-a229081e41b7" />
-                </propertyInstance>
-                <elementDefinition Id="801c8eb6-c2e1-4156-a2a5-bb71d048c287" />
-              </stereotypeInstanceHasPropertyInstances>
-              <stereotypeInstanceHasPropertyInstances Id="b6b70c67-e849-47d8-a66f-caddfc6792a5">
-                <propertyInstance Id="1bfd1119-1078-453c-a47f-b99029657104" name="PackageVisibility" value="internal">
-                  <elementDefinition Id="6f71a65d-f48d-4e08-b2aa-35ac6ec94e85" />
-                </propertyInstance>
-                <elementDefinition Id="ef4c2f9c-ee6c-4214-a007-877c52922d58" />
-              </stereotypeInstanceHasPropertyInstances>
-            </propertyInstances>
-          </stereotypeInstance>
-        </appliedStereotypesInternal>
-        <elementDefinition Id="9608d58c-c745-4dbc-91d7-d3fe39c3c9d6" />
-        <ownedLiterals>
-          <enumerationLiteral Id="2735b553-aaed-4d0c-8114-ed8b9d005dd2" name="JsonPersistence">
-            <referencesInternal>
-              <reference Id="1eb9f470-2e76-4376-9428-5df120fd00d3" handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2FD:%2FDokumenter%2FVisual Studio 2013%2FProjects%2F2. Semester%2FKanbanBoard%2FKanbanBoard%2Fbin%2FDebug%2FKanbanBoard.exe&quot; Namespace%3DKanbanBoard.Persistence Type%3DEnumPersistenceOptions Member%3DJsonPersistence" tag="ViewCode">
-                <elementDefinition Id="257ebbc9-026a-4ff7-839f-1629fec03ad0" />
-              </reference>
-            </referencesInternal>
-            <elementDefinition Id="bbee11b9-673f-4efc-9bda-fc47de2ce133" />
-          </enumerationLiteral>
-          <enumerationLiteral Id="fc38710f-a4df-4cd9-92e2-9fdb440c6c01" name="XmlPersistence">
-            <referencesInternal>
-              <reference Id="333f7ccf-c4c4-4d07-bd97-44f50e79835d" handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2FD:%2FDokumenter%2FVisual Studio 2013%2FProjects%2F2. Semester%2FKanbanBoard%2FKanbanBoard%2Fbin%2FDebug%2FKanbanBoard.exe&quot; Namespace%3DKanbanBoard.Persistence Type%3DEnumPersistenceOptions Member%3DXmlPersistence" tag="ViewCode">
-                <elementDefinition Id="b0c4650c-1f31-4411-8484-c3688c216d9a" />
-              </reference>
-            </referencesInternal>
-            <elementDefinition Id="2de0e6fa-8b29-40ee-95dc-928687e28f06" />
-          </enumerationLiteral>
-        </ownedLiterals>
-      </enumeration>
-    </logicalClassDesignerModelHasTypes>
-    <logicalClassDesignerModelHasTypes>
       <Interface Id="2022f368-78ab-4fa3-b7b0-7a4aef911134" name="IPersistence" visibility="Package" isAbstract="false" isLeaf="false">
         <referencesInternal>
           <reference Id="c31f46f0-e1d0-423f-9e9b-2743ad8c469c" handle="viewcode://./CodeSchema_Interface?Assembly%3D&quot;file:%2F%2F%2FD:%2FDokumenter%2FVisual Studio 2013%2FProjects%2F2. Semester%2FKanbanBoard%2FKanbanBoard%2Fbin%2FDebug%2FKanbanBoard.exe&quot; Namespace%3DKanbanBoard.Persistence Type%3DIPersistence" tag="ViewCode">
@@ -6707,6 +6746,59 @@
         <elementDefinition Id="32e868d5-65a4-4c30-bc0e-c676f8cfa4fe" />
       </referencedType>
     </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <enumeration Id="492f9281-b905-44ef-b121-84a7c0eb69d6" name="EnumPersistenceOptions" visibility="Package" isAbstract="false" isLeaf="false">
+        <referencesInternal>
+          <reference Id="12980663-23b0-40ab-9a6e-8208ddb666c9" handle="viewcode://./CodeSchema_Enum?Assembly%3D&quot;file:%2F%2F%2FD:%2FDokumenter%2FVisual Studio 2013%2FProjects%2F2. Semester%2FKanbanBoard%2FKanbanBoard%2Fbin%2FDebug%2FKanbanBoard.exe&quot; Namespace%3DKanbanBoard.Persistence Type%3DEnumPersistenceOptions" tag="ViewCode">
+            <elementDefinition Id="6f0a266b-3543-4980-b87f-3757e8023121" />
+          </reference>
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance Id="f00e88c1-4531-4ab9-a553-a7cc8345d5af" name="enum" profile="CSharpProfile">
+            <elementDefinition Id="f53f6c21-2f91-4652-b047-1d263b8fe612" />
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="b6a249a4-0ac7-41c6-9034-b40b0b88f672">
+                <propertyInstance Id="482d6470-bf44-4554-8911-1cc00228b451" name="ClrAttributes">
+                  <elementDefinition Id="e446a573-17c0-45e1-83cc-8fb1b6514487" />
+                </propertyInstance>
+                <elementDefinition Id="51bc21b5-ac40-4e16-9201-3e8bf3cdbe51" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="5f1acae2-52d2-46ce-91d2-32bc231e4b8e">
+                <propertyInstance Id="3c6ce4dd-4b80-4975-bf9d-1851c7d20b68" name="BaseType" value="int">
+                  <elementDefinition Id="9e8d8e21-a005-4454-b39b-a229081e41b7" />
+                </propertyInstance>
+                <elementDefinition Id="801c8eb6-c2e1-4156-a2a5-bb71d048c287" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="1e966a3a-768a-4a1a-9cd3-9193845adcaa">
+                <propertyInstance Id="9958f1cd-64f5-4d35-8952-c403c1985bcf" name="PackageVisibility" value="internal">
+                  <elementDefinition Id="6f71a65d-f48d-4e08-b2aa-35ac6ec94e85" />
+                </propertyInstance>
+                <elementDefinition Id="ef4c2f9c-ee6c-4214-a007-877c52922d58" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <elementDefinition Id="9608d58c-c745-4dbc-91d7-d3fe39c3c9d6" />
+        <ownedLiterals>
+          <enumerationLiteral Id="5bcc906a-5d17-408f-8781-4bc31e3f83be" name="JsonPersistence">
+            <referencesInternal>
+              <reference Id="01d28f33-855f-4828-bf8a-bb09fb2f672a" handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2FD:%2FDokumenter%2FVisual Studio 2013%2FProjects%2F2. Semester%2FKanbanBoard%2FKanbanBoard%2Fbin%2FDebug%2FKanbanBoard.exe&quot; Namespace%3DKanbanBoard.Persistence Type%3DEnumPersistenceOptions Member%3DJsonPersistence" tag="ViewCode">
+                <elementDefinition Id="257ebbc9-026a-4ff7-839f-1629fec03ad0" />
+              </reference>
+            </referencesInternal>
+            <elementDefinition Id="bbee11b9-673f-4efc-9bda-fc47de2ce133" />
+          </enumerationLiteral>
+          <enumerationLiteral Id="aa34e6ff-7271-48cd-b318-87527d320005" name="XmlPersistence">
+            <referencesInternal>
+              <reference Id="b76f30fc-a65f-4542-ac4d-3d2d48e6e87b" handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2FD:%2FDokumenter%2FVisual Studio 2013%2FProjects%2F2. Semester%2FKanbanBoard%2FKanbanBoard%2Fbin%2FDebug%2FKanbanBoard.exe&quot; Namespace%3DKanbanBoard.Persistence Type%3DEnumPersistenceOptions Member%3DXmlPersistence" tag="ViewCode">
+                <elementDefinition Id="b0c4650c-1f31-4411-8484-c3688c216d9a" />
+              </reference>
+            </referencesInternal>
+            <elementDefinition Id="2de0e6fa-8b29-40ee-95dc-928687e28f06" />
+          </enumerationLiteral>
+        </ownedLiterals>
+      </enumeration>
+    </logicalClassDesignerModelHasTypes>
   </packagedElements>
   <package Id="0999e405-5bb6-4ebb-8580-6391d0895417" name="Modeling">
     <elementDefinition Id="66726029-97b7-475b-848c-6d9676ce6e1a" />

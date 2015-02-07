@@ -1,0 +1,13 @@
+﻿<Window x:Class="KanbanBoard.View.ManageEmployees"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:viewModel="clr-namespace:KanbanBoard.ViewModel"
+        Title="ManageEmployees" Height="300" Width="300">
+    <Window.DataContext>
+        <viewModel:EmployeeViewModel/>
+    </Window.DataContext>
+    <Grid>
+        <ComboBox HorizontalAlignment="Left" Margin="99,46,0,0" VerticalAlignment="Top" Width="120" ItemsSource="{Binding Employees/}"/>
+
+    </Grid>
+</Window>

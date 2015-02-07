@@ -20,6 +20,7 @@
         <Menu Grid.Row="0">
             <MenuItem Header="Menu">
                 <MenuItem Header="New" Command="{Binding NewCommand}"/>
+                <MenuItem Header="Manage Employees" Command="{Binding ManageEmployeesCommand}"></MenuItem>
                 <MenuItem Header="Add..." Command="{Binding AddOrEditCommand}"/>
                 <MenuItem Header="Edit selection"/>
                 <MenuItem Header="Load..." Command="{Binding LoadFromDialogCommand}"/>

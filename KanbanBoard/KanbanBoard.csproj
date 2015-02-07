@@ -60,6 +60,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="View\ManageEmployees.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\ManipulatePostItView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -72,6 +76,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Model\CategoriesModel.cs" />
     <Compile Include="Model\EmployeeModel.cs" />
     <Compile Include="Model\EnumCategories.cs" />
     <Compile Include="Model\EnumEmployeeTitles.cs" />
@@ -87,6 +92,9 @@
     <Compile Include="ViewModel\EmployeeViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\ManipulatePostItViewModel.cs" />
+    <Compile Include="View\ManageEmployees.xaml.cs">
+      <DependentUpon>ManageEmployees.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\ManipulatePostItView.xaml.cs">
       <DependentUpon>ManipulatePostItView.xaml</DependentUpon>
     </Compile>

@@ -1,8 +1,11 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.IO;
 using KanbanBoard.Model;
 using KanbanBoard.ViewModel;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace KanbanBoard.Persistence
 {
@@ -104,8 +107,11 @@ namespace KanbanBoard.Persistence
             /// <returns>The post its that was loaded</returns>
             public object Load(string fileName)
             {
+                // TODO: find out why casting only works when using build in DeserializeObject<>.
                 string readAllText = File.ReadAllText(fileName);
-                return JsonConvert.DeserializeObject<Dictionary<EnumCategories, CategoryViewModel>>(readAllText);
+                return JsonConvert.DeserializeObject(readAllText);
+                //return JsonConvert.DeserializeObject<Dictionary<EnumCategories, CategoryViewModel>>(readAllText);
+                //return JsonConvert.DeserializeObject<object>(readAllText);
             }
         }
         #endregion

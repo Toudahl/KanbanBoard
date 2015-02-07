@@ -14,6 +14,7 @@ using KanbanBoard.Model;
 using KanbanBoard.Persistence;
 using KanbanBoard.View;
 using Microsoft.Win32;
+using Newtonsoft.Json;
 
 namespace KanbanBoard.ViewModel
 {
@@ -32,6 +33,8 @@ namespace KanbanBoard.ViewModel
         private ICommand _loadFromDialogCommand;
         private ICommand _saveCommand;
         private ICommand _addOrEditCommand;
+        private ICommand _manageEmployeesCommand;
+
 
         // Used for saving, loading, adding and editing operations
         private SaveFileDialog _saveAsFileDialog;
@@ -39,6 +42,7 @@ namespace KanbanBoard.ViewModel
         private string _boardFileNameAndPath;
         private readonly string _compatibleFiles = PersistenceHandler.CompatibleFiles;
         private ManipulatePostItView addOrEditWindow;
+        private ManageEmployees manageEmployeesWindow;
 
         #endregion
 
@@ -59,6 +63,7 @@ namespace KanbanBoard.ViewModel
             _newCommand = new RelayCommand(NewBoard);
             _loadFromDialogCommand = new RelayCommand(LoadFromDialog);
             _addOrEditCommand = new RelayCommand(AddOrEdit);
+            _manageEmployeesCommand = new RelayCommand(Employees);
             #endregion
 
             #region Prepare the dialogs
@@ -75,7 +80,7 @@ namespace KanbanBoard.ViewModel
             _openFileDialog.Filter = _compatibleFiles;
             #endregion
         }
-
+        
         #region Properties
         /// <summary>
         /// Use this property to access the categories of the board
@@ -93,6 +98,15 @@ namespace KanbanBoard.ViewModel
 
         #region Methods for commands
         /// <summary>
+        /// Opens the window to manage the employees with
+        /// </summary>
+        private void Employees()
+        {
+            manageEmployeesWindow = new ManageEmployees();
+            manageEmployeesWindow.Show();
+        }
+
+        /// <summary>
         /// Clears the boards, and the file name and path to the save file.
         /// </summary>
         private void NewBoard()
@@ -103,7 +117,6 @@ namespace KanbanBoard.ViewModel
             }
             _boardFileNameAndPath = null;
         }
-
 
         /// <summary>
         /// Saves the board to a file, using the allready set file name and path.
@@ -143,8 +156,11 @@ namespace KanbanBoard.ViewModel
             _openFileDialog.ShowDialog();
             if (_openFileDialog.FileName != "")
             {
+                // TODO: fix this.
                 _boardFileNameAndPath = _openFileDialog.FileName;
-                Board = (Dictionary<EnumCategories, CategoryViewModel>) PersistenceHandler.Load(_boardFileNameAndPath);
+                var test = PersistenceHandler.Load(_boardFileNameAndPath).ToString();
+
+                Board = JsonConvert.DeserializeObject<Dictionary<EnumCategories, CategoryViewModel>>(test);
             }
         }
 
@@ -201,6 +217,13 @@ namespace KanbanBoard.ViewModel
             get { return _addOrEditCommand; }
             set { _addOrEditCommand = value; }
         }
+
+        public ICommand ManageEmployeesCommand
+        {
+            get { return _manageEmployeesCommand; }
+            set { _manageEmployeesCommand = value; }
+        }
+
         #endregion
 
         #region Gong drag and drop

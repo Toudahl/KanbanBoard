@@ -13,10 +13,6 @@ functionallity, i will add more features.
 
 // TODO: Create functionality to select an employee
 
-// TODO: Move the "AddWindow" methods to MainViewModel, and use commands to access them.
-
-// TODO: Move the methods to the ManipulatePostItViewModel, and use commands to access them instead
-
 // TODO: Add other types of persistence.
 
 // TODO: Make a check on the file beeing loaded to detect what type of persistence was used, and

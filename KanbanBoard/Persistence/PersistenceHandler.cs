@@ -16,7 +16,6 @@ namespace KanbanBoard.Persistence
         private static EnumPersistenceOptions _selectedPersistenceOptions = EnumPersistenceOptions.JsonPersistence;
         private static string _compatibleFiles = "KanBan Board file (*.kbb)|*.kbb";
 
-
         /// <summary>
         /// Uses the persistence type set by <see cref="SetPersistenceType()"/> to save the post its.
         /// Default is <see cref="JsonPersistence"/>
@@ -111,6 +110,7 @@ namespace KanbanBoard.Persistence
         }
         #endregion
 
+        #region XmlPersistence - not implemented
         private class XmlPersistence : IPersistence
         {
             public void Save(object informationToSave, string fileName)
@@ -123,7 +123,7 @@ namespace KanbanBoard.Persistence
                 throw new System.NotImplementedException();
             }
         }
-
+        #endregion
     }
 
 }

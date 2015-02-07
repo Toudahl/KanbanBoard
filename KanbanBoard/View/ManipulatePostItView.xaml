@@ -34,12 +34,13 @@
             Grid.RowSpan="2"/>
         <ComboBox
             x:Name="ComboBox_SelectedCategory"
-            Loaded="ComboBox_SelectedCategory_OnLoaded"
             Grid.Column="1"
             Grid.Row="0"
             Height="30" 
             VerticalAlignment="Top"
-            SelectedIndex="{Binding Category}"/>
+            ItemsSource="{Binding AvailableCategories}"
+            SelectedItem="{Binding SelectedCategory, Mode=TwoWay}"
+            />
 
         <Label Content="Task:"
                Grid.Row="1"
@@ -95,7 +96,7 @@
             HorizontalAlignment="Left"
             Grid.Row="5" 
             Width="50"
-            Command="{Binding AddCommand}"/>
+            Command="{Binding SaveCommand}"/>
         <Button 
             x:Name="Button_Cancel"
             Click="Button_CloseWindow"

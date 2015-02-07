@@ -20,18 +20,7 @@
         <Menu Grid.Row="0">
             <MenuItem Header="Menu">
                 <MenuItem Header="New" Command="{Binding NewCommand}"/>
-                <MenuItem Header="Add...">
-                    <MenuItem x:Name="menu_ToDo" Header="To do" Click="Menu_ToDo_OnClick"/>
-                    <MenuItem x:Name="menu_WorkInProgress" Header="Work in progress" Click="Menu_WorkInProgress_OnClick"/>
-                    <MenuItem x:Name="menu_CompletedWork" Header="Completed work" Click="Menu_CompletedWork_OnClick"/>
-                </MenuItem>
-                <MenuItem Header="Add test..." ItemsSource="{Binding Board}">
-                    <MenuItem.ItemTemplate>
-                        <DataTemplate>
-                            <MenuItem Header="{Binding Key}" CommandParameter="{Binding Key}"/>
-                        </DataTemplate>
-                    </MenuItem.ItemTemplate>
-                </MenuItem>
+                <MenuItem Header="Add..." Command="{Binding AddOrEditCommand}"/>
                 <MenuItem Header="Edit selection"/>
                 <MenuItem Header="Load..." Command="{Binding LoadFromDialogCommand}"/>
                 <MenuItem Header="Save" Command="{Binding SaveCommand}"/>

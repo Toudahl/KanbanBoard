@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Windows.Input;
 using System.Windows.Media;
 using HelperClasses;
@@ -12,8 +13,8 @@ namespace KanbanBoard.ViewModel
         private string _taskName;
         private string _taskDetails;
         private string _deadline;
-        private EnumCategories _category;
-        private ICommand _addCommand;
+        private EnumCategories _selectedCategory;
+        private ICommand _saveCommand;
         private EmployeeModel _responsiblePerson;
 
         public ManipulatePostItViewModel()
@@ -21,13 +22,13 @@ namespace KanbanBoard.ViewModel
             _taskName = null;
             _taskDetails = null;
 
-            _addCommand = new RelayCommand(Save);
+            _saveCommand = new RelayCommand(Save);
 
             _responsiblePerson = new EmployeeModel("Morten", "Toudahl", EnumEmployeeTitles.LeadDeveloper);
             _deadline = DateTime.Today.ToString("HH:mm - dd MMMM, yyyy");
-
         }
 
+        #region Methods
         /// <summary>
         /// If all fields has input, create a <see cref="PostItModel"/> with the information
         /// from the fields.
@@ -35,31 +36,34 @@ namespace KanbanBoard.ViewModel
         /// </summary>
         private void Save()
         {
-            SolidColorBrush ColorBrush;
+            SolidColorBrush colorBrush;
 
-            switch (Category)
+            switch (SelectedCategory)
             {
                 case EnumCategories.ToDo:
-                    ColorBrush = new SolidColorBrush(Colors.Red);
+                    colorBrush = new SolidColorBrush(Colors.Red);
                     break;
                 case EnumCategories.WorkInProgress:
-                    ColorBrush = new SolidColorBrush(Colors.Yellow);
+                    colorBrush = new SolidColorBrush(Colors.Yellow);
                     break;
                 case EnumCategories.CompletedWork:
-                    ColorBrush = new SolidColorBrush(Colors.Green);
+                    colorBrush = new SolidColorBrush(Colors.Green);
                     break;
                 default:
-                    ColorBrush = new SolidColorBrush();
+                    colorBrush = new SolidColorBrush();
                     break;
             }
 
             if (CheckInput())
             {
-                MainViewModel.Categories[Category].PostItsInCategory.Add(new PostItModel(_taskName, _taskDetails, _deadline, _responsiblePerson, ColorBrush));
+                MainViewModel.Board[SelectedCategory].PostItsInCategory.Add(new PostItModel(_taskName, _taskDetails, _deadline, _responsiblePerson, colorBrush));
             }
         }
 
-
+        /// <summary>
+        /// Check if TaskName and TaskDetails has been set.
+        /// </summary>
+        /// <returns>Returns true if both have been set.</returns>
         private bool CheckInput()
         {
             if (TaskName == null)
@@ -70,48 +74,74 @@ namespace KanbanBoard.ViewModel
             {
                 return false;
             }
-            if (Deadline == DateTime.MinValue.ToString())
-            {
-                return false;
-            }
             return true;
         }
+        #endregion
 
-
+        #region Properties
+        /// <summary>
+        /// Provides access to the properties in the <see cref="MainViewModel"/>, which contains the board
+        /// </summary>
         public MainViewModel MainViewModel
         {
             get { return _mainViewModel; }
             set { _mainViewModel = value; }
         }
 
+        /// <summary>
+        /// Get and set the TaskName
+        /// </summary>
         public string TaskName
         {
             get { return _taskName; }
             set { _taskName = value; }
         }
 
+        /// <summary>
+        /// Get and set the TaskDetails
+        /// </summary>
         public string TaskDetails
         {
             get { return _taskDetails; }
             set { _taskDetails = value; }
         }
 
+        /// <summary>
+        /// Get and set the Deadline
+        /// </summary>
         public string Deadline
         {
             get { return _deadline; }
             set { _deadline = value; }
         }
 
-        public EnumCategories Category
+        /// <summary>
+        /// Get and set the SelectedCategory
+        /// </summary>
+        public EnumCategories SelectedCategory
         {
-            get { return _category; }
-            set { _category = value; }
+            get { return _selectedCategory; }
+            set { _selectedCategory = value; }
         }
 
-        public ICommand AddCommand
+        /// <summary>
+        /// Get the entries from <see cref="EnumCategories"/>, used to populate the combobox
+        /// </summary>
+        public string[] AvailableCategories
         {
-            get { return _addCommand; }
-            set { _addCommand = value; }
+            get { return Enum.GetNames(typeof(EnumCategories)); }
         }
+        #endregion
+
+        #region Commands
+        /// <summary>
+        /// Will save the content of the window
+        /// </summary>
+        public ICommand SaveCommand
+        {
+            get { return _saveCommand; }
+            set { _saveCommand = value; }
+        }
+        #endregion
     }
 }

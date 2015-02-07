@@ -12,6 +12,7 @@ using HelperClasses;
 using KanbanBoard.Annotations;
 using KanbanBoard.Model;
 using KanbanBoard.Persistence;
+using KanbanBoard.View;
 using Microsoft.Win32;
 
 namespace KanbanBoard.ViewModel
@@ -28,12 +29,15 @@ namespace KanbanBoard.ViewModel
         private ICommand _saveAsDialogCommand;
         private ICommand _loadFromDialogCommand;
         private ICommand _saveCommand;
+        private ICommand _addOrEditCommand;
 
-        // Used for saving and loading operations
+        // Used for saving, loading, adding and editing operations
         private SaveFileDialog _saveAsFileDialog;
         private OpenFileDialog _openFileDialog;
         private string _boardFileNameAndPath;
         private readonly string _compatibleFiles = PersistenceHandler.CompatibleFiles;
+        private ManipulatePostItView addOrEditWindow;
+
         #endregion
 
         public MainViewModel()
@@ -52,6 +56,7 @@ namespace KanbanBoard.ViewModel
             _saveCommand = new RelayCommand(SaveBoard);
             _newCommand = new RelayCommand(NewBoard);
             _loadFromDialogCommand = new RelayCommand(LoadFromDialog);
+            _addOrEditCommand = new RelayCommand(AddOrEdit);
             #endregion
 
             #region Prepare the dialogs
@@ -90,7 +95,7 @@ namespace KanbanBoard.ViewModel
         /// </summary>
         private void NewBoard()
         {
-            foreach (KeyValuePair<EnumCategories, CategoryViewModel> category in Categories)
+            foreach (KeyValuePair<EnumCategories, CategoryViewModel> category in Board)
             {
                 category.Value.PostItsInCategory.Clear();
             }
@@ -106,7 +111,7 @@ namespace KanbanBoard.ViewModel
         {
             if (_boardFileNameAndPath != null)
             {
-                PersistenceHandler.Save(_categories, _boardFileNameAndPath);
+                PersistenceHandler.Save(Board, _boardFileNameAndPath);
             }
             else
             {
@@ -123,7 +128,7 @@ namespace KanbanBoard.ViewModel
             if (_saveAsFileDialog.FileName != "")
             {
                 _boardFileNameAndPath = _saveAsFileDialog.FileName;
-                PersistenceHandler.Save(_categories, _boardFileNameAndPath);
+                PersistenceHandler.Save(Board, _boardFileNameAndPath);
             }
         }
 
@@ -137,9 +142,16 @@ namespace KanbanBoard.ViewModel
             if (_openFileDialog.FileName != "")
             {
                 _boardFileNameAndPath = _openFileDialog.FileName;
-                Categories = (Dictionary<EnumCategories, CategoryViewModel>) PersistenceHandler.Load(_boardFileNameAndPath);
+                Board = (Dictionary<EnumCategories, CategoryViewModel>) PersistenceHandler.Load(_boardFileNameAndPath);
             }
         }
+
+        private void AddOrEdit()
+        {
+            addOrEditWindow = new ManipulatePostItView(this);
+            addOrEditWindow.Show();
+        }
+
         #endregion
 
         #region Commands
@@ -177,6 +189,15 @@ namespace KanbanBoard.ViewModel
         {
             get { return _saveCommand; }
             set { _saveCommand = value; }
+        }
+
+        /// <summary>
+        /// Used for opening the add / edit window
+        /// </summary>
+        public ICommand AddOrEditCommand
+        {
+            get { return _addOrEditCommand; }
+            set { _addOrEditCommand = value; }
         }
         #endregion
 

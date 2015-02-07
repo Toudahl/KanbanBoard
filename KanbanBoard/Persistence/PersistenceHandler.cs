@@ -23,7 +23,7 @@ namespace KanbanBoard.Persistence
         /// </summary>
         /// <param name="informationToSave">The post its that will be saved</param>
         /// <param name="fileName">The path to the file that will be saved to</param>
-        static public void Save(Dictionary<EnumCategories, CategoryViewModel> informationToSave, string fileName)
+        static public void Save(object informationToSave, string fileName)
         {
             _persistence.Save(informationToSave, fileName);
         }
@@ -36,7 +36,7 @@ namespace KanbanBoard.Persistence
         /// </summary>
         /// <param name="fileName">The path to the file that will be saved to</param>
         /// <returns>The entire board as a list of a list of CategoryViewModel</returns>
-        static public Dictionary<EnumCategories, CategoryViewModel> Load(string fileName)
+        static public object Load(string fileName)
         {
             return _persistence.Load(fileName);
         }
@@ -91,7 +91,7 @@ namespace KanbanBoard.Persistence
             /// </summary>
             /// <param name="informationToSave">The post its that will be saved</param>
             /// <param name="fileName">The path to the file that will be saved to</param>
-            public void Save(Dictionary<EnumCategories, CategoryViewModel> informationToSave, string fileName)
+            public void Save(object informationToSave, string fileName)
             {
                 string jsonViewModel = JsonConvert.SerializeObject(informationToSave);
 
@@ -103,7 +103,7 @@ namespace KanbanBoard.Persistence
             /// </summary>
             /// <param name="fileName">The file to load from</param>
             /// <returns>The post its that was loaded</returns>
-            public Dictionary<EnumCategories, CategoryViewModel> Load(string fileName)
+            public object Load(string fileName)
             {
                 string readAllText = File.ReadAllText(fileName);
                 return JsonConvert.DeserializeObject<Dictionary<EnumCategories, CategoryViewModel>>(readAllText);
@@ -113,12 +113,12 @@ namespace KanbanBoard.Persistence
 
         private class XmlPersistence : IPersistence
         {
-            public void Save(Dictionary<EnumCategories, CategoryViewModel> informationToSave, string fileName)
+            public void Save(object informationToSave, string fileName)
             {
                 throw new System.NotImplementedException();
             }
 
-            public Dictionary<EnumCategories, CategoryViewModel> Load(string fileName)
+            public object Load(string fileName)
             {
                 throw new System.NotImplementedException();
             }

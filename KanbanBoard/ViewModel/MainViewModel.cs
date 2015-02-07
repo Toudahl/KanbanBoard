@@ -133,10 +133,7 @@ namespace KanbanBoard.ViewModel
             if (_openFileDialog.FileName != "")
             {
                 _boardFileNameAndPath = _openFileDialog.FileName;
-                Categories = PersistenceHandler.Load(_boardFileNameAndPath);
-                //ListOfToDo = _boardContainer[0][0].PostItsInCategory;
-                //ListOfWorkInProgress = _boardContainer[1][0].PostItsInCategory;
-                //ListOfCompletedWork = _boardContainer[2][0].PostItsInCategory;
+                Categories = (Dictionary<EnumCategories, CategoryViewModel>) PersistenceHandler.Load(_boardFileNameAndPath);
             }
         }
         #endregion

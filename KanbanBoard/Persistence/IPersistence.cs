@@ -10,7 +10,7 @@ namespace KanbanBoard.Persistence
 {
     interface IPersistence
     {
-        void Save(Dictionary<EnumCategories, CategoryViewModel> informationToSave, string fileName);
-        Dictionary<EnumCategories, CategoryViewModel> Load(string fileName);
+        void Save(object informationToSave, string fileName);
+        object Load(string fileName);
     }
 }

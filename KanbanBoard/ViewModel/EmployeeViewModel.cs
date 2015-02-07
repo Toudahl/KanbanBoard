@@ -28,8 +28,8 @@ namespace KanbanBoard.ViewModel
             }
             else
             {
-                
-                Employees = (List<EmployeeModel>)PersistenceHandler.Load(_fileName);
+
+                Employees = PersistenceHandler.Load <List<EmployeeModel>>(_fileName);
             }
         }
 

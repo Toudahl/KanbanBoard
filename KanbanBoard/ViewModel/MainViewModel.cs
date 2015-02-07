@@ -158,9 +158,7 @@ namespace KanbanBoard.ViewModel
             {
                 // TODO: fix this.
                 _boardFileNameAndPath = _openFileDialog.FileName;
-                var test = PersistenceHandler.Load(_boardFileNameAndPath).ToString();
-
-                Board = JsonConvert.DeserializeObject<Dictionary<EnumCategories, CategoryViewModel>>(test);
+                Board = PersistenceHandler.Load<Dictionary<EnumCategories, CategoryViewModel>>(_boardFileNameAndPath);
             }
         }
 

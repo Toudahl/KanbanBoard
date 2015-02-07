@@ -38,9 +38,9 @@ namespace KanbanBoard.Persistence
         /// </summary>
         /// <param name="fileName">The path to the file that will be saved to</param>
         /// <returns>The entire board as a list of a list of CategoryViewModel</returns>
-        static public object Load(string fileName)
+        static public T Load<T>(string fileName)
         {
-            return _persistence.Load(fileName);
+            return _persistence.Load<T>(fileName);
         }
 
         /// <summary>
@@ -101,15 +101,15 @@ namespace KanbanBoard.Persistence
             }
 
             /// <summary>
-            /// Loads the post its from a file
+            /// Loads json from a file
             /// </summary>
             /// <param name="fileName">The file to load from</param>
             /// <returns>The post its that was loaded</returns>
-            public object Load(string fileName)
+            public T Load<T>(string fileName)
             {
                 // TODO: find out why casting only works when using build in DeserializeObject<>.
                 string readAllText = File.ReadAllText(fileName);
-                return JsonConvert.DeserializeObject(readAllText);
+                return JsonConvert.DeserializeObject<T>(readAllText);
                 //return JsonConvert.DeserializeObject<Dictionary<EnumCategories, CategoryViewModel>>(readAllText);
                 //return JsonConvert.DeserializeObject<object>(readAllText);
             }
@@ -124,9 +124,9 @@ namespace KanbanBoard.Persistence
                 throw new System.NotImplementedException();
             }
 
-            public object Load(string fileName)
+            public T Load<T>(string fileName)
             {
-                throw new System.NotImplementedException();
+                throw new NotImplementedException();
             }
         }
         #endregion

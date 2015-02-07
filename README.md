@@ -21,10 +21,13 @@ functionallity, i will add more features.
 // TODO: Further clean up of the UI
 
 // TODO: Create settings functionallity
-     //TODO: Auto load
-     //TODO: Default persistence type
-     //TODO: Auto save
 
+     //TODO: Auto load
+     
+     //TODO: Default persistence type
+     
+     //TODO: Auto save
+     
 
 Known bugs:
 

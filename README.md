@@ -1,4 +1,5 @@
-# KanbanBoard
+# KanbanBoard - No longer beeing worked on
+
 A simple kanban board made as a "brush up" exercise at the beginning
 of my second semester studying for my AP graduate degree in computer science.
 More than a month christmas vacation will make anyone rusty :)

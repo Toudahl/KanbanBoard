@@ -1,4 +1,4 @@
-# KanbanBoard - No longer beeing worked on
+# KanbanBoard - No longer being worked on
 
 A simple kanban board made as a "brush up" exercise at the beginning
 of my second semester studying for my AP graduate degree in computer science.
